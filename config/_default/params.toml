@@ -1,0 +1,6 @@
+# config/_default/params.toml
+
+  contactNumber = "01454 610066"
+  contactEmail = "contact@theblackcircle.com"
+  contactAddress = "xxxx"
+

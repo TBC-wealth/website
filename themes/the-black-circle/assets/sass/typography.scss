@@ -1,0 +1,114 @@
+html {
+	@include media-breakpoint-between(xl, xxl) {
+		font-size: 13px;
+	}
+}
+body, p {
+	font-family: $body-font;
+	font-weight: $font-weight-light;
+	line-height: 1.75;
+}
+ul, ol {
+	li {
+		font-family: $body-font;
+		font-weight: $font-weight-light;
+		line-height: 1.75;
+	}
+}
+strong {
+	font-weight: $font-weight-bold;
+}
+.text-primary {
+    background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-secondary {
+    background: linear-gradient(90deg, #343433 -16.69%, #CECECE 36.61%, #232323 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-large, .text-large p {
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 1.125;
+	}
+}
+
+a {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: $heading-font;
+	font-weight: $font-weight-normal;
+	margin-bottom: $default-base-spacer;
+	color: $white;
+}
+
+h1, .h1 { 
+	font-size: $font-size-base * 1.875; 
+	line-height: 1.15;
+	font-weight: $font-weight-light;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base * 2.375;
+	} 
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 2.875;
+	} 
+}
+
+h2, .h2 { 
+	font-size: $font-size-base * 1.875; 
+	line-height: 1.2;
+	font-weight: $font-weight-light;
+    background: linear-gradient(90deg, #343433 -18.71%, #CECECE 35.51%, #232323 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base * 2.375;
+        letter-spacing: 2.3px;
+	} 
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 2.875;
+	} 
+}
+
+h3, .h3 { 
+	font-size: $font-size-base * 2;
+	line-height: 1.2;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base * 2.125;
+	} 
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 2.5;
+		line-height: 1;
+	} 
+}
+
+h4, .h4 { 
+	font-size: $font-size-base * 1.5; 
+	line-height: 1.2;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base * 1.75; 
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 2; 
+	} 
+}
+
+h5, .h5 { 
+	font-size: $font-size-base * 1.25; 
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 1.375; 
+	} 
+}
+
+h6, .h6 { 
+	font-size: $font-size-base * 1.125;
+	line-height: 1.4;
+}

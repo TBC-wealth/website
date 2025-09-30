@@ -1,0 +1,99 @@
+.custom-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba($white, 0.2);
+    transition: all .5s ease;
+    .main-card-heading {
+        padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5);
+        @include media-breakpoint-up(xl) {
+            padding: ($default-base-spacer * 2) ($default-base-spacer * 2) 0 ($default-base-spacer * 2);
+        }
+        
+    }
+    .card-body {
+        padding: $default-base-spacer * 1.5;
+        @include media-breakpoint-up(xl) {
+            padding: $default-base-spacer * 2;    
+        }
+        .card-icon {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .custom-card-heading {
+            border-bottom: 1px solid rgba($white, 0.25);
+            padding-right: 0;
+            padding-bottom: $default-base-spacer;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                border-right: 1px solid rgba($white, 0.25);
+                border-bottom: 0px;
+                padding-right: $default-base-spacer * 1.5;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-right: $default-base-spacer * 3;
+            }
+        }
+        .custom-card-content {
+            padding-left: 0;
+            padding-top: $default-base-spacer;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                padding-left: $default-base-spacer * 1.5;
+                padding-top: 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-left: $default-base-spacer * 3;
+            }
+
+            ul {
+                list-style-type: square;
+                padding-left: $default-base-spacer * 1.75;
+            }
+        }
+    }
+    h5 {
+        font-family: $body-font;
+        font-weight: $font-weight-normal;
+        font-size: $font-size-base * 1.25;
+    }
+    &.custom-card-style {
+        .card-body {
+            .card-icon {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0 1px 20px rgba(255,255,255,.3);
+    }
+    &.full-custom-card {
+        .card-body {
+            img {
+                width: 64px;
+                @include media-breakpoint-up(md) {
+                    width: 160px;
+                }   
+            }
+        }
+    }
+}
+
+.execution-section {
+    .block-bg {
+        opacity: 0.3;
+        top: -20%;
+    }
+}

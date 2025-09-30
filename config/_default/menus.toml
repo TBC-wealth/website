@@ -1,0 +1,103 @@
+[[main]]
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+identifier = "solutions"
+name = "Solutions"
+pageRef = "/solutions"
+weight = 2
+
+  [[main]]
+  parent = "solutions"
+  identifier = "uhnws"
+  name = "UHNWs & Digital Asset Whales"
+  pageRef = "/solutions/uhnws"
+  weight = 1
+
+  [[main]]
+  parent = "solutions"
+  name = "Private Banks"
+  pageRef = "/solutions/private-bank-health-offices"
+  weight = 2
+
+  [[main]]
+  parent = "solutions"
+  name = "Cryptonative Organisations"
+  pageRef = "/solutions/crypto-native-organizations"
+  weight = 3
+
+  [[main]]
+  parent = "solutions"
+  name = "Bitcoin and Crypto-Backed Lending"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+  weight = 4
+
+  [[main]]
+  parent = "solutions"
+  name = "Yield Strategies"
+  pageRef = "/solutions/btc-yield-strategies"
+  weight = 5
+
+  [[main]]
+  parent = "solutions"
+  name = "Custody"
+  pageRef = "/solutions/custody"
+  weight = 6
+
+  [[main]]
+  parent = "solutions"
+  name = "Trading Desk"
+  pageRef = "/solutions/trading-desk"
+  weight = 7
+
+  [[main]]
+  parent = "solutions"
+  name = "Tailored Solutions"
+  pageRef = "/solutions/tailored-solutions"
+  weight = 8
+
+[[main]]
+name = "The Origin"
+pageRef = "/the-origin"
+weight = 3
+
+[[main]]
+name = "Request Access"
+pageRef = "/request-access"
+weight = 4
+
+ ##############################
+# Footer Menu Sitemap
+##############################
+
+[[footer]]
+name = 'Home'
+pageRef = '/'
+weight = 1
+
+[[footer]]
+name = 'Solutions'
+pageRef = '/solutions'
+weight = 2
+
+[[footer]]
+name = 'The Origin'
+pageRef = '/the-origin'
+weight = 3
+
+[[footer]]
+name = 'Request Access'
+pageRef = '/request-access'
+weight = 4
+
+ ##############################
+# Footer Menu Terms
+##############################
+
+[[terms]]
+name = 'Terms & Conditions'
+pageRef = '/terms'
+weight = 1
+

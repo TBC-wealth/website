@@ -1,0 +1,77 @@
+.btn { 
+	height: 48px; 
+	border-radius: 8px; 
+	border: 0;
+	font-weight: $font-weight-medium;
+	text-align: center;
+	line-height: 1.2;
+	transition: all 0.5s ease !important;
+	padding: ($default-base-spacer * 0.5) ($default-base-spacer * 1.5);
+	margin: 0;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+    text-transform: uppercase;
+	gap: $default-base-spacer;
+}
+
+.btn-primary {
+	color: #D9D9D9;
+    //background: var(--Linear-1, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
+	background-image: linear-gradient(to right, #B2724A 0%, #0C2D2A  50%, #B2724A  100%);
+	background-size: 200% auto;
+	&:hover {
+        color: #D9D9D9;
+		background-position: right center;
+	}
+}
+
+.btn-secondary {
+	background-color: #080808;
+	span {
+		background: linear-gradient(302deg, #0C2D2A -49.81%, #B2724A 95.63%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+	&:hover {
+		background-color: $primary;
+		span {
+			background: linear-gradient(302deg, #FFF8F8 -49.81%, #FFFFFF 95.63%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
+}
+
+.btn-link {
+	text-decoration: none;
+	&:hover {
+		color: $light;
+	}
+}
+
+
+
+         .btn-grad {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
+         .btn-grad {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            display: block;
+          }
+
+          .btn-grad:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         

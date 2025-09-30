@@ -1,0 +1,71 @@
+
+<div class="container">
+  <div class="row">
+    <!-- Logo and Description -->
+    <div class="col-12 col-lg-3 offset-xl-1 pb-4">
+      <div class="footer-logo text-center text-md-start">
+        <a href="/">
+          <!-- <img src="{{ (resources.Get "images/logo-gradient.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid d-none d-xl-block"> -->
+          <img src="{{ (resources.Get "images/logo-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid mb-4">
+        </a>
+      </div>
+    </div>
+    
+    <!-- Sitemap -->
+    <div class="col-12 col-md-4 col-lg-3 mb-3 text-center text-md-start">
+      <h6 class="text-uppercase mb-2 text-primary">SITEMAP</h6>
+        {{ partial "menu.html" (dict "menuID" "footer" "page" .) }}
+    </div>
+        
+    <!-- Terms & Follow Us -->
+    <div class="col-12 col-md-4 col-lg-2 mb-3 text-center text-md-start">
+      <h6 class="text-uppercase mb-2 text-primary">TERMS</h6>
+      {{ partial "menu.html" (dict "menuID" "terms" "page" .) }}
+    </div> 
+
+    <div class="col-12 col-md-4 col-lg-5 col-xl-3 mb-4 mb-lg-5 text-center text-md-start">
+      <h6 class="text-uppercase mb-2 text-primary">FOLLOW US</h6>
+      <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
+        <a href="#" target="_blank" class="d-none">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="30" viewBox="0 0 28 30" fill="none">
+            <g clip-path="url(#clip0_79_16)">
+              <path d="M16.6616 12.2888L27.0852 0.015625H24.6152L15.5643 10.6723L8.33546 0.015625H-0.00219727L10.9293 16.1304L-0.00219727 29.0007H2.46801L12.0259 17.7469L19.6601 29.0007H27.9978L16.661 12.2888H16.6616ZM13.2783 16.2724L12.1707 14.6677L3.35806 1.89919H7.15215L14.2641 12.2038L15.3717 13.8084L24.6163 27.2028H20.8222L13.2783 16.273V16.2724Z" fill="url(#paint0_linear_79_16)"/>
+            </g>
+            <defs>
+              <linearGradient id="paint0_linear_79_16" x1="29.431" y1="33.9059" x2="-6.71313" y2="24.5194" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#0C2D2A"/>
+                <stop offset="1" stop-color="#B2724A"/>
+              </linearGradient>
+              <clipPath id="clip0_79_16">
+                <rect width="28" height="29" fill="white" transform="translate(-0.00219727 0.015625)"/>
+              </clipPath>
+            </defs>
+          </svg>
+        </a>
+        <a href="https://www.linkedin.com/company/the-black-circle/about/" target="_blank" class="text-light fs-4" aria-label="LinkedIn">
+          <svg width="35" height="35" viewBox="0 0 64 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M55.2725 0.5H8.72725C6.41265 0.5 4.19284 1.41948 2.55616 3.05616C0.91948 4.69284 0 6.91265 0 9.22725V55.7725C0 58.0875 0.91948 60.307 2.55616 61.944C4.19284 63.5805 6.41265 64.5 8.72725 64.5H55.2725C57.5875 64.5 59.807 63.5805 61.444 61.944C63.0805 60.307 64 58.0875 64 55.7725V9.22725C64 6.91265 63.0805 4.69284 61.444 3.05616C59.807 1.41948 57.5875 0.5 55.2725 0.5ZM21.8182 51.1475C21.8186 51.3245 21.7841 51.5005 21.7166 51.6645C21.649 51.829 21.5497 51.978 21.4244 52.1035C21.299 52.229 21.1501 52.329 20.9862 52.397C20.8223 52.465 20.6466 52.5 20.4691 52.5H14.72C14.5422 52.5005 14.3661 52.466 14.2017 52.398C14.0374 52.33 13.8881 52.2305 13.7624 52.105C13.6367 51.979 13.5371 51.83 13.4692 51.6655C13.4014 51.501 13.3668 51.325 13.3673 51.1475V27.0455C13.3673 26.6867 13.5098 26.3426 13.7635 26.0889C14.0172 25.8352 14.3613 25.6928 14.72 25.6928H20.4691C20.8273 25.6937 21.1704 25.8367 21.4233 26.0902C21.6762 26.3438 21.8182 26.6873 21.8182 27.0455V51.1475ZM17.5928 23.4091C16.5139 23.4091 15.4594 23.0892 14.5624 22.4898C13.6654 21.8905 12.9663 21.0386 12.5534 20.0419C12.1406 19.0452 12.0325 17.9485 12.243 16.8904C12.4535 15.8323 12.9729 14.8604 13.7358 14.0976C14.4986 13.3347 15.4705 12.8153 16.5286 12.6048C17.5867 12.3944 18.6834 12.5024 19.6801 12.9152C20.6768 13.3281 21.5287 14.0272 22.128 14.9242C22.7274 15.8212 23.0473 16.8757 23.0473 17.9545C23.0473 19.4012 22.4726 20.7886 21.4496 21.8115C20.4267 22.8344 19.0394 23.4091 17.5928 23.4091ZM51.869 51.242C51.8695 51.4055 51.8375 51.567 51.7755 51.7185C51.713 51.8695 51.6215 52.0065 51.506 52.1225C51.3905 52.238 51.253 52.3295 51.102 52.392C50.951 52.454 50.789 52.486 50.6255 52.4855H44.4436C44.2802 52.486 44.1183 52.454 43.9672 52.392C43.8161 52.3295 43.6788 52.238 43.5632 52.1225C43.4476 52.0065 43.356 51.8695 43.2937 51.7185C43.2314 51.567 43.1995 51.4055 43.2 51.242V39.9509C43.2 38.2637 43.6946 32.5618 38.7891 32.5618C34.9891 32.5618 34.2145 36.4637 34.0618 38.2164V51.2565C34.0618 51.583 33.9333 51.8965 33.704 52.1295C33.4747 52.362 33.163 52.495 32.8363 52.5H26.8654C26.7023 52.5 26.5408 52.468 26.3901 52.4055C26.2394 52.3425 26.1026 52.251 25.9874 52.1355C25.8722 52.02 25.7809 51.883 25.7188 51.732C25.6567 51.581 25.625 51.4195 25.6255 51.2565V26.94C25.625 26.7769 25.6567 26.6152 25.7188 26.4643C25.7809 26.3135 25.8722 26.1764 25.9874 26.0609C26.1026 25.9453 26.2394 25.8536 26.3901 25.7911C26.5408 25.7285 26.7023 25.6964 26.8654 25.6964H32.8363C33.1662 25.6964 33.4825 25.8274 33.7158 26.0606C33.949 26.2939 34.08 26.6102 34.08 26.94V29.0418C35.4909 26.9218 37.5818 25.2927 42.0437 25.2927C51.9275 25.2927 51.862 34.5218 51.862 39.5909L51.869 51.242Z" fill="url(#paint0_linear_843_2029)"/>
+            <defs>
+            <linearGradient id="paint0_linear_843_2029" x1="67.276" y1="75.3308" x2="-14.9672" y2="53.2212" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#0C2D2A"/>
+            <stop offset="1" stop-color="#B2724A"/>
+            </linearGradient>
+            </defs>
+          </svg>
+
+        </a>
+      </div>
+      <!-- <div class="pt-4">
+        <p class="mb-2">Subscribe for our latest news</p>
+        <form class="subscribe-form d-flex">
+          <input type="email" class="form-control" placeholder="Enter your email" aria-label="Email" required>
+          <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+        </form>
+      </div> -->
+    </div>
+    <div class="col-12 col-lg-9 col-xl-8 offset-lg-3 offset-xl-4 text-center text-md-start">
+      <p class="small mt-3 d-none"><em>The Black Circle provides sophisticated digital asset management services exclusively to qualified high-net-worth individuals and institutions. All investments involve risk, including potential loss of principal. Past performance does not guarantee future results. Securities offered through licensed partners.</em></p>
+      <p class="small mt-2 mb-0">&copy; {{ now.Year }} The Black Circle. All rights reserved. <a href="https://www.wearegrizzly.com/" target="_blank">Web Design Grizzly</a>.</p>
+    </div>
+  </div>
+</div>
