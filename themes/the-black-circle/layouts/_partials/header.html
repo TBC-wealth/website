@@ -1,0 +1,15 @@
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/"><img src="{{ (resources.Get "images/logo-gradient-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid" loading="lazy"></a>
+        </div>
+        <div class="navbar-menu">
+            {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+        </div>
+        <button class="menu-toggle">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+    </div>
+</nav>

@@ -1,0 +1,171 @@
+{{ define "main" }}
+
+<!-- {{ $solutionbanner := resources.Get "images/the-origin-hero-bg.jpg" }} -->
+<!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
+
+<section class="block inner-hero-block position-relative">
+  <div class="hero-bg">
+    <img src="{{ (resources.Get "images/bitcoin-crypto-banner.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+  </div>
+  <div class="container text-center">
+    <div class="row justify-content-center pb-lg-3 pt-5 mt-xl-5">
+      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
+          <div class="inner-hero-item px-lg-5">
+            <!-- <img src="{{ (resources.Get "images/bitcoin-crypto.png").RelPermalink }}" alt="The Black Circle" class="img-fluid mb-3 pb-lg-3" width="128px"> -->
+            <h1 class="d-inline-block text-secondary text-uppercase mb-4 pb-lg-2">Unlock liquidity from crypto,<br class="d-none d-lg-inline-block"/>without compromising your portfolio</h1>
+            <p class="text-light mb-3">Our lending solutions allow you to access capital backed by Bitcoin, and other leading cryptocurrencies while maintaining full ownership. Put your digital wealth to work in the real world, for personal needs, reinvestment, or new opportunities, all with discreet, personalized support.</p>
+            <div class="d-flex justify-content-center pt-3">
+              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">Request Access</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block block-bg-img-style">
+  <div class="block-bg top-0 opacity-low">
+    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div>
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-5 pb-lg-3">Why Leading Clients Choose Our Lending</h2>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-10">
+        <div class="row row-gap-4">
+          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="600">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column">
+                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
+                  <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
+                </div>
+                <h3 class="h5 mb-2">Institutional-grade execution</h3>
+                <p class="mb-0">Competitive rates and deep liquidity through trusted global partners.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="700">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column">
+                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
+                  <img src="{{ (resources.Get "images/trading-desk-img.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
+                </div>
+                <h3 class="h5 mb-2">Tailored loan structures</h3>
+                <p class="mb-0">Flexible conditions crafted to match your specific needs and timing.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="800">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column">
+                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
+                  <img src="{{ (resources.Get "images/client-choose-03.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
+                </div>
+                <h3 class="h5 mb-2">Secure custody</h3>
+                <p class="mb-0">Assets protected by regulated providers and institutional-level infrastructure.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="900">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column">
+                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
+                  <img src="{{ (resources.Get "images/client-choose.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
+                </div>
+                <h3 class="h5 mb-2">White-glove service</h3>
+                <p class="mb-0">Dedicated support at every step, from structuring to execution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-8 pt-lg-3" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-5 pb-lg-3">Designed for your unique needs</h2>
+      </div>
+    </div>
+    <div class="row row-gap-4 justify-content-center">
+      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
+        <div class="card custom-card full-custom-card text-light">
+          <div class="card-body d-flex flex-column flex-md-row justify-content-between px-lg-5">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+              <div class="col-12 col-md-9">
+                  <h4 class="d-inline-block text-secondary text-uppercase mb-3 mb-lg-4">uhnwis & Digital Asset Pioneers</h4>
+                  <!-- <h3 class="h5 mb-2">Discreet liquidity for those who build and hold.</h3> -->
+                  <p class="mb-0">Access capital without compromising core holdings. Finance lifestyle needs, reinvest into digital assets, or capture new opportunities, all while preserving your long-term vision.</p>
+              </div>
+              <div class="col-12 col-md-3 pb-3 p-xl-4 text-md-center">
+                <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="700">
+        <div class="card custom-card full-custom-card text-light">
+          <div class="card-body d-flex flex-column flex-md-row justify-content-between px-lg-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-3 pb-3 p-xl-4 text-md-center">
+                  <img src="{{ (resources.Get "images/trusted-icon.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
+              </div>
+              <div class="col-12 col-md-9">
+                <h4 class="d-inline-block text-secondary text-uppercase mb-3 mb-lg-4">private banks & Family Offices</h4>
+                 <!-- <h3 class="h5 mb-2">Trusted lending frameworks for the world's most discerning clients.</h3> -->
+                <p class="mb-0">Provide clients with bespoke solutions that combine flexibility, discretion, and institutional-grade execution.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
+        <div class="card custom-card full-custom-card text-light">
+          <div class="card-body d-flex flex-column flex-md-row justify-content-between px-lg-5">
+            <div class="row align-items-center flex-column-reverse flex-md-row">
+              <div class="col-12 col-md-9">
+                <h4 class="d-inline-block text-secondary text-uppercase mb-3 mb-lg-4">Crypto-Native Organizations</h4>
+                <!-- <h3 class="h5 mb-2">Treasury strength without liquidation.</h3> -->
+                <p class="mb-0">Unlock liquidity without selling your core reserves. Fund operations, extend runway, or diversify into yield strategies, while maintaining balance-sheet integrity.</p>
+              </div>
+              <div class="col-12 col-md-3 pb-3 p-xl-4 text-md-center">
+                <img src="{{ (resources.Get "images/visionaries.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block call-to-action">
+  <div class="container">
+    <div class="w-100 call-to-action-inner p-4 p-lg-5 position-relative d-flex">
+      <div class="row align-items-center">
+        <!-- Left Column -->
+        <div class="col-12 col-lg-12 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
+            <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
+            <p class="mb-4 text-light text-large">Your wealth deserves discretion, trust, and growth. <br>Experience the difference.</p>
+            <div class="d-flex pt-4">
+              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
+            </div>
+        </div>
+        <!-- Right Column -->
+        <div class="col-md-6 call-to-action-pic">
+            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

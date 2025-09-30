@@ -1,0 +1,19 @@
+.modal {
+    z-index: 99999;
+    strong {
+        font-weight: 700;
+    }
+    .modal-body {
+        height: 100%;
+        max-height: 65vh;
+        overflow-y: auto;
+    }
+}
+
+.modal-backdrop {
+    z-index: 9999; 
+    backdrop-filter: blur(30px);
+    &.show {
+        opacity: 0.85;
+    }
+}
