@@ -6,25 +6,24 @@ weight = 1
 [[main]]
 identifier = "solutions"
 name = "Solutions"
-pageRef = "/solutions"
 weight = 2
 
   [[main]]
   parent = "solutions"
   identifier = "uhnws"
-  name = "UHNWs & Digital Asset Whales"
+  name = "Ultra-High-Net-Worth Individuals"
   pageRef = "/solutions/uhnws"
   weight = 1
 
   [[main]]
   parent = "solutions"
-  name = "Private Banks"
-  pageRef = "/solutions/private-bank-health-offices"
+  name = "Family Offices and Private Banks"
+  pageRef = "/solutions/private-bank-family-offices"
   weight = 2
 
   [[main]]
   parent = "solutions"
-  name = "Cryptonative Organisations"
+  name = "Crypto-Native Organizations"
   pageRef = "/solutions/crypto-native-organizations"
   weight = 3
 
@@ -48,8 +47,8 @@ weight = 2
 
   [[main]]
   parent = "solutions"
-  name = "Trading Desk"
-  pageRef = "/solutions/trading-desk"
+  name = "OTC Trading"
+  pageRef = "/solutions/otc-trading"
   weight = 7
 
   [[main]]
