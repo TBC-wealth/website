@@ -89,7 +89,9 @@
                 }   
             }
             h4 {
-                font-size: $font-size-base * 1.875;
+                @include media-breakpoint-up(xl) {
+                    font-size: $font-size-base * 1.875;
+                }
             }
             p {
                 font-size: $font-size-base * 0.938;
