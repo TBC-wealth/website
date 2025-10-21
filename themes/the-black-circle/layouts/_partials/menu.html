@@ -50,7 +50,7 @@ Renders a menu for the given menu ID.
         {{- $left := where . "Weight" "<=" 3 -}}
         {{- if gt (len $left) 0 }}
           <ul class="left-menu-items">
-            <li class="h6 fw-semibold mb-2 mt-2 mt-xl-0 text-center text-xl-start">For Whom</li>
+            <li class="h6 fw-semibold mb-2 mt-2 mt-xl-0 text-center text-xl-start text-uppercase">For Whom</li>
             {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $left) }}
           </ul>
         {{- end }}
@@ -58,7 +58,7 @@ Renders a menu for the given menu ID.
         {{- $right := where . "Weight" ">=" 4 -}}
         {{- if gt (len $right) 0 }}
           <ul class="right-menu-items">
-            <li class="h6 fw-semibold mb-2 mt-3 mt-xl-0 text-center text-xl-start">Products</li>
+            <li class="h6 fw-semibold mb-2 mt-3 mt-xl-0 text-center text-xl-start text-uppercase">Products</li>
             {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $right) }}
           </ul>
         {{- end }}
