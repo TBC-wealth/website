@@ -23,7 +23,7 @@ weight = 2
 
   [[main]]
   parent = "solutions"
-  name = "Crypto-Native Organizations"
+  name = "Crypto Institutions"
   pageRef = "/solutions/crypto-native-organizations"
   weight = 3
 
@@ -100,3 +100,60 @@ name = 'Terms & Conditions'
 pageRef = '/terms'
 weight = 1
 
+##############################
+# Footer Menu Company
+##############################
+
+[[company]]
+name = 'The Origin'
+pageRef = '/the-origin'
+weight = 3
+
+##############################
+# Footer Menu Products
+##############################
+
+[[products]]
+name = "Bitcoin and Crypto-Backed Lending"
+pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+weight = 4
+
+[[products]]
+name = "Yield Strategies"
+pageRef = "/solutions/btc-yield-strategies"
+weight = 5
+
+[[products]]
+name = "Custody"
+pageRef = "/solutions/custody"
+weight = 6
+
+[[products]]
+name = "OTC Trading"
+pageRef = "/solutions/otc-trading"
+weight = 7
+
+[[products]]
+name = "Tailored Solutions"
+pageRef = "/solutions/tailored-solutions"
+weight = 8
+
+
+##############################
+# Footer Menu Explore
+##############################
+
+[[explore]]
+name = "Ultra-High-Net-Worth Individuals"
+pageRef = "/solutions/uhnws"
+weight = 1
+
+[[explore]]
+name = "Family Offices and Private Banks"
+pageRef = "/solutions/private-bank-family-offices"
+weight = 2
+
+[[explore]]
+name = "Crypto Institutions"
+pageRef = "/solutions/crypto-native-organizations"
+weight = 3
