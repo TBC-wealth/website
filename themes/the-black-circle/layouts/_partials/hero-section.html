@@ -1,12 +1,15 @@
 {{ $bg := resources.Get "images/eye-bg.png" }}
+{{ $bg := resources.Get "images/eye-bg-light" }}
 
 <section id="hero-section" class="hero-section position-relative d-flex flex-column justify-content-center align-items-center text-center">
   <div class="hero-pic">
-    <img src="{{ (resources.Get "images/eye-bg.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+    <img src="{{ (resources.Get "images/eye-bg.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
+    <img src="{{ (resources.Get "images/eye-bg-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
   </div>
   <div class="container z-2">
     <div class="hero-logo pt-4 mb-2" data-aos="fade-up" data-aos-duration="500">
-      <img src="{{ (resources.Get "images/logo-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-fluid mb-4">
+      <img src="{{ (resources.Get "images/logo-white.png").RelPermalink }}" alt="{{ site.Title }}" class="img-dark img-fluid mb-4">
+      <img src="{{ (resources.Get "images/logo-gradient.png").RelPermalink }}" alt="{{ site.Title }}" class="img-light img-fluid mb-4">
     </div>
     <div class="d-flex justify-content-center" data-aos="fade-up" data-aos-duration="600">
       <a href="{{ "/request-access/" | relURL }}" class="btn btn-secondary"><span>You are invited. Request Access</span></a>
