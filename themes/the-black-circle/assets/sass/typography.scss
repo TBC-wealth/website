@@ -117,8 +117,8 @@ h6, .h6 {
 }
 
 html[data-theme="light"] {
-	h2, .h2 {
-		background: linear-gradient(90deg, #111 -20.21%, #666 40.5%, #111 112.71%);
+	h2, .h2, .text-secondary {
+		background: var(--Linear-3, linear-gradient(90deg, $darkgrey -20.21%, $lightgrey 40.5%, $darkgrey 112.71%));
 		background-clip: text;
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
