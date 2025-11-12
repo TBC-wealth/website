@@ -11,7 +11,7 @@
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row justify-content-center">
     <!-- Logo and Description -->
     <!-- <div class="col-12 col-lg-3 offset-xl-1 pb-4">
       <div class="footer-logo text-center text-md-start">
@@ -22,20 +22,20 @@
     </div>
      -->
     <!-- Company -->
-    <div class="col-12 col-md-4 col-lg-2  mb-3 text-center text-md-start">
+    <div class="col-12 col-md-3 col-lg-2 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">Company</h6>
         {{ partial "menu.html" (dict "menuID" "company" "page" .) }}
     </div>
     <!-- Products -->
-    <div class="col-12 col-md-4 col-lg-3 mb-3 text-center text-md-start">
+    <div class="col-12 col-md-3 col-lg-3 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">Products</h6>
         {{ partial "menu.html" (dict "menuID" "products" "page" .) }}
     </div>
      <!-- Explore -->
-    <div class="col-12 col-md-4 col-lg-3 mb-3 text-center text-md-start">
+    <!-- <div class="col-12 col-md-4 col-lg-3 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">Explore</h6>
         {{ partial "menu.html" (dict "menuID" "explore" "page" .) }}
-    </div>
+    </div> -->
     <!-- Sitemap -->
     <!-- <div class="col-12 col-md-4 col-lg-3 offset-xl-1 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">SITEMAP</h6>
@@ -43,12 +43,12 @@
     </div> -->
         
     <!-- Terms & Follow Us -->
-    <div class="col-12 col-md-4 col-lg-2 mb-3 text-center text-md-start">
+    <div class="col-12 col-md-3 col-lg-3 col-xl-2 mb-3 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">TERMS</h6>
       {{ partial "menu.html" (dict "menuID" "terms" "page" .) }}
     </div> 
 
-    <div class="col-12 col-md-4 col-lg-2 mb-4 mb-lg-5 text-center text-md-start">
+    <div class="col-12 col-md-3 col-lg-2 mb-4 mb-lg-5 text-center text-md-start">
       <h6 class="text-uppercase mb-2 text-primary">FOLLOW US</h6>
       <div class="d-flex gap-3 align-items-center justify-content-center justify-content-md-start">
         <a href="#" target="_blank" class="d-none">
@@ -88,7 +88,7 @@
         </form>
       </div> -->
     </div>
-    <div class="col-12 text-center text-md-start">
+    <div class="col-12 col-lg-10 col-xl-9 text-center text-md-start">
       <p class="small mt-3"><em>The Black Circle SPV Limited, registered in the Abu Dhabi Global Market (“ADGM”) under company number 32099, operates under the regulatory authorisation of Oros Asset Management Limited. Oros Asset Management Limited is registered in ADGM under registration number 9278 and is authorised and regulated by the Financial Services Regulatory Authority (“FSRA”) under Financial Services Permission No. 220084</em></p>
       <p class="small mt-2 mb-0 text-center">&copy; {{ now.Year }} The Black Circle. All rights reserved.</p>
     </div>

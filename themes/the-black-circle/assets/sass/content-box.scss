@@ -24,11 +24,14 @@
         pointer-events: none;
     }
     .main-card-heading {
-        padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5); 
+        padding: ($default-base-spacer * 1) ($default-base-spacer * 1) 0 ($default-base-spacer * 1); 
+        @include media-breakpoint-up(lg) {
+           padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5); 
+        }
     }
     .card-body {
-        padding: $default-base-spacer * 1.5;
-        @include media-breakpoint-up(xl) {
+        padding: $default-base-spacer * 1;
+        @include media-breakpoint-up(lg) {
             padding: $default-base-spacer * 1.5;    
         }
         .card-icon {

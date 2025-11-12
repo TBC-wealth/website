@@ -11,6 +11,7 @@ jQuery( document ).ready(function($) {
 	* Fall back to light mode.
 	*/
 	function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
+	  return "dark";
 	  if (localStorageTheme !== null) {
 		return localStorageTheme;
 	  }
