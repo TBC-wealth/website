@@ -57,13 +57,25 @@ weight = 2
   pageRef = "/solutions/tailored-solutions"
   weight = 8
 
+  [[main]]
+  parent = "solutions"
+  name = "Wealth Planning"
+  pageRef = "/solutions/wealth-planning"
+  weight = 9
+
+  [[main]]
+  parent = "solutions"
+  name = "Investment"
+  pageRef = "/solutions/investment"
+  weight = 10
+
 [[main]]
 name = "The Origin"
 pageRef = "/the-origin"
 weight = 3
 
 [[main]]
-name = "Request Access"
+name = "BECOME A CLIENT"
 pageRef = "/request-access"
 weight = 4
 
@@ -87,7 +99,7 @@ pageRef = '/the-origin'
 weight = 3
 
 [[footer]]
-name = 'Request Access'
+name = 'BECOME A CLIENT'
 pageRef = '/request-access'
 weight = 4
 

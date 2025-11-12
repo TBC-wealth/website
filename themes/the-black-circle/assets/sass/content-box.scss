@@ -24,15 +24,12 @@
         pointer-events: none;
     }
     .main-card-heading {
-        padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5);
-        @include media-breakpoint-up(xl) {
-            padding: ($default-base-spacer * 2) ($default-base-spacer * 2) 0 ($default-base-spacer * 2);
-        }  
+        padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5); 
     }
     .card-body {
         padding: $default-base-spacer * 1.5;
         @include media-breakpoint-up(xl) {
-            padding: $default-base-spacer * 2;    
+            padding: $default-base-spacer * 1.5;    
         }
         .card-icon {
             height: 64px;
@@ -83,11 +80,21 @@
                 padding-left: $default-base-spacer * 1.75;
             }
         }
+        .fs-5 {
+            @include media-breakpoint-up(xl) {
+                font-size: 18px !important;
+                line-height: 1.5;
+                letter-spacing: 0.54px;
+            }
+        }
     }
     h5 {
         font-family: $body-font;
-        font-weight: $font-weight-normal;
+        font-weight: $font-weight-medium;
         font-size: $font-size-base * 1.25;
+        @include media-breakpoint-up(md) {
+            font-weight: $font-weight-normal;
+        }
     }
     &.custom-card-style {
         .card-body {
@@ -126,5 +133,18 @@
     .block-bg {
         opacity: 0.3;
         top: -20%;
+    }
+}
+.content-box-items {
+    .content-box-item {
+        h3 {
+            color: $primary;
+            @include media-breakpoint-up(xl) {
+                font-size: $font-size-base * 3;
+            }
+        }
+        p {
+            line-height: 1.5;
+        }
     }
 }

@@ -1,23 +1,19 @@
 {{ define "main" }}
 
-<!-- {{ $solutionbanner := resources.Get "images/the-origin-hero-bg.jpg" }} -->
-<!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
-
 <section class="block inner-hero-block position-relative">
-  <div class="hero-bg">
-    <!-- <img src="{{ (resources.Get "images/bitcoin-crypto-banner.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100"> -->
+  <!-- <div class="hero-bg">
     <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
     <img src="{{ (resources.Get "images/our-values-section-bg-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
-  </div>
+  </div> -->
   <div class="container text-center">
     <div class="row justify-content-center pb-lg-3 pt-5 mt-xl-5">
       <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
           <div class="inner-hero-item px-lg-5">
             <!-- <img src="{{ (resources.Get "images/bitcoin-crypto.png").RelPermalink }}" alt="The Black Circle" class="img-fluid mb-3 pb-lg-3" width="128px"> -->
-            <h1 class="d-inline-block text-secondary text-uppercase mb-4 pb-lg-2">Access Capital. Keep Ownership.</h1>
-            <p class="text-light mb-3">Our lending solutions let you unlock liquidity backed by Bitcoin and other leading cryptocurrencies while retaining full ownership. Use your digital wealth for personal needs, reinvestment, or new opportunities with discreet, personalized support.</p>
+            <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">Bitcoin-Backed Lending</h1>
+            <p class="text-light mb-3">Access liquidity for discretionary use while retaining ownership and market exposure.</p>
             <div class="d-flex justify-content-center pt-3">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">Request Access</a>
+              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">BECOME A CLIENT</a>
             </div>
           </div>
       </div>
@@ -25,14 +21,11 @@
   </div>
 </section>
 
-<section class="block block-bg-img-style">
-  <!-- <div class="block-bg top-0 opacity-low">
-    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
-  </div> -->
+<section class="block">
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-5 pb-lg-3">Why Leading Clients Choose Our Lending</h2>
+        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">Why Leading Clients Choose Our Lending</h2>
       </div>
     </div>
     <div class="row justify-content-center">
@@ -88,30 +81,73 @@
   </div>
 </section>
 
-<section class="block">
+<section class="block block-bg-img-style">
+  <div class="block-bg top-0">
+    <img src="{{ (resources.Get "images/holistic-background.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div>
   <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-lg-8 pt-lg-3" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-5 pb-lg-3">Designed for your unique needs</h2>
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-12 text-light text-center mb-4 mb-xl-5" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="text-uppercase">Key Benefits</h2>
       </div>
-    </div>
-    <div class="row row-gap-4 justify-content-center">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
-        <div class="card custom-card full-custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-              <div class="col-12 col-md-9">
-                  <h4 class="d-inline-block text-secondary text-uppercase mb-3">uhnwis & Digital Asset Pioneers</h4>
-                  <!-- <h3 class="h5 mb-2">Discreet liquidity for those who build and hold.</h3> -->
-                  <p class="mb-0">Access capital without compromising core holdings. Finance lifestyle needs, reinvest into digital assets, or capture new opportunities, all while preserving your long-term vision.</p>
+      <div class="col-12 col-lg-12">
+        <div class="row row-gap-3">
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="600">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Unlock liquidity without selling core assets</p>
               </div>
-              <div class="col-12 col-md-3 pb-3 p-xl-3 text-md-center">
-                <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="700">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Maintain full market exposure and ownership</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Benefit from industry-leading terms within a regulated framework</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Fund lifestyle needs, real-estate purchases, or reinvestment opportunities</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Transparent documentation and insured custody</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
+            <div class="card custom-card custom-card-style text-light">
+              <div class="card-body d-flex flex-column justify-content-center">
+                <p class="fs-5 mb-0">Operates fully within ADGM/FSRA regulatory standards</p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="container">
+    <div class="row justify-content-center text-center">
+      <div class="col-12 col-lg-8 pt-lg-3" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">How It Helps You</h2>
+      </div>
+    </div>
+    <div class="row row-gap-4 justify-content-center">
       <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="700">
         <div class="card custom-card full-custom-card text-light">
           <div class="card-body px-lg-5">
@@ -120,9 +156,8 @@
                   <img src="{{ (resources.Get "images/trusted-icon.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
               </div>
               <div class="col-12 col-md-9">
-                <h4 class="d-inline-block text-secondary text-uppercase mb-3">private banks & Family Offices</h4>
-                 <!-- <h3 class="h5 mb-2">Trusted lending frameworks for the world's most discerning clients.</h3> -->
-                <p class="mb-0">Provide clients with bespoke solutions that combine flexibility, discretion, and institutional-grade execution.</p>
+                <h4 class="d-inline-block text-uppercase mb-3">High-Net-Worth Individuals</h4>
+                <p class="mb-0">Access capital without selling assets or triggering tax events. Use your crypto to fund lifestyle needs, investments, or diversification within a secure, regulated structure that protects ownership and privacy.</p>
               </div>
             </div>
           </div>
@@ -134,9 +169,8 @@
           <div class="card-body px-lg-5">
             <div class="row align-items-center flex-column-reverse flex-md-row">
               <div class="col-12 col-md-9">
-                <h4 class="d-inline-block text-secondary text-uppercase mb-3">Crypto-Native Organizations</h4>
-                <!-- <h3 class="h5 mb-2">Treasury strength without liquidation.</h3> -->
-                <p class="mb-0">Unlock liquidity without selling your core reserves. Fund operations, extend runway, or diversify into yield strategies, while maintaining balance-sheet integrity.</p>
+                <h4 class="d-inline-block text-uppercase mb-3">Family Offices and EAMs</h4>
+                <p class="mb-0">Provide clients with regulated credit solutions backed by digital assets. Our framework integrates seamlessly into portfolios with full compliance, transparency and insured custody.</p>
               </div>
               <div class="col-12 col-md-3 pb-3 p-xl-3 text-md-center">
                 <img src="{{ (resources.Get "images/visionaries.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
