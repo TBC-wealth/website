@@ -4,70 +4,99 @@ pageRef = "/"
 weight = 1
 
 [[main]]
-identifier = "solutions"
+identifier = "Solutions"
 name = "Solutions"
+pageRef = "/solutions"
 weight = 2
 
+  # === Column 1: Financing ===
   [[main]]
-  parent = "solutions"
-  identifier = "uhnws"
-  name = "Ultra-High-Net-Worth Individuals"
-  pageRef = "/solutions/uhnws"
+  identifier = "Financing"
+  parent = "Solutions"
+  name = "Financing"
+  pageRef = "/solutions/financing"
   weight = 1
 
-  [[main]]
-  parent = "solutions"
-  name = "Family Offices and Private Banks"
-  pageRef = "/solutions/private-bank-family-offices"
-  weight = 2
+    [[main]]
+    parent = "Financing"
+    name = "Bitcoin-Backed Loans"
+    pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+    weight = 1
 
-  [[main]]
-  parent = "solutions"
-  name = "Crypto Institutions"
-  pageRef = "/solutions/crypto-native-organizations"
-  weight = 3
 
+  # === Column 2: Investment ===
   [[main]]
-  parent = "solutions"
-  name = "Bitcoin and Crypto-Backed Lending"
-  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
-  weight = 4
-
-  [[main]]
-  parent = "solutions"
-  name = "Yield Strategies"
-  pageRef = "/solutions/btc-yield-strategies"
-  weight = 5
-
-  [[main]]
-  parent = "solutions"
-  name = "Custody"
-  pageRef = "/solutions/custody"
-  weight = 6
-
-  [[main]]
-  parent = "solutions"
-  name = "OTC Trading"
-  pageRef = "/solutions/otc-trading"
-  weight = 7
-
-  [[main]]
-  parent = "solutions"
-  name = "Tailored Solutions"
-  pageRef = "/solutions/tailored-solutions"
-  weight = 8
-
-  [[main]]
-  parent = "solutions"
-  name = "Wealth Planning"
-  pageRef = "/solutions/wealth-planning"
-  weight = 9
-
-  [[main]]
-  parent = "solutions"
+  identifier = "Investment"
+  parent = "Solutions"
   name = "Investment"
   pageRef = "/solutions/investment"
-  weight = 10
+  weight = 2
+
+    [[main]]
+    parent = "Investment"
+    name = "Trading"
+    pageRef = ""
+    weight = 1
+
+    [[main]]
+    parent = "Investment"
+    name = "Custody"
+    pageRef = ""
+    weight = 2
+
+    [[main]]
+    parent = "Investment"
+    name = "Bitcoin Yield Strategies"
+    pageRef = ""
+    weight = 3
+
+
+  # === Column 3: Wealth Planning ===
+  [[main]]
+  identifier = "Wealth Planning"
+  parent = "Solutions"
+  name = "Wealth Planning"
+  pageRef = "/solutions/wealth-planning"
+  weight = 3
+
+    [[main]]
+    parent = "Wealth Planning"
+    name = "Insurance"
+    pageRef = ""
+    weight = 1
+
+    [[main]]
+    parent = "Wealth Planning"
+    name = "Fiduciary Services"
+    pageRef = ""
+    weight = 2
+
+
+  # === Column 4: Tailored Solutions ===
+  [[main]]
+  identifier = "Tailored Solutions"
+  parent = "Solutions"
+  name = "Tailored Solutions"
+  pageRef = "/solutions//tailored-solutions"
+  weight = 4
+
+    [[main]]
+    parent = "Tailored Solutions"
+    name = "Visa & Relocation"
+    pageRef = ""
+    weight = 1
+
+    [[main]]
+    parent = "Tailored Solutions"
+    name = "Bank Accounts"
+    pageRef = ""
+    weight = 2
+
+    [[main]]
+    parent = "Tailored Solutions"
+    name = "Lifestyle"
+    pageRef = ""
+    weight = 3
 
 [[main]]
 name = "The Origin"
@@ -75,7 +104,7 @@ pageRef = "/the-origin"
 weight = 3
 
 [[main]]
-name = "BECOME A CLIENT"
+name = "Request Access"
 pageRef = "/request-access"
 weight = 4
 
@@ -99,7 +128,7 @@ pageRef = '/the-origin'
 weight = 3
 
 [[footer]]
-name = 'BECOME A CLIENT'
+name = 'Request Access'
 pageRef = '/request-access'
 weight = 4
 
