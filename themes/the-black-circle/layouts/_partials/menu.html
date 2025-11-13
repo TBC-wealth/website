@@ -72,7 +72,7 @@ Renders a menu for the given menu ID.
                   {{- range sort .Children "Weight" "asc" }}
                     <div class="col-12 col-md-6 col-xl-3 mb-4">
                       <ul class="menu-column list-unstyled">
-                        <li class="h6 fw-semibold mb-3 text-uppercase"><a href="{{ .URL }}">{{ .Name }}</a></li>
+                        <li class="h6 fw-semibold mb-0"><a href="{{ .URL }}">{{ .Name }}</a></li>
 
                         {{- if .HasChildren }}
                           {{- range .Children }}

@@ -35,13 +35,13 @@ weight = 2
     [[main]]
     parent = "Investment"
     name = "Trading"
-    pageRef = ""
+    pageRef = "/solutions/investment/#trading"
     weight = 1
 
     [[main]]
     parent = "Investment"
     name = "Custody"
-    pageRef = ""
+    pageRef = "/solutions/investment/#custody"
     weight = 2
 
     [[main]]
@@ -155,29 +155,24 @@ weight = 3
 ##############################
 
 [[products]]
-name = "Bitcoin and Crypto-Backed Lending"
+name = "Financing"
 pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
 weight = 4
 
 [[products]]
-name = "Yield Strategies"
-pageRef = "/solutions/btc-yield-strategies"
+name = "Investment"
+pageRef = "/solutions/investment"
 weight = 5
 
 [[products]]
-name = "Custody"
-pageRef = "/solutions/custody"
+name = "Wealth Planning"
+pageRef = "/solutions/wealth-planning"
 weight = 6
-
-[[products]]
-name = "OTC Trading"
-pageRef = "/solutions/otc-trading"
-weight = 7
 
 [[products]]
 name = "Tailored Solutions"
 pageRef = "/solutions/tailored-solutions"
-weight = 8
+weight = 7
 
 
 ##############################
