@@ -30,10 +30,13 @@
     }
     .hero-logo {
         img {
-            max-width: 545px;
+            max-width: 450px;
             width: 90%;
+            @include media-breakpoint-up(xxl) {
+                max-width: 545px;  
+            }
             @include media-breakpoint-between(xl, xxl) {
-                max-width: 400px;    
+                max-width: 450px;    
             }
         }
     }
@@ -55,19 +58,20 @@
     }
     .h5 {
         font-size: $font-size-base;
-        letter-spacing: 2px;
+        letter-spacing: 0.8px;
+        font-weight: $font-weight-light;
     }
 }
 
 .inner-hero-block {
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     padding-top: $default-base-spacer * 5.313;
     @include media-breakpoint-up(xl) {
-        min-height: 550px;
+        min-height: 430px;
     }
     &:before {
         height: 100%;

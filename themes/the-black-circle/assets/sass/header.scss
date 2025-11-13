@@ -147,14 +147,20 @@
 		padding: 0;
 	}
 	ul.menu { 
+		height: 100%;
 		list-style-type: none; 
 		margin: 0; 
 		padding: 0;
+		padding-bottom: $default-base-spacer * 1.5;
+		overflow-y: auto;
 		@include media-breakpoint-up(xl) {
             width: 100%;
+			height: auto;
+			overflow-y: initial;
 			display: flex;
 			align-items: center;
             justify-content: center;
+			padding-bottom: 0;
             gap: $default-base-spacer * 2;
 		}
 		> li { 
@@ -228,7 +234,7 @@
 				text-align: center;
 				display: block;
 				cursor: pointer;
-				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
+				padding: ($default-base-spacer * 0.5); 
 				@include media-breakpoint-up(xl) {
 					padding: 0; 
 					display: inline-flex;
@@ -276,37 +282,33 @@
 				position: static;
 				left: 0;
 				top: 100%;
-                background: rgba(var(--color-bg), 0.03);
+                background: rgba(var(--color-fg-rgb), 0);
 				list-style-type: none;
 				margin: 0;
-				padding: $default-base-spacer * 1.5;
+				padding: 0 ($default-base-spacer * 1.5);
 				backdrop-filter: blur(30px);
 				@include media-breakpoint-up(xl) {
 					width: 910px;
-					background: rgba(var(--color-bg), 0.10);
-					border: 1px solid var(--color-fg);
+					background: rgba(var(--color-fg-rgb), 0.1);
+					border: 1px solid #3e3e3e;
 					border-radius: 10px;
 					position: absolute;
+					left: calc(-100% - 50%);
 					opacity: 0;
 					visibility: hidden;
 					transition: all 0.5s ease;
 					top: calc(100% + 28px);
+					padding: ($default-base-spacer) ($default-base-spacer * 1.5);
 				}
 				ul {
 					list-style-type: none;
-					padding: $default-base-spacer;
+					padding: 0 $default-base-spacer;
 					@include media-breakpoint-up(xl) {
 						width: 100%;
 						flex: 0 0 auto;
 						list-style-type: none;
 						margin: 0;
 						padding: 0;
-					}
-					&:first-child {
-						padding-bottom: 0;
-						@include media-breakpoint-up(xl) {
-							padding-bottom: $default-base-spacer * 2;
-						}
 					}
 					& + ul {
 						padding-top: 0;
@@ -321,7 +323,7 @@
 							background: transparent;
 							text-align: left;
 							font-size: $font-size-base;
-							font-weight: $font-weight-normal;
+							font-weight: $font-weight-light;
 							text-decoration: none; 
 							color: var(--color-fg);
 							line-height: normal;
@@ -333,6 +335,7 @@
 							@include media-breakpoint-up(xl) {
 								padding: ($default-base-spacer * 0.5) 0; 	
 								text-align: left;
+								font-weight: $font-weight-normal;
 							}
 						}
 						&:hover, &.active, &.ancestor {

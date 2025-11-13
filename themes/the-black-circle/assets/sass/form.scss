@@ -1,4 +1,7 @@
 .hsfc-FormWrapper {
+	.hsfc-Step__Content {
+		padding: 0 ($default-base-spacer* 0.5) !important;
+	}
 	.hsfc-RichText {
 		display: none;
 	}
