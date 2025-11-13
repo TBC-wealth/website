@@ -76,7 +76,12 @@ Renders a menu for the given menu ID.
 
                         {{- if .HasChildren }}
                           {{- range .Children }}
-                            <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+                            <!-- <li><a href="{{ .URL }}">{{ .Name }}</a></li> -->
+                            <li>
+                            <a href="{{ if .URL }}{{ .URL }}{{ else }}{{ .PageRef | relURL }}{{ end }}">
+                              {{ .Name }}
+                            </a>
+                          </li>
                           {{- end }}
                         {{- end }}
                       </ul>

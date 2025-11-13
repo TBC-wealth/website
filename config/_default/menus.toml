@@ -47,7 +47,7 @@ weight = 2
     [[main]]
     parent = "Investment"
     name = "Bitcoin Yield Strategies"
-    pageRef = ""
+    pageRef = "/solutions/investment/#yield-strategies"
     weight = 3
 
 
@@ -62,13 +62,13 @@ weight = 2
     [[main]]
     parent = "Wealth Planning"
     name = "Insurance"
-    pageRef = ""
+    pageRef = "/solutions/wealth-planning/#insurance"
     weight = 1
 
     [[main]]
     parent = "Wealth Planning"
     name = "Fiduciary Services"
-    pageRef = ""
+    pageRef = "/solutions/wealth-planning/#fiduciary"
     weight = 2
 
 
@@ -83,19 +83,19 @@ weight = 2
     [[main]]
     parent = "Tailored Solutions"
     name = "Visa & Relocation"
-    pageRef = ""
+    pageRef = "/solutions//tailored-solutions/#visa-relocation"
     weight = 1
 
     [[main]]
     parent = "Tailored Solutions"
     name = "Bank Accounts"
-    pageRef = ""
+    pageRef = "/solutions//tailored-solutions/#banking-access"
     weight = 2
 
     [[main]]
     parent = "Tailored Solutions"
     name = "Lifestyle"
-    pageRef = ""
+    pageRef = "/solutions//tailored-solutions/#lifestyle"
     weight = 3
 
 [[main]]
