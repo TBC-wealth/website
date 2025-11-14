@@ -77,13 +77,13 @@ weight = 2
   identifier = "Tailored Solutions"
   parent = "Solutions"
   name = "Tailored Solutions"
-  pageRef = "/solutions//tailored-solutions"
+  pageRef = "/solutions/tailored-solutions"
   weight = 4
 
     [[main]]
     parent = "Tailored Solutions"
     name = "Visa & Relocation"
-    pageRef = "/solutions//tailored-solutions/#visa-relocation"
+    pageRef = "/solutions/tailored-solutions/#visa-relocation"
     weight = 1
 
     [[main]]
