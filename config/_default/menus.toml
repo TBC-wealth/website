@@ -14,7 +14,7 @@ weight = 2
   identifier = "Financing"
   parent = "Solutions"
   name = "Financing"
-  pageRef = "/solutions/financing"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
   weight = 1
 
     [[main]]
@@ -104,7 +104,7 @@ pageRef = "/the-origin"
 weight = 3
 
 [[main]]
-name = "Request Access"
+name = "Become A Client"
 pageRef = "/request-access"
 weight = 4
 

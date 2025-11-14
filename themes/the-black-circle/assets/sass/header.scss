@@ -29,6 +29,9 @@
 	margin: 0;
 	padding: 0;
     z-index: 9;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	@include media-breakpoint-up(xl) {
 		position: absolute;
 		left: 50%;
@@ -217,24 +220,23 @@
 				}
 				display: flex;
 				justify-content: center;
-				margin: 0 ($default-base-spacer * 1.5);
+				margin: ($default-base-spacer * 0.75) ($default-base-spacer * 1.5);
 				@include media-breakpoint-up(xl) {
                     margin: 0;     
-                } 
+                }  
 			}
 			> a { 
 				text-decoration: none; 
 				color: var(--color-fg); 
 				font-family: $heading-font;
-				font-size: $font-size-base * 0.938;
+				font-size: $font-size-base;
 				font-weight: $font-weight-light;
-				letter-spacing: 0.3px;
 				line-height: normal;
                 text-transform: uppercase;
 				text-align: center;
 				display: block;
 				cursor: pointer;
-				padding: ($default-base-spacer * 0.5); 
+				padding: ($default-base-spacer * 0.75); 
 				@include media-breakpoint-up(xl) {
 					padding: 0; 
 					display: inline-flex;
@@ -254,6 +256,14 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     -webkit-text-fill-color: transparent;
+				}
+			}
+			&:nth-child(2) > {
+				a {
+					display: none;
+					@include media-breakpoint-up(xl) {
+						display: inline-flex;
+					}
 				}
 			}
 			span {
@@ -330,12 +340,14 @@
 							background-clip: inherit;
 							-webkit-background-clip: inherit;
 							-webkit-text-fill-color: inherit;
-							padding: ($default-base-spacer * 0.5) 0; 
+							padding: ($default-base-spacer * 0.75) 0; 
 							text-align: center;
+							text-transform: uppercase;
 							@include media-breakpoint-up(xl) {
 								padding: ($default-base-spacer * 0.5) 0; 	
 								text-align: left;
 								font-weight: $font-weight-normal;
+								text-transform: none;
 							}
 						}
 						&:hover, &.active, &.ancestor {
@@ -345,8 +357,18 @@
 						}
 						&.h6 {
 							a {
-								font-weight: $font-weight-medium;
+								font-weight: $font-weight-light;
+								@include media-breakpoint-up(xl) {
+									font-weight: $font-weight-medium;
+								}
 							}
+						}
+						display: none;
+						@include media-breakpoint-up(xl) {
+							display: block;
+						}
+						&:first-child {
+							display: block;
 						}
 					}
 					&.right-menu-items {
