@@ -1,4 +1,4 @@
 ---
-title: "Bitcoin Lending & Crypto Collateral Loans | Institutional Digital Asset Lending | The Black Circle"
-description: "Access capital with Bitcoin and cryptocurrency collateral through institutional lending partners. Flexible credit lines from $1M+ with competitive rates and transparent terms for sophisticated clients"
+title: "Financing & Bitcoin-Backed Lending | The Black Circle"
+description: "BlackCircle offers secure institutional lending against Bitcoin and crypto - access liquidity while retaining exposure to your digital assets."
 ---
