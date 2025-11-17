@@ -1,5 +1,23 @@
+[data-theme="light"] {
+	--color-bg: #{$white};
+	--color-fg: #{$black};
+	--color-hover-fg: #{$white};
+	--color-hover-bg: #{$black};
+    --color-bg-rgb: #{to-rgb($white)};
+    --color-fg-rgb: #{to-rgb($black)};
+}
+
+[data-theme="dark"] {
+	--color-bg: #{$black};
+	--color-fg: #{$white};
+	--color-hover-fg: #{$black};
+	--color-hover-bg: #{$white};
+    --color-bg-rgb: #{to-rgb($black)};
+    --color-fg-rgb: #{to-rgb($white)};
+}
+
 body {
-    background-color: $black;
+	background-color: var(--color-bg);
 }
 
 .block {
@@ -21,7 +39,7 @@ body {
 
 .block-bg-img-style { 
     .block-bg {
-        opacity: 0.35;
+        opacity: 0.25;
         top: -22%;
 
         &.opacity-low {
@@ -35,7 +53,7 @@ body {
         &:before {
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0) 51.44%, #000 100%);
+            background: linear-gradient(180deg, var(--color-bg) 0%, rgba(0, 0, 0, 0) 51.44%, var(--color-bg) 100%);
             content: "";
             position: absolute;
             left: 0;
@@ -125,4 +143,22 @@ body {
     @include media-breakpoint-between(xl, xxl) {
 		max-width: 85%;
 	}
+}
+
+html[data-theme="light"] {
+    .img-light {
+        display: inline-block;
+    }
+    .img-dark {
+        display: none;
+    }
+}
+
+html[data-theme="dark"] {
+    .img-light {
+        display: none;
+    }
+    .img-dark {
+        display: inline-block;
+    }
 }

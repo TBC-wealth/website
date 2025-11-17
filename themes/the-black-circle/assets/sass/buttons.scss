@@ -38,7 +38,7 @@
 	&:hover {
 		background-color: $primary;
 		span {
-			background: linear-gradient(302deg, #FFF8F8 -49.81%, #FFFFFF 95.63%);
+			background: linear-gradient(302deg, var(--color-bg) -49.81%, var(--color-bg) 95.63%);
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
@@ -49,29 +49,47 @@
 .btn-link {
 	text-decoration: none;
 	&:hover {
-		color: $light;
+		color: var(--color-fg);
 	}
 }
 
+.btn-grad { 
+	background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)
+}
+.btn-grad {
+	margin: 10px;
+	padding: 15px 45px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: 0.5s;
+	background-size: 200% auto;
+	color: var(--color-fg);          
+	box-shadow: 0 0 20px #eee;
+	border-radius: 10px;
+	display: block;
+	&:hover {
+		background-position: right center; /* change the direction of the change here */
+		color: var(--color-fg);
+		text-decoration: none;
+	}
+}
 
-
-         .btn-grad {background-image: linear-gradient(to right, #314755 0%, #26a0da  51%, #314755  100%)}
-         .btn-grad {
-            margin: 10px;
-            padding: 15px 45px;
-            text-align: center;
-            text-transform: uppercase;
-            transition: 0.5s;
-            background-size: 200% auto;
-            color: white;            
-            box-shadow: 0 0 20px #eee;
-            border-radius: 10px;
-            display: block;
-          }
-
-          .btn-grad:hover {
-            background-position: right center; /* change the direction of the change here */
-            color: #fff;
-            text-decoration: none;
-          }
-         
+html[data-theme="light"] {
+	.btn-secondary {
+		span {
+			background: linear-gradient(302deg, #86DFD7 -49.81%, #B2724A 95.63%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		&:hover {
+			background-color: $primary;
+			span {
+				background: linear-gradient(302deg, #FFF8F8 -49.81%, var(--color-bg) 95.63%);
+				background-clip: text;
+				-webkit-background-clip: text;
+				-webkit-text-fill-color: transparent;
+			}
+		}
+	}
+}

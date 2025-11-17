@@ -1,4 +1,4 @@
 ---
-title: ": Bespoke Digital Asset Solutions | Custom Crypto Wealth Management | The Black Circle"
-description: " Custom digital asset solutions tailored for unique client requirements. Bespoke cryptocurrency strategies, specialized custody arrangements, and personalized wealth management for distinguished clients."
+title: "Tailored Wealth Solutions | The Black Circle"
+description: "The Black Circle delivers bespoke wealth planning, residency, tax, banking, and lifestyle solutions - designed for high-net-worth clients globally."
 ---

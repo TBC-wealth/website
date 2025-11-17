@@ -12,8 +12,8 @@
 	margin: 0; 
 	padding: 0;
 	&.sticky-header { 
-		background-color: $black;
-		box-shadow: 0 0 15px rgba(255,255,255,0.10);
+		background-color: var(--color-bg);
+		box-shadow: 0 0 15px rgba(var(--color-fg),0.10);
 	}
 	.navbar {
 		width: 100%;
@@ -29,6 +29,9 @@
 	margin: 0;
 	padding: 0;
     z-index: 9;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
 	@include media-breakpoint-up(xl) {
 		position: absolute;
 		left: 50%;
@@ -37,6 +40,60 @@
 	}
 	img {
 		width: 185px; 
+	}
+}
+
+.theme-toggle {
+	display: flex;
+	gap: $default-base-spacer * 0.30;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	right: calc(var(--bs-gutter-x) * .5);
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 1;
+	@include media-breakpoint-up(xl) {
+		right: 0;	
+	}
+	.checkbox-label {
+		border-radius: 16px;
+		background: rgba(206, 206, 206, 0.40);
+		box-shadow: 4px -2px 2px 0 rgba(109, 114, 128, 0.06) inset;
+		width: 36px;
+		height:20px;
+		position: relative;
+		padding: 5px;
+		cursor: pointer;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		.ball {
+			background-color: #CECECE;
+			width: 16px;
+			height: 16px;
+			position: absolute;
+			left: 2px;
+			top: 2px;
+			border-radius: 100px;
+			transition: transform 0.2s linear;
+			transform: translateX(15px);
+		}
+	}
+	.checkbox {
+		opacity: 0;
+		position: absolute;
+		&:checked + .checkbox-label .ball {
+			transform: translateX(0);
+		}
+	}
+	span {
+		color: var(--color-fg);
+		svg {
+			path {
+				stroke: var(--color-fg);
+			}
+		}
 	}
 }
 
@@ -54,7 +111,7 @@
 	.line {
 		width: 30px; 
 		height: 1px;
-		background-color: $white;
+		background-color: var(--color-fg);
 		border-radius: 2px;
 		display: block;
 		margin: ($default-base-spacer * 0.5) auto;
@@ -70,7 +127,7 @@
 .navbar-menu {
 	width: 100%;
 	height: 100vh;
-	background: $black;
+	background: var(--color-bg);
 	transform: translatex(100%);
 	transition: transform 0.5s, right 0.5s;
 	padding: 0;
@@ -93,14 +150,20 @@
 		padding: 0;
 	}
 	ul.menu { 
+		height: 100%;
 		list-style-type: none; 
 		margin: 0; 
 		padding: 0;
+		padding-bottom: $default-base-spacer * 1.5;
+		overflow-y: auto;
 		@include media-breakpoint-up(xl) {
             width: 100%;
+			height: auto;
+			overflow-y: initial;
 			display: flex;
 			align-items: center;
             justify-content: center;
+			padding-bottom: 0;
             gap: $default-base-spacer * 2;
 		}
 		> li { 
@@ -157,24 +220,23 @@
 				}
 				display: flex;
 				justify-content: center;
-				margin: 0 ($default-base-spacer * 1.5);
+				margin: ($default-base-spacer * 0.75) ($default-base-spacer * 1.5);
 				@include media-breakpoint-up(xl) {
                     margin: 0;     
-                } 
+                }  
 			}
 			> a { 
 				text-decoration: none; 
-				color: $white; 
+				color: var(--color-fg); 
 				font-family: $heading-font;
-				font-size: $font-size-base * 0.938;
+				font-size: $font-size-base;
 				font-weight: $font-weight-light;
-				letter-spacing: 0.3px;
 				line-height: normal;
                 text-transform: uppercase;
 				text-align: center;
 				display: block;
 				cursor: pointer;
-				padding: ($default-base-spacer) ($default-base-spacer * 1.5); 
+				padding: ($default-base-spacer * 0.75); 
 				@include media-breakpoint-up(xl) {
 					padding: 0; 
 					display: inline-flex;
@@ -196,6 +258,14 @@
                     -webkit-text-fill-color: transparent;
 				}
 			}
+			&:nth-child(2) > {
+				a {
+					display: none;
+					@include media-breakpoint-up(xl) {
+						display: inline-flex;
+					}
+				}
+			}
 			span {
 				position: absolute;
 				width: 48px;
@@ -206,6 +276,11 @@
 				align-items: center;
 				justify-content: center;
 				z-index: 1;
+				svg {
+					path {
+						fill: var(--color-fg);
+					}
+				}
 				@include media-breakpoint-up(xl) {
 					top:50%;
 					transform: translateY(-50%);	
@@ -217,39 +292,33 @@
 				position: static;
 				left: 0;
 				top: 100%;
-                background: rgba(255, 255, 255, 0.03);
+                background: rgba(var(--color-fg-rgb), 0);
 				list-style-type: none;
 				margin: 0;
-				padding: 0;
+				padding: 0 ($default-base-spacer * 1.5);
 				backdrop-filter: blur(30px);
 				@include media-breakpoint-up(xl) {
-					width: 745px;
-					background: rgba(255, 255, 255, 0.10);
-					border: 1px solid $white;
+					width: 910px;
+					background: rgba(var(--color-fg-rgb), 0.1);
+					border: 1px solid #3e3e3e;
 					border-radius: 10px;
-					display: flex;	
-					flex-wrap: wrap;
 					position: absolute;
+					left: calc(-100% - 50%);
 					opacity: 0;
 					visibility: hidden;
 					transition: all 0.5s ease;
 					top: calc(100% + 28px);
+					padding: ($default-base-spacer) ($default-base-spacer * 1.5);
 				}
 				ul {
 					list-style-type: none;
-					padding: $default-base-spacer;
+					padding: 0 $default-base-spacer;
 					@include media-breakpoint-up(xl) {
-						width: 50%;
+						width: 100%;
 						flex: 0 0 auto;
 						list-style-type: none;
 						margin: 0;
-						padding: $default-base-spacer * 2;
-					}
-					&:first-child {
-						padding-bottom: 0;
-						@include media-breakpoint-up(xl) {
-							padding-bottom: $default-base-spacer * 2;
-						}
+						padding: 0;
 					}
 					& + ul {
 						padding-top: 0;
@@ -263,25 +332,43 @@
 							display: block;
 							background: transparent;
 							text-align: left;
-							font-size: $font-size-base * 1.125;
-							font-weight: $font-weight-normal;
+							font-size: $font-size-base;
+							font-weight: $font-weight-light;
 							text-decoration: none; 
-							color: $white;
+							color: var(--color-fg);
 							line-height: normal;
 							background-clip: inherit;
 							-webkit-background-clip: inherit;
 							-webkit-text-fill-color: inherit;
-							padding: ($default-base-spacer * 0.5) 0; 
+							padding: ($default-base-spacer * 0.75) 0; 
 							text-align: center;
+							text-transform: uppercase;
 							@include media-breakpoint-up(xl) {
-								padding: ($default-base-spacer * 0.75) 0; 	
+								padding: ($default-base-spacer * 0.5) 0; 	
 								text-align: left;
+								font-weight: $font-weight-normal;
+								text-transform: none;
 							}
 						}
 						&:hover, &.active, &.ancestor {
 							a {
 								color: $primary; 
 							}
+						}
+						&.h6 {
+							a {
+								font-weight: $font-weight-light;
+								@include media-breakpoint-up(xl) {
+									font-weight: $font-weight-medium;
+								}
+							}
+						}
+						display: none;
+						@include media-breakpoint-up(xl) {
+							display: block;
+						}
+						&:first-child {
+							display: block;
 						}
 					}
 					&.right-menu-items {
@@ -296,7 +383,7 @@
 						position: relative;
 						&::before {
 							width: 1px;
-							background-color: rgba(255,255,255,0.15);
+							background-color: rgba(var(--color-bg),0.15);
 							content: "";
 							position: absolute;
 							left: -4px;
@@ -345,6 +432,19 @@
 				-ms-transform: translateY(-9px) rotate(-45deg);
 				-o-transform: translateY(-9px) rotate(-45deg);
 				transform: translateY(-9px) rotate(-45deg);
+			}
+		}
+	}
+}
+
+html[data-theme="light"] {
+	.theme-toggle {
+		.checkbox-label {
+			border-radius: 16px;
+			background: linear-gradient(90deg, #343433 -20.21%, #CECECE 40.5%, #232323 112.71%);
+			box-shadow: 4px -2px 2px 0 rgba(109, 114, 128, 0.06) inset;
+			.ball {
+				background-color: var(--color-bg);
 			}
 		}
 	}

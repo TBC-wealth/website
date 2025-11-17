@@ -10,7 +10,7 @@
     &::before {
         width: 100%;
         height: 100%;
-        background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 62.26%, #000 100%), linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%);
+        background: linear-gradient(180deg, rgba(var(--color-bg-rgb), 0.0) 62.26%, var(--color-bg) 100%), linear-gradient(0deg, rgba(var(--color-bg-rgb), 0.20) 0%, rgba(var(--color-bg-rgb), 0.20) 100%);
         content: "";
         position: absolute;
         left: 0;
@@ -30,10 +30,13 @@
     }
     .hero-logo {
         img {
-            max-width: 545px;
+            max-width: 450px;
             width: 90%;
+            @include media-breakpoint-up(xxl) {
+                max-width: 545px;  
+            }
             @include media-breakpoint-between(xl, xxl) {
-                max-width: 400px;    
+                max-width: 450px;    
             }
         }
     }
@@ -47,23 +50,28 @@
     .herofade {
         width: 100%;
         height: 100%;
-        background: rgba(0, 0, 0, 1);
+        background: var(--color-bg);
         opacity: 0;
         top: 0;
         position: absolute;
         left: 0;
     }
+    .h5 {
+        font-size: $font-size-base;
+        letter-spacing: 0.8px;
+        font-weight: $font-weight-light;
+    }
 }
 
 .inner-hero-block {
-    min-height: 500px;
+    min-height: 400px;
     display: flex;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
     padding-top: $default-base-spacer * 5.313;
     @include media-breakpoint-up(xl) {
-        min-height: 550px;
+        min-height: 430px;
     }
     &:before {
         height: 100%;
@@ -72,7 +80,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        background: linear-gradient(250deg, #000 1.55%, rgba(0, 0, 0, 0.00) 37.29%, rgba(0, 0, 0, 0.70) 55.3%, rgba(0, 0, 0, 0.00) 76.63%), linear-gradient(0deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.75) 100%);
+        background: linear-gradient(250deg, var(--color-bg) 1.55%, rgba(var(--color-bg-rgb), 0.00) 37.29%, rgba(var(--color-bg-rgb), 0.70) 55.3%, rgba(var(--color-bg-rgb), 0.00) 76.63%), linear-gradient(0deg, rgba(var(--color-bg-rgb), 0.75) 0%, rgba(var(--color-bg-rgb), 0.75) 100%);
         z-index: 0;
     }
     .hero-bg {
@@ -95,7 +103,7 @@
         &:before {
             width: 100%;
             height: 100%;
-            background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 55.63%, #000 100%);
+            background: linear-gradient(180deg, var(--color-bg) 0%, rgba(var(--color-bg-rgb), 0.00) 55.63%, var(--color-bg) 100%);
             content: "";
             position: absolute;
             left: 0;
