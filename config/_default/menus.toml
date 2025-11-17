@@ -6,7 +6,6 @@ weight = 1
 [[main]]
 identifier = "Solutions"
 name = "Solutions"
-pageRef = "/solutions"
 weight = 2
 
   # === Column 1: Financing ===
