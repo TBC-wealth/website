@@ -1,19 +1,19 @@
 {{ define "main" }}
 
-<!-- {{ $solutionbanner := resources.Get "images/the-origin-hero-bg.jpg" }} -->
-<!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
-
 <section class="block inner-hero-block position-relative">
-  <div class="hero-bg">
-    <!-- <img src="{{ (resources.Get "images/the-origin-hero-bg.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100"> -->
-    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
-  </div>
+  <!-- <div class="hero-bg">
+    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
+    <img src="{{ (resources.Get "images/our-values-section-bg-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
+  </div> -->
   <div class="container text-center">
     <div class="row justify-content-center pb-lg-3 pt-5">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
+      <div class="col-12 col-lg-11" data-aos="fade-up" data-aos-duration="500">
           <div class="inner-hero-item px-lg-5 pt-lg-5">
-            <h1 class="d-inline-block text-secondary text-uppercase mb-4 pb-lg-2">Power. Privacy. Wealth.</h1>
-            <p class="text-light mb-3">The Black Circle is a crypto wealth manager for ultra-high-net-worth individuals, institutions, and organizations seeking more than traditional private banking. Founded by former leaders from JP Morgan, McKinsey, Deutsche Bank, Falcon Private Bank, and Virgin Group, we share one mission: to build a trusted environment where clients are understood, respected, and empowered through tailored strategies that protect and grow their wealth.</p>
+            <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">Your Regulated Gateway to Digital Wealth</h1>
+            <p class="text-light mb-3">We provide regulated, institutional-grade access to digital assets for you, your family office, or advisor. <br>Operating under ADGM and FSRA oversight, we combine financial discipline with technology, ensuring a trusted, secure, and private environment for managing digital wealth.</p>
+            <!-- <div class="d-flex pt-4 pt-xl-5 justify-content-center">
+              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">Become a Client</a>
+            </div> -->
           </div>
       </div>
     </div>
@@ -21,14 +21,114 @@
 </section>
 
 <section class="block">
+  <!-- <div class="block-bg top-0 opacity-low">
+    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div> -->
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-6 text-center text-light pt-lg-5">
-        <div class="card bg-transparent text-light">
-          <div class="card-body d-flex align-items-center flex-column p-0">
-            <img src="{{ (resources.Get "images/vision-icon.png").RelPermalink }}" alt="The Black Circle" class="img-fluid mb-3 pb-lg-3" width="128px">
-            <h2 class="h4 d-inline-block text-secondary text-uppercase mb-4 pb-lg-3">Our Vision</h2>
-            <p>To be the most trusted and exclusive private firm in the digital era, securing, growing, and connecting wealth across a global network of visionaries. We aim to elevate digital wealth into lasting influence and opportunity.</p>
+    <div class="row justify-content-center text-center">
+      <div class="col-12" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">Our Foundation</h2>
+      </div>
+    </div>
+    <div class="row row-gap-4">
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="600">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Security</h3>
+            <p class="mb-0">Institutional-grade custody and insured infrastructure safeguard every asset under our management.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="700">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Service</h3>
+            <p class="mb-0">A dedicated relationship manager delivers 24/7 personalized support, ensuring discretion, precision, and clarity in every interaction.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="800">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Compliance</h3>
+            <p class="mb-0">Authorized and regulated by the Financial Services Regulatory Authority (FSP No. 220084), we operate with full transparency and legal certainty.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Access</h3>
+            <p class="mb-0">Independent advisory model providing objective access to third-party products, ensuring selection based solely on client interests.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block block-bg-img-style">
+  <div class="block-bg top-0 opacity-low">
+    <img src="{{ (resources.Get "images/holistic-background.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">leadership</h2>
+      </div>
+      <div class="col-12 col-lg-8">
+        <div class="row row-gap-4">
+          <div class="col-12 col-md-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="600">
+            <div class="card custom-card text-light h-auto mb-3">
+              <div class="card-body d-flex flex-column py-3 px-4">
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1 pe-3">
+                    <p class="mb-1">Executive Chairman</p>
+                    <h4 class="fs-3 mb-0">Alex Tai</h4>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <img src="{{ (resources.Get "images/alex-tai.png").RelPermalink }}" alt="Alex Tai" class="img-fluid rounded-circle" loading="lazy" width="120px">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card custom-card text-light">
+              <div class="card-body d-flex flex-column">
+                <ul class="m-0 p-0 ps-2">
+                  <li>Over 30 years of leadership across blockchain, aerospace, and venture innovation.</li>
+                  <li><strong>Board Director,</strong> Global Blockchain Business Council (GBBC), advancing institutional adoption of digital assets.</li>
+                  <li>Former <strong>Group Director</strong> at Virgin Management Ltd and COO of Virgin Galactic, leading global strategy, innovation, and commercialization.</li>
+                  <!--<li><strong>Chairman</strong> of ALIENSENSE and New Frontier Aerospace, driving advancements in aerospace autonomy and sustainable propulsion.</li>
+                  <li>Recognized for connecting Web3, AI, and aerospace innovation to shape the next era of digital transformation.</li>-->
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex flex-column" data-aos="fade-up" data-aos-duration="700">
+            <div class="card custom-card text-light h-auto mb-3">
+              <div class="card-body d-flex flex-column py-3 px-4">
+                <div class="d-flex align-items-center">
+                  <div class="flex-grow-1 pe-3">
+                    <p class="mb-1">Chief Financial Officer</p>
+                    <h4 class="fs-3 mb-0">Ivan Grigorev</h4>
+                  </div>
+                  <div class="flex-shrink-0">
+                    <img src="{{ (resources.Get "images/ivan-grigorev.png").RelPermalink }}" alt="Ivan Grigorev" class="img-fluid rounded-circle" loading="lazy" width="120px">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card custom-card text-light">
+              <div class="card-body d-flex flex-column">
+                <ul class="m-0 p-0 ps-2">
+                  <li>Over a decade of experience in digital assets, quantitative trading, and institutional finance.</li>
+                  <li>Former <strong>Partner & CFO</strong> at Alber Blanc, leading digital-markets expansion, liquidity strategies, and cross-border trading infrastructure.</li>
+                  <li>Began as an <strong>algorithmic trader,</strong> managing proprietary capital and developing high-frequency models.</li>
+                  <!--<li>Specializes in bridging traditional finance with Web3 through regulated, institutional-grade frameworks.</li>
+                  <li>Delivers disciplined, compliant, and technically advanced solutions in digital asset management.</li>-->
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -43,55 +143,39 @@
   <div class="container">
     <div class="row justify-content-center text-center">
       <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-5 pb-lg-3">Our Values</h2>
+        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">Our Values</h2>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10">
-        <div class="row row-gap-4">
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="600">
-            <div class="card custom-card text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/excellence-in-everything-icon.svg").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy" width="32px">
-                </div>
-                <h3 class="h5 mb-2">Excellence in Everything</h3>
-                <p class="mb-0">We uphold the highest standards in all we do. Excellence is our baseline, not our aspiration.</p>
-              </div>
-            </div>
+    <div class="row row-gap-4">
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="600">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Excellence in Everything</h3>
+            <p class="mb-0">We uphold the highest standards in all we do. Excellence is our baseline, not our aspiration.</p>
           </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="700">
-            <div class="card custom-card text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/client-first-philosophy-icon.svg").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy" width="32px">
-                </div>
-                <h3 class="h5 mb-2">Client-First Philosophy</h3>
-                <p class="mb-0">Every decision begins with one question: Is it in the client's best interest?</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="700">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Client-First Philosophy</h3>
+            <p class="mb-0">Every decision begins with one question: Is it in the client's best interest?</p>
           </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="800">
-            <div class="card custom-card text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/institutional integrity-icon.svg").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy" width="32px">
-                </div>
-                <h3 class="h5 mb-2">Institutional Integrity</h3>
-                <p class="mb-0">We operate with full transparency, regulatory discipline, and fiduciary care, setting a new benchmark for digital asset management.</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="800">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Institutional Integrity</h3>
+            <p class="mb-0">We operate with full transparency, regulatory discipline, and fiduciary care, setting a new benchmark for digital asset management.</p>
           </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="900">
-            <div class="card custom-card text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/innovation-with-purpose-icon.svg").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy" width="32px">
-                </div>
-                <h3 class="h5 mb-2">Innovation with Purpose</h3>
-                <p class="mb-0">We apply technology that strengthens security, enhances results, and refines the client experience.</p>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-xl-3" data-aos="fade-up" data-aos-duration="900">
+        <div class="card custom-card text-light">
+          <div class="card-body d-flex flex-column">
+            <h3 class="h5 mb-2">Innovation with Purpose</h3>
+            <p class="mb-0">We apply technology that strengthens security, enhances results, and refines the client experience.</p>
           </div>
         </div>
       </div>
@@ -103,54 +187,42 @@
   <div class="container">
     <div class="row justify-content-center text-center mb-3 mb-lg-5">
       <div class="col-12 col-lg-8 pt-lg-3" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 d-inline-block text-secondary text-uppercase text-center mb-3">Beyond Wealth Management</h2>
+        <h2 class="d-inline-block text-uppercase text-center mb-3">Beyond Wealth Management</h2>
         <p class="text-light text-center px-lg-3">The Black Circle is more than a financial institution. Beyond our core offerings, we open doors to unique opportunities that amplify our clients' value in three ways:</p>
       </div>
     </div>
     <div class="row g-3 justify-content-center">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
+      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
         <div class="card custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-              <div class="col-12 col-md-9">
-                  <h4 class="d-inline-block text-secondary text-uppercase mb-3 pb-lg-1">A Network of Visionaries</h4>
-                  <p class="mb-0">Access an ecosystem of entrepreneurs, pioneers, and leaders across finance, crypto, and innovation. Through private events and curated gatherings, we connect you with those shaping the future.</p>
-              </div>
-              <div class="col-12 col-md-3 text-center">
-                <img src="{{ (resources.Get "images/visionaries.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="200px">
-              </div>
+          <div class="card-body">
+            <div class="mb-4">
+              <img src="{{ (resources.Get "images/visionaries.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="100px">
             </div>
+            <h4 class="d-inline-block text-uppercase mb-3 pb-lg-1">A Network of Visionaries</h4>
+            <p class="mb-0">Access an ecosystem of entrepreneurs, pioneers, and leaders across finance, crypto, and innovation. Through private events and curated gatherings, we connect you with those shaping the future.</p>
           </div>
         </div>
       </div>
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="700">
+      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="700">
         <div class="card custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-3 text-center">
-                  <img src="{{ (resources.Get "images/client-choose.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="200px">
-              </div>
-              <div class="col-12 col-md-9">
-                <h4 class="d-inline-block text-secondary text-uppercase mb-3 pb-lg-1">Exclusive Insights & Research</h4>
-                <p class="mb-0">Our dedicated research team delivers market intelligence and strategic overviews, giving you the clarity to make confident decisions and capture opportunities.</p>
-              </div>
+          <div class="card-body">
+            <div class="mb-4">
+              <img src="{{ (resources.Get "images/client-choose.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="100px">
             </div>
+            <h4 class="d-inline-block text-uppercase mb-3 pb-lg-1">Exclusive Insights & Research</h4>
+            <p class="mb-0">Our dedicated research team delivers market intelligence and strategic overviews, giving you the clarity to make confident decisions and capture opportunities.</p>
           </div>
         </div>
       </div>
 
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
+      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
         <div class="card custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-              <div class="col-12 col-md-9">
-                <h4 class="d-inline-block text-secondary text-uppercase mb-3 pb-lg-1">Tailored Experiences & Solutions</h4>
-                <p class="mb-0">From financial structures to bespoke strategies, we create paths designed exclusively for you. Every solution amplifies, diversifies, and secures your wealth for sustainable growth.</p>
-              </div>
-              <div class="col-12 col-md-3 text-center">
-                <img src="{{ (resources.Get "images/tailored-solutions.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="200px">
-              </div>
+          <div class="card-body">
+            <div class="mb-4">
+              <img src="{{ (resources.Get "images/tailored-solutions.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="100px">
             </div>
+            <h4 class="d-inline-block text-uppercase mb-3 pb-lg-1">Tailored Experiences & Solutions</h4>
+            <p class="mb-0">From financial structures to bespoke strategies, we create paths designed exclusively for you. Every solution amplifies, diversifies, and secures your wealth for sustainable growth.</p>
           </div>
         </div>
       </div>
@@ -165,14 +237,15 @@
         <!-- Left Column -->
         <div class="col-12 col-lg-12 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
             <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
-            <p class="mb-4 text-light text-large">Your wealth deserves discretion, trust, and growth. <br>Experience the difference.</p>
+            <p class="mb-4 text-light text-large">Exclusive Access. Exceptional Service.</p>
             <div class="d-flex pt-4">
               <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
             </div>
         </div>
         <!-- Right Column -->
         <div class="col-md-6 call-to-action-pic">
-            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
+            <img src="{{ (resources.Get "images/call-to-action-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
         </div>
       </div>
     </div>

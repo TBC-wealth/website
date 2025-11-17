@@ -7,16 +7,21 @@ body, p {
 	font-family: $body-font;
 	font-weight: $font-weight-light;
 	line-height: 1.75;
+	font-size: 14px;
 }
 ul, ol {
 	li {
 		font-family: $body-font;
 		font-weight: $font-weight-light;
-		line-height: 1.75;
+		line-height: 1.65;
+		font-size: 14px;
 	}
 }
 strong {
-	font-weight: $font-weight-bold;
+	font-weight: $font-weight-medium;
+}
+.text-light {
+	color: var(--color-fg) !important;	
 }
 .text-primary {
     background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
@@ -25,11 +30,8 @@ strong {
     -webkit-text-fill-color: transparent;
 }
 
-.text-secondary {
-    background: linear-gradient(90deg, #343433 -16.69%, #CECECE 36.61%, #232323 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.text-color-primary {
+	color: $primary;
 }
 
 .text-large, .text-large p {
@@ -46,46 +48,50 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $heading-font;
 	font-weight: $font-weight-normal;
 	margin-bottom: $default-base-spacer;
-	color: $white;
+	color: var(--color-fg);
 }
 
 h1, .h1 { 
 	font-size: $font-size-base * 1.875; 
 	line-height: 1.15;
-	font-weight: $font-weight-light;
+	font-weight: $font-weight-medium;
 	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 2.375;
-	} 
-	@include media-breakpoint-up(xl) {
-		font-size: $font-size-base * 2.75;
-	} 
-}
-
-h2, .h2 { 
-	font-size: $font-size-base * 1.875; 
-	line-height: 1.2;
-	font-weight: $font-weight-light;
-    background: linear-gradient(90deg, #343433 -18.71%, #CECECE 35.51%, #232323 100%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-	@include media-breakpoint-up(md) {
-		font-size: $font-size-base * 2.375;
-        letter-spacing: 2.3px;
+		font-weight: $font-weight-light;
 	} 
 	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.875;
 	} 
 }
 
-h3, .h3 { 
-	font-size: $font-size-base * 2;
+h2, .h2 { 
+	font-size: $font-size-base * 1.75; 
 	line-height: 1.2;
+	font-weight: $font-weight-medium;
+    // background: linear-gradient(90deg, #343433 -18.71%, #CECECE 35.51%, #232323 100%);
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
 	@include media-breakpoint-up(md) {
-		font-size: $font-size-base * 2.125;
+		font-size: $font-size-base * 1.875;
+        letter-spacing: 2.3px;
+		font-weight: $font-weight-light;
 	} 
 	@include media-breakpoint-up(xl) {
-		font-size: $font-size-base * 2.5;
+		font-size: $font-size-base * 2;
+	} 
+}
+
+h3, .h3 { 
+	font-size: $font-size-base * 1.65;
+	line-height: 1.2;
+	font-weight: $font-weight-medium;
+	@include media-breakpoint-up(md) {
+		font-size: $font-size-base * 1.75;
+		font-weight: $font-weight-normal;
+	} 
+	@include media-breakpoint-up(xl) {
+		font-size: $font-size-base * 1.875;
 		line-height: 1;
 	} 
 }
@@ -93,22 +99,41 @@ h3, .h3 {
 h4, .h4 { 
 	font-size: $font-size-base * 1.5; 
 	line-height: 1.2;
+	font-weight: $font-weight-medium;
 	@include media-breakpoint-up(md) {
-		font-size: $font-size-base * 1.75; 
+		font-size: $font-size-base * 1.625; 
+		font-weight: $font-weight-normal;
 	}
 	@include media-breakpoint-up(xl) {
-		font-size: $font-size-base * 2; 
+		font-size: $font-size-base * 1.75; 
 	} 
 }
 
 h5, .h5 { 
+	font-weight: $font-weight-medium;
 	font-size: $font-size-base * 1.25; 
+	@include media-breakpoint-up(md) {
+		font-weight: $font-weight-normal;
+	}
 	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 1.375; 
 	} 
 }
 
 h6, .h6 { 
+	font-weight: $font-weight-medium;
 	font-size: $font-size-base * 1.125;
 	line-height: 1.4;
+	@include media-breakpoint-up(md) {
+		font-weight: $font-weight-normal;
+	}
 }
+
+// html[data-theme="light"] {
+// 	h2, .h2, .{
+// 		background: var(--Linear-3, linear-gradient(90deg, $darkgrey -20.21%, $lightgrey 40.5%, $darkgrey 112.71%));
+// 		background-clip: text;
+// 		-webkit-background-clip: text;
+// 		-webkit-text-fill-color: transparent;
+// 	}	
+// }

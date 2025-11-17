@@ -1,21 +1,18 @@
 {{ define "main" }}
 
-<!-- {{ $solutionbanner := resources.Get "images/solution-hero-banner.png" }} -->
-<!-- {{ $ctabanner := resources.Get "images/holistic-background.png" }} -->
-
 <section class="block inner-hero-block position-relative">
-  <div class="hero-bg">
+  <!-- <div class="hero-bg">
     <img src="{{ (resources.Get "images/solution-hero-banner.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
-  </div>
+  </div> -->
   <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5">
+    <div class="row justify-content-center pb-lg-3 pt-5 mt-xl-5">
       <div class="col-lg-10 col-12" data-aos="fade-up" data-aos-duration="500">
           <div class="inner-hero-item">
-            <h1 class="text-secondary text-uppercase mb-3">Tailored digital wealth solutions designed for those who demand more</h1>
+            <h1 class="text-uppercase mb-3">Tailored digital wealth solutions designed for those who demand more</h1>
             <p class="text-light">At The Black Circle, we provide institutional-grade financial solutions for Bitcoin and other leading cryptocurrencies. Our offerings are built to secure, amplify, and activate your wealth, combining precision, discretion, and world-class infrastructure.</p>
-            <div class="d-flex justify-content-center pt-3">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">Request Access</a>
-            </div>
+            <!-- <div class="d-flex justify-content-center pt-3">
+              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">BECOME A CLIENT</a>
+            </div> -->
           </div>
       </div>
     </div>
@@ -26,7 +23,7 @@
   <div class="container">
     <div class="row justify-content-center">
       <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 text-secondary text-uppercase text-center mb-5 pb-lg-3">Core Offerings</h2>
+        <h2 class="h4 text-uppercase text-center mb-5 pb-lg-3">Core Offerings</h2>
       </div>
     </div>
     <div class="row row-gap-4">
@@ -78,7 +75,7 @@
   <div class="container">
     <div class="row justify-content-center mb-5">
       <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="text-secondary text-uppercase text-center mb-3">Created to serve those who shape the future of digital wealth</h2>
+        <h2 class="text-uppercase text-center mb-3">Created to serve those who shape the future of digital wealth</h2>
         <p class="text-light text-center mb-0">The Black Circle was built with a singular purpose: to serve the individuals and organizations driving the next era of capital. Every service is designed to protect, activate, and elevate wealth without compromise.</p>
       </div>
     </div>
@@ -121,14 +118,15 @@
         <!-- Left Column -->
         <div class="col-12 col-lg-12 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
             <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
-            <p class="mb-4 text-light text-large">Your wealth deserves discretion, trust, and growth. <br>Experience the difference.</p>
+            <p class="mb-4 text-light text-large">Exclusive Access. Exceptional Service.</p>
             <div class="d-flex pt-4">
               <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
             </div>
         </div>
         <!-- Right Column -->
         <div class="col-md-6 call-to-action-pic">
-            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+          <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
+          <img src="{{ (resources.Get "images/call-to-action-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
         </div>
       </div>
     </div>

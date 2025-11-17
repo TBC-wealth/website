@@ -1,7 +1,7 @@
 .footer {
-    background: var(--black-gradient, linear-gradient(325deg, #20201E -2.33%, #0F0E0E 90.92%));
+    background: var(--black-gradient, linear-gradient(325deg, var(--color-bg) -2.33%, var(--color-bg) 90.92%));
     padding: ($default-base-spacer * 3) 0;
-    color: $light;
+    color: var(--color-fg);
     @include media-breakpoint-up(xl) {
         padding: $default-vertical-padding 0;
     }
@@ -16,7 +16,7 @@
     }
     a {
         text-decoration: none;
-        color: $white;
+        color: var(--color-fg);
         &:hover {
             color: $primary;
         }
@@ -27,7 +27,7 @@
         padding: 0;
         li {
             a {
-                color: $white;
+                color: var(--color-fg);
             }
             & + li {
                 margin-top: $default-base-spacer * 0.5;
@@ -46,11 +46,11 @@
     .form-control {
         height: 48px;
         background-color: transparent;
-        border: 1px solid rgba($white, 0.2);
+        border: 1px solid rgba(var(--color-bg-rgb), 0.2);
         border-radius: 6px;
-        color: rgba($white, 0.85);
+        color: rgba(var(--color-fg-rgb), 0.85);
         &::placeholder {
-            color: rgba($white, 0.85);    
+            color: rgba(var(--color-fg-rgb), 0.85);    
         }
         &:focus {
             outline: none;
