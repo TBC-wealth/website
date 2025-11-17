@@ -1,4 +1,4 @@
 ---
-title: "Bespoke Digital Asset Solutions | Custom Crypto Wealth Management | The Black Circle"
-description: " Custom digital asset solutions tailored for unique client requirements. Bespoke cryptocurrency strategies, specialized custody arrangements, and personalized wealth management for distinguished clients."
+title: "Institutional Crypto Investment | Black Circle"
+description: "The Black Circle provides regulated crypto investment services - trading, custody & yield solutions for institutional wealth planning in ADGM."
 ---
