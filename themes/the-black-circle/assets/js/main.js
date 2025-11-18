@@ -110,7 +110,7 @@ jQuery( document ).ready(function($) {
 
 	// Menu
 	var windowWidth = $(window).width();
-	$('.navbar-menu .menu > li > span').click(function (e) {
+	$('.navbar-menu .menu > li > .has-children').click(function (e) {
 		e.preventDefault();
 		var $ul = $(this).siblings('.sub-menu');
 		if ($ul.length > 0) {

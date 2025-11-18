@@ -31,6 +31,13 @@ Renders a menu for the given menu ID.
         {{- $name = . }}
       {{- end }}
     {{- end }}
+
+    {{- if .HasChildren }}
+    {{- $existing := index $attrs "class" | default "" }}
+    {{- $newClass := cond (eq $existing "") "has-children" (printf "%s has-children" $existing) }}
+    {{- $attrs = merge $attrs (dict "class" $newClass) }}
+  {{- end }}
+
     <li class="{{ if $page.IsMenuCurrent .Menu . }}active{{ else if $page.HasMenuCurrent .Menu . }}ancestor{{ end }}">
       <a
         {{- range $k, $v := $attrs }}
