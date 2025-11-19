@@ -289,6 +289,7 @@
 				list-style-type: none;
 				margin: 0;
 				padding: 0 ($default-base-spacer * 1.5);
+				padding-bottom: $default-base-spacer;
 				backdrop-filter: blur(30px);
 				display: none;
 				@include media-breakpoint-up(xl) {
@@ -357,36 +358,19 @@
 									font-weight: $font-weight-medium;
 								}
 							}
-						}
-						display: none;
-						@include media-breakpoint-up(xl) {
-							display: block;
-						}
-						&:first-child {
-							display: block;
-						}
-					}
-					&.right-menu-items {
-						li {
-							a {
-								font-size: $font-size-base;
-								font-weight: $font-weight-light;
-							}
-						}
-					}
-					&.right-menu-items {
-						position: relative;
-						&::before {
-							width: 1px;
-							background-color: rgba(var(--color-bg),0.15);
-							content: "";
-							position: absolute;
-							left: -4px;
-							top: $default-base-spacer;
-							bottom: $default-base-spacer;	
+						}	
+					}	
+				}
+				.sub-childrens {
+					li {
+						a {
+							text-transform: initial;
+							padding: ($default-base-spacer * 0.25) 0;
 							@include media-breakpoint-up(xl) {
-								top: $default-base-spacer * 2;
-								bottom: $default-base-spacer * 2;	
+								padding: ($default-base-spacer * 0.5) 0; 	
+								text-align: left;
+								font-weight: $font-weight-normal;
+								text-transform: none;
 							}
 						}
 					}
