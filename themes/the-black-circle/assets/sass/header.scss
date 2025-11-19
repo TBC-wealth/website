@@ -289,7 +289,6 @@
 				list-style-type: none;
 				margin: 0;
 				padding: 0 ($default-base-spacer * 1.5);
-				padding-bottom: $default-base-spacer;
 				backdrop-filter: blur(30px);
 				display: none;
 				@include media-breakpoint-up(xl) {
@@ -336,9 +335,8 @@
 							background-clip: inherit;
 							-webkit-background-clip: inherit;
 							-webkit-text-fill-color: inherit;
-							padding: ($default-base-spacer * 0.75) 0; 
+							padding: ($default-base-spacer * 0.5) 0; 
 							text-align: center;
-							text-transform: uppercase;
 							@include media-breakpoint-up(xl) {
 								padding: ($default-base-spacer * 0.5) 0; 	
 								text-align: left;
@@ -362,18 +360,22 @@
 					}	
 				}
 				.sub-childrens {
-					li {
-						a {
-							text-transform: initial;
-							padding: ($default-base-spacer * 0.25) 0;
-							@include media-breakpoint-up(xl) {
-								padding: ($default-base-spacer * 0.5) 0; 	
-								text-align: left;
-								font-weight: $font-weight-normal;
-								text-transform: none;
-							}
-						}
+					display: none;
+					@include media-breakpoint-up(xl) {
+						display: block;
 					}
+					// li {
+					// 	a {
+					// 		text-transform: initial;
+					// 		padding: ($default-base-spacer * 0.25) 0;
+					// 		@include media-breakpoint-up(xl) {
+					// 			padding: ($default-base-spacer * 0.5) 0; 	
+					// 			text-align: left;
+					// 			font-weight: $font-weight-normal;
+					// 			text-transform: none;
+					// 		}
+					// 	}
+					// }
 				}
 			}
 			&:hover {
