@@ -1,0 +1,194 @@
+[[main]]
+identifier = "home"
+name = "الرئيسية"
+pageRef = "/"
+weight = 1
+
+[[main]]
+identifier = "solutions"
+name = "الحلول"
+weight = 2
+
+  [[main]]
+  identifier = "financing"
+  parent = "solutions"
+  name = "التمويل"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+  weight = 1
+
+    [[main]]
+    parent = "financing"
+    name = "قروض مدعومة بالبيتكوين"
+    pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+    weight = 1
+
+
+  [[main]]
+  identifier = "investment"
+  parent = "solutions"
+  name = "الاستثمار"
+  pageRef = "/solutions/investment"
+  weight = 2
+
+    [[main]]
+    parent = "investment"
+    name = "التداول"
+    pageRef = "/solutions/investment/#trading"
+    weight = 1
+
+    [[main]]
+    parent = "investment"
+    name = "الحفظ"
+    pageRef = "/solutions/investment/#custody"
+    weight = 2
+
+    [[main]]
+    parent = "investment"
+    name = "استراتيجيات العائد من البيتكوين"
+    pageRef = "/solutions/investment/#yield-strategies"
+    weight = 3
+
+
+  [[main]]
+  identifier = "wealth"
+  parent = "solutions"
+  name = "التخطيط المالي"
+  pageRef = "/solutions/wealth-planning"
+  weight = 3
+
+    [[main]]
+    parent = "wealth"
+    name = "التأمين"
+    pageRef = "/solutions/wealth-planning/#insurance"
+    weight = 1
+
+    [[main]]
+    parent = "wealth"
+    name = "الخدمات الائتمانية"
+    pageRef = "/solutions/wealth-planning/#fiduciary"
+    weight = 2
+
+
+  [[main]]
+  identifier = "tailored"
+  parent = "solutions"
+  name = "حلول مخصصة"
+  pageRef = "/solutions/tailored-solutions"
+  weight = 4
+
+    [[main]]
+    parent = "tailored"
+    name = "التأشيرات والانتقال"
+    pageRef = "/solutions/tailored-solutions/#visa-relocation"
+    weight = 1
+
+    [[main]]
+    parent = "tailored"
+    name = "الحسابات البنكية"
+    pageRef = "/solutions/tailored-solutions/#banking-access"
+    weight = 2
+
+    [[main]]
+    parent = "tailored"
+    name = "أسلوب الحياة"
+    pageRef = "/solutions/tailored-solutions/#lifestyle"
+    weight = 3
+
+
+[[main]]
+identifier = "origin"
+name = "الأصل"
+pageRef = "/the-origin"
+weight = 3
+
+[[main]]
+identifier = "client"
+name = "كن عميلاً"
+pageRef = "/request-access"
+weight = 4
+
+##############################
+# Footer Menu Sitemap
+##############################
+
+[[footer]]
+name = 'Home'
+pageRef = '/'
+weight = 1
+
+[[footer]]
+name = 'Solutions'
+pageRef = '/solutions'
+weight = 2
+
+[[footer]]
+name = 'The Origin'
+pageRef = '/the-origin'
+weight = 3
+
+[[footer]]
+name = 'Request Access'
+pageRef = '/request-access'
+weight = 4
+
+ ##############################
+# Footer Menu Terms
+##############################
+
+[[terms]]
+name = 'الشروط والأحكام'
+pageRef = '/terms'
+weight = 1
+
+##############################
+# Footer Menu Company
+##############################
+
+[[company]]
+name = 'الأصل'
+pageRef = '/the-origin'
+weight = 3
+
+##############################
+# Footer Menu Products
+##############################
+
+[[products]]
+name = "التمويل"
+pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+weight = 4
+
+[[products]]
+name = "استثمار"
+pageRef = "/solutions/investment"
+weight = 5
+
+[[products]]
+name = "تخطيط الثروة"
+pageRef = "/solutions/wealth-planning"
+weight = 6
+
+[[products]]
+name = "حلول مخصصة"
+pageRef = "/solutions/tailored-solutions"
+weight = 7
+
+
+##############################
+# Footer Menu Explore
+##############################
+
+[[explore]]
+name = "Ultra-High-Net-Worth Individuals"
+pageRef = "/solutions/uhnws"
+weight = 1
+
+[[explore]]
+name = "Family Offices and Private Banks"
+pageRef = "/solutions/private-bank-family-offices"
+weight = 2
+
+[[explore]]
+name = "Crypto Institutions"
+pageRef = "/solutions/crypto-native-organizations"
+weight = 3

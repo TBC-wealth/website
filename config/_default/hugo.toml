@@ -15,3 +15,19 @@ enableRobotsTXT = true
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+
+[languages]
+
+  [languages.en]
+    contentDir = "content/en"
+    title = "The Black Circle"
+    weight = 10
+
+  [languages.ar]
+    contentDir = "content/ar"
+    title = "الدائرة السوداء"
+    weight = 20
