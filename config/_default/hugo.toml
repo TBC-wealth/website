@@ -21,7 +21,6 @@ defaultContentLanguageInSubdir = true
 
 
 [languages]
-
   [languages.en]
     contentDir = "content/en"
     title = "The Black Circle"
