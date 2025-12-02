@@ -23,10 +23,12 @@ defaultContentLanguageInSubdir = true
 [languages]
   [languages.en]
     contentDir = "content/en"
+    languageDirection = 'ltr'
     title = "The Black Circle"
     weight = 10
 
   [languages.ar]
     contentDir = "content/ar"
+    languageDirection = 'rtl'
     title = "الدائرة السوداء"
     weight = 20

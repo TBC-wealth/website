@@ -1,23 +1,37 @@
-{{- $sassOptions := dict "targetPath" "css/style.css" "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
-{{/*- $postcssOptions := dict "use" "autoprefixer" "noMap" true -*/}}
- 
+{{- $sassOptions := dict "enableSourceMap" true "outputStyle" "expanded" "precision" 6 -}}
 {{ if not hugo.IsDevelopment -}}
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
-{{- end -}}
- 
-{{ $css := resources.Get "sass/main.scss" | toCSS $sassOptions -}}
-
-{{ $slick := resources.Get "css/slick.css" -}}
-<link rel="stylesheet" href="{{ $slick.RelPermalink | relURL }}" media="screen">
-
-{{ $aos := resources.Get "css/aos.css" -}}
-<link rel="stylesheet" href="{{ $aos.RelPermalink | relURL }}" media="screen">
- 
-{{ if hugo.IsDevelopment  -}}
-  <link rel="stylesheet" href="{{ $css.RelPermalink | relURL }}" media="screen">
-{{ else -}}
-  {{ $secureCSS := $css | resources.Fingerprint "sha512" -}}
-  <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" media="screen" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous">
-
 {{ end -}}
- 
+
+{{/* Build LTR CSS */}}
+{{ $mainLTR := resources.Get "sass/main.scss" | toCSS (merge $sassOptions (dict "targetPath" "css/style-ltr.css"))}}
+
+{{/* Build RTL CSS */}}
+{{ $mainRTL := resources.Get "sass/main-rtl.scss" | toCSS (merge $sassOptions (dict "targetPath" "css/style-rtl.css")) | postCSS}}
+
+{{/* Extra CSS */}}
+{{ $slick := resources.Get "css/slick.css" }}
+<link rel="stylesheet" href="{{ $slick.RelPermalink }}" media="screen">
+
+{{ $aos := resources.Get "css/aos.css" }}
+<link rel="stylesheet" href="{{ $aos.RelPermalink }}" media="screen">
+
+{{ if hugo.IsDevelopment }}
+
+    {{ if eq .Site.Language.LanguageDirection "rtl" }}
+        <link rel="stylesheet" href="{{ $mainRTL.RelPermalink }}" media="screen">
+    {{ else }}
+        <link rel="stylesheet" href="{{ $mainLTR.RelPermalink }}" media="screen">
+    {{ end }}
+
+{{ else }}
+
+    {{ if eq .Site.Language.LanguageDirection "rtl" }}
+        {{ $secureCSS := $mainRTL | resources.Fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" media="screen">
+    {{ else }}
+        {{ $secureCSS := $mainLTR | resources.Fingerprint "sha512" }}
+        <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" media="screen">
+    {{ end }}
+
+{{ end }}

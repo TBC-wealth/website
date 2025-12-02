@@ -11,7 +11,7 @@ public/
 resources/
 .hugo_build.lock
 hugo_stats.json
-
+package-lock.json
 # Go modules
 go.sum
 
