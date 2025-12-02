@@ -10,6 +10,41 @@
             {{ partial "menu.ar.html" (dict "menuID" "main" "page" .) }}
         </div>
         <div class="theme-toggle">
+            <!-- Language Menu -->
+            {{ if hugo.IsMultilingual -}}
+            <div class="menu-language dropdown">
+                <a class="dropdown-toggle" id="navbarLanguageDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ .Site.Language.LanguageCode }}
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarLanguageDropdown">
+                    <li>
+                    <a class="dropdown-item active" aria-current="true" href="{{ .RelPermalink }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                        {{ .Site.Language.LanguageName }}
+                    </a>
+                    </li>
+                    {{ if .IsTranslated -}}
+                    {{ range .Translations }}
+                    <li>
+                    <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                        {{ .Language.LanguageName }}
+                    </a>
+                    </li>
+                    {{ end -}}
+                    {{ else -}}
+                    {{ range .Site.Home.AllTranslations -}}
+                    {{ if ne $.Site.Language.Lang .Language.Lang }}
+                    <li>
+                    <a class="dropdown-item" rel="alternate" href="{{ .RelPermalink }}" hreflang="{{ .Lang }}" lang="{{ .Lang }}"{{ with .Title }} title='{{ . }}' aria-label='{{ . }}'{{ end }}>
+                        {{ .Language.LanguageName }}
+                    </a>
+                    </li>
+                    {{ end -}}
+                    {{ end -}}
+                    {{ end -}}
+                </ul>
+                
+            </div>
+            {{ end -}}
             <button class="menu-toggle">
                 <span class="line"></span>
                 <span class="line"></span>

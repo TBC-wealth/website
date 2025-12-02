@@ -1,4 +1,4 @@
 ---
-title: "About The Black Circle | Digital Asset Wealth Management Leaders | Our Story"
-description: "Founded in 2024 to redefine digital wealth management for distinguished clients. Learn about our mission to provide institutional-grade cryptocurrency solutions with traditional private banking excellence."
+title: "حول الدائرة السوداء | رواد إدارة ثروات الأصول الرقمية | قصتنا"
+description: "تأسست عام ٢٠٢٤ لإعادة تعريف إدارة الثروات الرقمية لعملائها المميزين. تعرّف على مهمتنا في توفير حلول العملات المشفرة بمستوى مؤسسي مع تميز الخدمات المصرفية الخاصة التقليدية."
 ---

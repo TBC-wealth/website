@@ -6,6 +6,10 @@
   <script src="{{ .RelPermalink }}"></script>
 {{- end }}
 
+{{- with resources.Get "js/popper.min.js" }}
+  <script src="{{ .RelPermalink }}"></script>
+{{- end }}
+
 {{- with resources.Get "js/bootstrap.min.js" }}
   <script src="{{ .RelPermalink }}"></script>
 {{- end }}
