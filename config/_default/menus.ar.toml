@@ -35,21 +35,21 @@ weight = 2
     identifier = "Trading"
     parent = "Investment"
     name = "التداول"
-    pageRef = "/solutions/investment/#trading"
+    url = "/ar/solutions/investment/#trading"
     weight = 1
 
     [[main]]
     identifier = "Custody"
     parent = "Investment"
     name = "الحفظ"
-    pageRef = "/solutions/investment/#custody"
+    url = "/ar/solutions/investment/#custody"
     weight = 2
 
     [[main]]
     identifier = "Bitcoin Yield Strategies"
     parent = "Investment"
     name = "استراتيجيات العائد من البيتكوين"
-    pageRef = "/solutions/investment/#yield-strategies"
+    url = "/ar/solutions/investment/#yield-strategies"
     weight = 3
 
 
@@ -64,14 +64,14 @@ weight = 2
     identifier = "Insurance"
     parent = "Wealth Planning"
     name = "التأمين"
-    pageRef = "/solutions/wealth-planning/#insurance"
+    url = "/ar/solutions/wealth-planning/#insurance"
     weight = 1
 
     [[main]]
     identifier = "Fiduciary Services"
     parent = "Wealth Planning"
     name = "الخدمات الائتمانية"
-    pageRef = "/solutions/wealth-planning/#fiduciary"
+    url = "/ar/solutions/wealth-planning/#fiduciary"
     weight = 2
 
 
@@ -86,21 +86,21 @@ weight = 2
     identifier = "Visa & Relocation"
     parent = "Tailored Solutions"
     name = "التأشيرات والانتقال"
-    pageRef = "/solutions/tailored-solutions/#visa-relocation"
+    url = "/ar/solutions/tailored-solutions/#visa-relocation"
     weight = 1
 
     [[main]]
     identifier = "Bank Accounts"
     parent = "Tailored Solutions"
     name = "الحسابات البنكية"
-    pageRef = "/solutions/tailored-solutions/#banking-access"
+    url = "/ar/solutions/tailored-solutions/#banking-access"
     weight = 2
 
     [[main]]
     identifier = "Lifestyle"
     parent = "Tailored Solutions"
     name = "أسلوب الحياة"
-    pageRef = "/solutions/tailored-solutions/#lifestyle"
+    url = "/ar/solutions/tailored-solutions/#lifestyle"
     weight = 3
 
 
