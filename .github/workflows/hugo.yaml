@@ -67,10 +67,11 @@ jobs:
         run: echo "NODE_ENV=development" >> $GITHUB_ENV
       - name: Install Node.js dependencies
         run: |
-          [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
-      - name: Ensure PostCSS binaries exist
-        run: |
-          npm install -g postcss postcss-cli autoprefixer postcss-rtlcss
+          npm install --include=dev
+          echo "Installed node_modules:"
+          ls -R node_modules | head -n 50
+      - name: Add local PostCSS binaries to PATH
+        run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
       - name: Configure Git
         run: |
           git config core.quotepath false
