@@ -1,0 +1,203 @@
+[[main]]
+identifier = "Home"
+name = "الرئيسية"
+pageRef = "/"
+weight = 1
+
+[[main]]
+identifier = "Solutions"
+name = "الحلول والخدمات"
+weight = 2
+
+  [[main]]
+  identifier = "Financing"
+  parent = "Solutions"
+  name = "التمويل"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+  weight = 1
+
+    [[main]]
+    identifier = "Bitcoin-Backed Loans"
+    parent = "Financing"
+    name = "الإقراض بضمان البيتكوين"
+    pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+    weight = 1
+
+
+  [[main]]
+  identifier = "Investment"
+  parent = "Solutions"
+  name = "الإستثمار"
+  pageRef = "/solutions/investment"
+  weight = 2
+
+    [[main]]
+    identifier = "Trading"
+    parent = "Investment"
+    name = "التداول"
+    url = "/ar/solutions/investment/#trading"
+    weight = 1
+
+    [[main]]
+    identifier = "Custody"
+    parent = "Investment"
+    name = "الحفظ الأمين"
+    url = "/ar/solutions/investment/#custody"
+    weight = 2
+
+    [[main]]
+    identifier = "Bitcoin Yield Strategies"
+    parent = "Investment"
+    name = "استراتيجيات تحقيق العائد"
+    url = "/ar/solutions/investment/#yield-strategies"
+    weight = 3
+
+
+  [[main]]
+  identifier = "Wealth Planning"
+  parent = "Solutions"
+  name = "التخطيط للثروة"
+  pageRef = "/solutions/wealth-planning"
+  weight = 3
+
+    [[main]]
+    identifier = "Insurance"
+    parent = "Wealth Planning"
+    name = "التأمين الخاص على الحياة"
+    url = "/ar/solutions/wealth-planning/#insurance"
+    weight = 1
+
+    [[main]]
+    identifier = "Fiduciary Services"
+    parent = "Wealth Planning"
+    name = "خدمات الوصاية"
+    url = "/ar/solutions/wealth-planning/#fiduciary"
+    weight = 2
+
+
+  [[main]]
+  identifier = "Tailored Solutions"
+  parent = "Solutions"
+  name = "حلول على مقاسك"
+  pageRef = "/solutions/tailored-solutions"
+  weight = 4
+
+    [[main]]
+    identifier = "Visa & Relocation"
+    parent = "Tailored Solutions"
+    name = "التأشيرات والإقامة"
+    url = "/ar/solutions/tailored-solutions/#visa-relocation"
+    weight = 1
+
+    [[main]]
+    identifier = "Bank Accounts"
+    parent = "Tailored Solutions"
+    name = "الوصول إلى الخدمات المصرفية"
+    url = "/ar/solutions/tailored-solutions/#banking-access"
+    weight = 2
+
+    [[main]]
+    identifier = "Lifestyle"
+    parent = "Tailored Solutions"
+    name = "تجربة حياة استثنائية"
+    url = "/ar/solutions/tailored-solutions/#lifestyle"
+    weight = 3
+
+
+[[main]]
+identifier = "The Origin"
+name = "بدايتنا"
+pageRef = "/the-origin"
+weight = 3
+
+[[main]]
+identifier = "Become A Client"
+name = "إنضم الى قائمة عملائنا"
+pageRef = "/request-access"
+weight = 4
+
+##############################
+# Footer Menu Sitemap
+##############################
+
+[[footer]]
+name = 'الرئيسية'
+pageRef = '/'
+weight = 1
+
+[[footer]]
+name = 'الحلول والخدمات'
+pageRef = '/solutions'
+weight = 2
+
+[[footer]]
+name = 'بدايتنا'
+pageRef = '/the-origin'
+weight = 3
+
+[[footer]]
+name = 'Request Access'
+pageRef = '/request-access'
+weight = 4
+
+ ##############################
+# Footer Menu Terms
+##############################
+
+[[terms]]
+name = 'الشروط والأحكام'
+pageRef = '/terms'
+weight = 1
+
+##############################
+# Footer Menu Company
+##############################
+
+[[company]]
+name = 'بدايتنا'
+pageRef = '/the-origin'
+weight = 3
+
+##############################
+# Footer Menu Products
+##############################
+
+[[products]]
+name = "التمويل"
+pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+weight = 4
+
+[[products]]
+name = "الإستثمار"
+pageRef = "/solutions/investment"
+weight = 5
+
+[[products]]
+name = "التخطيط للثروة"
+pageRef = "/solutions/wealth-planning"
+weight = 6
+
+[[products]]
+name = "حلول على مقاسك"
+pageRef = "/solutions/tailored-solutions"
+weight = 7
+
+
+##############################
+# Footer Menu Explore
+##############################
+
+[[explore]]
+name = "Ultra-High-Net-Worth Individuals"
+pageRef = "/solutions/uhnws"
+weight = 1
+
+[[explore]]
+name = "Family Offices and Private Banks"
+pageRef = "/solutions/private-bank-family-offices"
+weight = 2
+
+[[explore]]
+name = "Crypto Institutions"
+pageRef = "/solutions/crypto-native-organizations"
+weight = 3

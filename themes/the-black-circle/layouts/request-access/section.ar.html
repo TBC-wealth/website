@@ -1,0 +1,51 @@
+{{ define "main" }}
+
+<section class="block inner-hero-block position-relative">
+  <!-- <div class="hero-bg opacity-half">
+    <img src="{{ (resources.Get "images/request-bg.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
+    <img src="{{ (resources.Get "images/request-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
+  </div> -->
+  <div class="container text-center">
+    <div class="row justify-content-center pb-lg-3 pt-5">
+      <div class="col-12 col-lg-8 z-1" data-aos="fade-up" data-aos-duration="500">
+          <div class="inner-hero-item px-lg-5 pt-lg-5">
+            <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">هل أنت مستعد لتأمين أصولك الرقمية وتنميتها؟</h1>
+            <p class="text-light mb-3 mb-lg-4 px-xl-4">تخدم "ذا بلاك سيركل" العملاء من الأفراد والمكاتب العائلية والمؤسسات التي تسعى إلى إدارة الأصول الرقمية بمعايير مؤسسية.</p>
+            <p class="text-light mb-0 px-xl-4">إذا كنت مستثمراً محترفاً أو منظمة تبحث عن حلول مصممة خصيصاً، يُرجى تعبئة النموذج أدناه. سيتواصل معك مدير متخصص لمناقشة احتياجاتك بمنتهى السرية.</p> 
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block block-bg-img-style">
+  <div class="block-bg bottom-0">
+    <img src="{{ (resources.Get "images/holistic-background.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
+  </div>
+  <div class="container position-relative z-1">
+    <div class="row justify-content-center mb-5 pb-lg-3">
+      <div class="col-12 col-lg-7">
+        <div class="text-center text-light">
+          <h2 class="h4 d-inline-block text-uppercase text-center mb-0">انضم إلى قائمة عملائنا</h2>
+        </div>
+        {{ partial "contact-form.html" . }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section -->
+<section class="block solution-section z-1">
+  <div class="container">
+    <div class="row justify-content-center mb-lg-5 pb-lg-3">
+      <div class="col-12 col-lg-10 col-xl-8 text-center" data-aos="fade-up" data-aos-duration="500">
+        <h2 class="h3 d-inline-block text-uppercase">معايير الانضمام</h2>
+        <h3 class="h6 mb-lg-5">وصول حصري. خدمة استثنائية.</h3>
+        <p class="text-light mb-0">في "ذا بلاك سيركل"، نقدم خدماتنا لمجموعة مختارة من الأفراد والمكاتب العائلية والمؤسسات الذين يستوفون معاييرنا الداخلية والمعايير التنظيمية لسوق أبوظبي العالمي (ADGM) تحت إشراف سلطة تنظيم الخدمات المالية (FSRA). 
+نحن نضمن تصنيف وانضمام كل عميل وفقاً لقواعد سلطة تنظيم الخدمات المالية (FSRA) ، بما في ذلك إجراءات مكافحة غسيل الأموال (AML) ومعرفة العميل (KYC) الكاملة، والامتثال لمعايير الإبلاغ المشترك (CRS) وقانون الامتثال الضريبي للحسابات الأجنبية . (FATCA) </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

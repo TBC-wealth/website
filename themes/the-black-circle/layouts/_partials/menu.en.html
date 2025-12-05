@@ -7,6 +7,7 @@ Renders a menu for the given menu ID.
 @example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
 */}}
 
+
 {{- $page := .page }}
 {{- $menuID := .menuID }}
 
@@ -73,7 +74,7 @@ Renders a menu for the given menu ID.
     {{- $current := $page.RelPermalink }}
 
     {{- range site.Menus.main }}
-      {{- if eq .Name "Solutions" }}
+      {{- if eq .Identifier "Solutions" }}
         {{- if .HasChildren }}
           <div class="sub-menu">
             <div class="row justify-content-center text-center text-xl-start">

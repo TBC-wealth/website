@@ -1,4 +1,5 @@
 [[main]]
+identifier = "Home"
 name = "Home"
 pageRef = "/"
 weight = 1
@@ -17,6 +18,7 @@ weight = 2
   weight = 1
 
     [[main]]
+    identifier = "Bitcoin-Backed Loans"
     parent = "Financing"
     name = "Bitcoin-Backed Loans"
     pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
@@ -32,18 +34,21 @@ weight = 2
   weight = 2
 
     [[main]]
+    identifier = "Trading"
     parent = "Investment"
     name = "Trading"
     pageRef = "/solutions/investment/#trading"
     weight = 1
 
     [[main]]
+    identifier = "Custody"
     parent = "Investment"
     name = "Custody"
     pageRef = "/solutions/investment/#custody"
     weight = 2
 
     [[main]]
+    identifier = "Bitcoin Yield Strategies"
     parent = "Investment"
     name = "Bitcoin Yield Strategies"
     pageRef = "/solutions/investment/#yield-strategies"
@@ -59,12 +64,14 @@ weight = 2
   weight = 3
 
     [[main]]
+    identifier = "Insurance"
     parent = "Wealth Planning"
     name = "Insurance"
     pageRef = "/solutions/wealth-planning/#insurance"
     weight = 1
 
     [[main]]
+    identifier = "Fiduciary Services"
     parent = "Wealth Planning"
     name = "Fiduciary Services"
     pageRef = "/solutions/wealth-planning/#fiduciary"
@@ -80,29 +87,34 @@ weight = 2
   weight = 4
 
     [[main]]
+    identifier = "Visa & Relocation"
     parent = "Tailored Solutions"
     name = "Visa & Relocation"
     pageRef = "/solutions/tailored-solutions/#visa-relocation"
     weight = 1
 
     [[main]]
+    identifier = "Bank Accounts"
     parent = "Tailored Solutions"
     name = "Bank Accounts"
     pageRef = "/solutions//tailored-solutions/#banking-access"
     weight = 2
 
     [[main]]
+    identifier = "Lifestyle"
     parent = "Tailored Solutions"
     name = "Lifestyle"
     pageRef = "/solutions//tailored-solutions/#lifestyle"
     weight = 3
 
 [[main]]
+identifier = "The Origin"
 name = "The Origin"
 pageRef = "/the-origin"
 weight = 3
 
 [[main]]
+identifier = "Become A Client"
 name = "Become A Client"
 pageRef = "/request-access"
 weight = 4

@@ -15,8 +15,12 @@ ul, ol {
 		font-weight: $font-weight-light;
 		line-height: 1.65;
 		font-size: 14px;
+		& + li {
+			padding-top: $default-base-spacer * 0.25;
+		}
 	}
 }
+
 strong {
 	font-weight: $font-weight-medium;
 }
