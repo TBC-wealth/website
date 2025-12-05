@@ -1,0 +1,126 @@
+{{- /*
+Renders a menu for the given menu ID.
+
+@context {page} page The current page.
+@context {string} menuID The menu ID.
+
+@example: {{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+*/}}
+
+{{- $page := .page }}
+{{- $menuID := .menuID }}
+
+{{- with index site.Menus $menuID }}
+  <ul class="menu">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
+{{- end }}
+
+{{- define "_partials/inline/menu/walk.html" }}
+  {{- $page := .page }}
+  {{- range .menuEntries }}
+    {{- $attrs := dict "href" .URL }}
+    {{- if $page.IsMenuCurrent .Menu . }}
+      {{- $attrs = merge $attrs (dict "class" "active" "aria-current" "page") }}
+    {{- else if $page.HasMenuCurrent .Menu .}}
+      {{- $attrs = merge $attrs (dict "class" "ancestor" "aria-current" "true") }}
+    {{- end }}
+    {{- $name := .Name }}
+    {{- with .Identifier }}
+      {{- with T . }}
+        {{- $name = . }}
+      {{- end }}
+    {{- end }}
+
+    {{- if .HasChildren }}
+    {{- $existing := index $attrs "class" | default "" }}
+    {{- $newClass := cond (eq $existing "") "has-children" (printf "%s has-children" $existing) }}
+    {{- $attrs = merge $attrs (dict "class" $newClass) }}
+  {{- end }}
+
+    <li class="{{ if $page.IsMenuCurrent .Menu . }}active{{ else if $page.HasMenuCurrent .Menu . }}ancestor{{ end }}">
+      <a
+        {{- range $k, $v := $attrs }}
+          {{- with $v }}
+            {{- printf " %s=%q" $k $v | safeHTMLAttr }}
+          {{- end }}
+        {{- end -}}
+      >{{ $name }}</a>
+      
+      {{- with .Children }}
+      <span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="9" viewBox="0 0 15 9" fill="none">
+          <path d="M6.83323 8.31691L0.72954 2.0679C0.568018 1.8907 0.508521 1.64022 0.572475 1.40698C0.636504 1.17372 0.814794 0.991475 1.04297 0.926004C1.27114 0.860622 1.51614 0.921447 1.68947 1.08657L7.32225 6.84492L12.955 1.08657C13.0818 0.955369 13.2547 0.881601 13.435 0.881601C13.6153 0.881601 13.7882 0.955374 13.915 1.08657C14.0422 1.21676 14.1136 1.39322 14.1136 1.57723C14.1136 1.76124 14.0422 1.93771 13.915 2.0679L7.77505 8.31691C7.64904 8.44247 7.4801 8.5127 7.30414 8.5127C7.12818 8.5127 6.95923 8.44247 6.83323 8.31691Z" fill="white"/>
+        </svg>
+      </span>
+      <!-- <div class="sub-menu">
+        {{- $left := where . "Weight" "<=" 3 -}}
+        {{- if gt (len $left) 0 }}
+          <ul class="left-menu-items">
+            <li class="h6 fw-semibold mb-2 mt-2 mt-xl-0 text-center text-xl-start text-uppercase">For Whom</li>
+            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $left) }}
+          </ul>
+        {{- end }}
+
+        {{- $right := where . "Weight" ">=" 4 -}}
+        {{- if gt (len $right) 0 }}
+          <ul class="right-menu-items">
+            <li class="h6 fw-semibold mb-2 mt-3 mt-xl-0 text-center text-xl-start text-uppercase">Products</li>
+            {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" $right) }}
+          </ul>
+        {{- end }}
+      </div> -->
+    {{- $current := $page.RelPermalink }}
+
+    {{- range site.Menus.main }}
+      {{- if eq .Identifier "Solutions" }}
+        {{- if .HasChildren }}
+          <div class="sub-menu">
+            <div class="row justify-content-center text-center text-xl-start">
+
+              {{- range sort .Children "Weight" "asc" }}
+                <div class="col-12 col-md-6 col-xl-3">
+                  <ul class="menu-column list-unstyled">
+
+                    {{- /* Parent */}}
+                    {{- $parentURL := "" }}
+                    {{- if .URL }}{{ $parentURL = .URL | relURL }}{{ else }}{{ $parentURL = .PageRef | relURL }}{{ end }}
+                    {{- $hasActiveChild := false }}
+                    {{- if .HasChildren }}
+                      {{- range .Children }}
+                        {{- $childURL := "" }}
+                        {{- if .URL }}{{ $childURL = .URL | relURL }}{{ else }}{{ $childURL = .PageRef | relURL }}{{ end }}
+                        {{- if eq $childURL $current }}
+                          {{- $hasActiveChild = true }}
+                        {{- end }}
+                      {{- end }}
+                    {{- end }}
+                    <li class="h6 fw-semibold mb-0 {{ if eq $parentURL $current }}active{{ else if $hasActiveChild }}ancestor{{ end }}">
+                      <a href="{{ if .URL }}{{ .URL }}{{ else }}{{ .PageRef | relURL }}{{ end }}">{{ .Name }}</a>
+                    </li>
+
+                    {{- /* Sub-children */}}
+                    <div class="sub-childrens">
+                      {{- if .HasChildren }}
+                        {{- range .Children }}
+                          {{- $childURL := "" }}
+                          {{- if .URL }}{{ $childURL = .URL | relURL }}{{ else }}{{ $childURL = .PageRef | relURL }}{{ end }}
+                          <li class="{{ if eq $childURL $current }}active{{ end }}">
+                            <a href="{{ if .URL }}{{ .URL }}{{ else }}{{ .PageRef | relURL }}{{ end }}">{{ .Name }}</a>
+                          </li>
+                        {{- end }}
+                      {{- end }}
+                    </div>
+
+                  </ul>
+                </div>
+              {{- end }}
+            </div>
+          </div>
+        {{- end }}
+      {{- end }}
+    {{- end }}
+      {{- end }}
+    </li>
+  {{- end }}
+{{- end }}

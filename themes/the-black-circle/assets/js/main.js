@@ -134,6 +134,8 @@ jQuery( document ).ready(function($) {
 		}
 	})
 
+	const isRTL = document.documentElement.getAttribute("dir") === "rtl";
+
 	$('.platform-slider').slick({
 		slidesToShow: 4,
 		slidesToScroll: 1,
@@ -141,6 +143,7 @@ jQuery( document ).ready(function($) {
 		dots: false,
 		infinite: true,
 		focusOnSelect: true,
+		rtl: isRTL,
 		prevArrow: prevArrow,
     	nextArrow: nextArrow,
 		responsive: [
@@ -176,6 +179,7 @@ jQuery( document ).ready(function($) {
 		slidesToScroll: 1,
 		arrows: false,
 		fade: true,
+		rtl: isRTL,
 		asNavFor: '.platform-slider'
 	});
 

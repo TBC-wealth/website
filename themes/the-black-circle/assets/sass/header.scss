@@ -124,6 +124,25 @@
 	}
 }
 
+.menu-language {
+	a {
+		color: var(--color-fg);
+		font-size: $font-size-base;
+		text-transform: uppercase;
+	}
+	.dropdown-menu {
+		min-width: 100px;
+		background-color: rgba(var(--color-fg-rgb), 0.10);
+		overflow: hidden;
+		padding: 0;
+		li {
+			a {
+				text-align: center;
+			}
+		}
+	}
+}
+
 .navbar-menu {
 	width: 100%;
 	height: 100vh;
