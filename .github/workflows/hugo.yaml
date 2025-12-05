@@ -68,8 +68,7 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           npm install --include=dev
-          echo "Installed node_modules:"
-          ls -R node_modules | head -n 50
+          echo "Node modules installed."
       - name: Add local PostCSS binaries to PATH
         run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
       - name: Configure Git
