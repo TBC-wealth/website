@@ -63,6 +63,12 @@ jobs:
           echo "Go: $(go version)"
           echo "Hugo: $(hugo version)"
           echo "Node.js: $(node --version)"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      - name: Install npx
+        run: npm install -g npx-cli
       - name: Install Node.js dependencies
         run: |
           [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
