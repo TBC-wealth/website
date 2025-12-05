@@ -6,7 +6,7 @@ weight = 1
 
 [[main]]
 identifier = "Solutions"
-name = "الخدمات والحلول"
+name = "الحلول والخدمات"
 weight = 2
 
   [[main]]
@@ -19,7 +19,7 @@ weight = 2
     [[main]]
     identifier = "Bitcoin-Backed Loans"
     parent = "Financing"
-    name = "قروض مدعومة بالبيتكوين"
+    name = "الإقراض بضمان البيتكوين"
     pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
     weight = 1
 
@@ -27,7 +27,7 @@ weight = 2
   [[main]]
   identifier = "Investment"
   parent = "Solutions"
-  name = "الاستثمار"
+  name = "الإستثمار"
   pageRef = "/solutions/investment"
   weight = 2
 
@@ -41,14 +41,14 @@ weight = 2
     [[main]]
     identifier = "Custody"
     parent = "Investment"
-    name = "الحفظ"
+    name = "الحفظ الأمين"
     url = "/ar/solutions/investment/#custody"
     weight = 2
 
     [[main]]
     identifier = "Bitcoin Yield Strategies"
     parent = "Investment"
-    name = "استراتيجيات العائد من البيتكوين"
+    name = "استراتيجيات تحقيق العائد"
     url = "/ar/solutions/investment/#yield-strategies"
     weight = 3
 
@@ -56,21 +56,21 @@ weight = 2
   [[main]]
   identifier = "Wealth Planning"
   parent = "Solutions"
-  name = "التخطيط المالي"
+  name = "التخطيط للثروة"
   pageRef = "/solutions/wealth-planning"
   weight = 3
 
     [[main]]
     identifier = "Insurance"
     parent = "Wealth Planning"
-    name = "التأمين"
+    name = "التأمين الخاص على الحياة"
     url = "/ar/solutions/wealth-planning/#insurance"
     weight = 1
 
     [[main]]
     identifier = "Fiduciary Services"
     parent = "Wealth Planning"
-    name = "الخدمات الائتمانية"
+    name = "خدمات الوصاية"
     url = "/ar/solutions/wealth-planning/#fiduciary"
     weight = 2
 
@@ -78,28 +78,28 @@ weight = 2
   [[main]]
   identifier = "Tailored Solutions"
   parent = "Solutions"
-  name = "حلول مخصصة"
+  name = "حلول على مقاسك"
   pageRef = "/solutions/tailored-solutions"
   weight = 4
 
     [[main]]
     identifier = "Visa & Relocation"
     parent = "Tailored Solutions"
-    name = "التأشيرات والانتقال"
+    name = "التأشيرات والإقامة"
     url = "/ar/solutions/tailored-solutions/#visa-relocation"
     weight = 1
 
     [[main]]
     identifier = "Bank Accounts"
     parent = "Tailored Solutions"
-    name = "الحسابات البنكية"
+    name = "الوصول إلى الخدمات المصرفية"
     url = "/ar/solutions/tailored-solutions/#banking-access"
     weight = 2
 
     [[main]]
     identifier = "Lifestyle"
     parent = "Tailored Solutions"
-    name = "أسلوب الحياة"
+    name = "تجربة حياة استثنائية"
     url = "/ar/solutions/tailored-solutions/#lifestyle"
     weight = 3
 
@@ -112,7 +112,7 @@ weight = 3
 
 [[main]]
 identifier = "Become A Client"
-name = "كن عميلاً"
+name = "إنضم الى قائمة عملائنا"
 pageRef = "/request-access"
 weight = 4
 
@@ -121,17 +121,17 @@ weight = 4
 ##############################
 
 [[footer]]
-name = 'Home'
+name = 'الرئيسية'
 pageRef = '/'
 weight = 1
 
 [[footer]]
-name = 'Solutions'
+name = 'الحلول والخدمات'
 pageRef = '/solutions'
 weight = 2
 
 [[footer]]
-name = 'The Origin'
+name = 'بدايتنا'
 pageRef = '/the-origin'
 weight = 3
 
@@ -168,17 +168,17 @@ pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
 weight = 4
 
 [[products]]
-name = "استثمار"
+name = "الإستثمار"
 pageRef = "/solutions/investment"
 weight = 5
 
 [[products]]
-name = "تخطيط الثروة"
+name = "التخطيط للثروة"
 pageRef = "/solutions/wealth-planning"
 weight = 6
 
 [[products]]
-name = "حلول مخصصة"
+name = "حلول على مقاسك"
 pageRef = "/solutions/tailored-solutions"
 weight = 7
 
