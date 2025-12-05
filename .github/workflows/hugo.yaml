@@ -66,8 +66,9 @@ jobs:
       - name: Install Node.js dependencies
         run: |
           [[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true
-      - name: Add node_modules/.bin to PATH
-        run: echo "$PWD/node_modules/.bin" >> $GITHUB_PATH
+      - name: Ensure PostCSS binaries exist
+        run: |
+          npm install -g postcss postcss-cli autoprefixer postcss-rtlcss
       - name: Configure Git
         run: |
           git config core.quotepath false
