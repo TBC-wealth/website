@@ -45,7 +45,7 @@
 
 .theme-toggle {
 	display: flex;
-	gap: $default-base-spacer * 0.30;
+	gap: $default-base-spacer * 0.50;
 	align-items: center;
 	justify-content: center;
 	position: absolute;
@@ -135,6 +135,7 @@
 		background-color: rgba(var(--color-fg-rgb), 0.10);
 		overflow: hidden;
 		padding: 0;
+		left: -100%;
 		li {
 			a {
 				text-align: center;
