@@ -1,5 +1,5 @@
 .footer {
-    background: var(--black-gradient, linear-gradient(325deg, var(--color-bg) -2.33%, var(--color-bg) 90.92%));
+    //background: var(--black-gradient, linear-gradient(325deg, var(--color-bg) -2.33%, var(--color-bg) 90.92%));
     padding: ($default-base-spacer * 3) 0;
     color: var(--color-fg);
     @include media-breakpoint-up(xl) {
@@ -57,5 +57,17 @@
             box-shadow: none;
             border-color: $primary;
         }
+    }
+}
+
+html[data-theme="light"] {
+    .footer {
+        background-color: $white;
+    }
+}
+
+html[data-theme="dark"] {
+    .footer {
+        background-color: $black;
     }
 }

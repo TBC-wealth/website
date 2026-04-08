@@ -11,7 +11,6 @@ jQuery( document ).ready(function($) {
 	* Fall back to light mode.
 	*/
 	function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark }) {
-	  return "dark";
 	  if (localStorageTheme !== null) {
 		return localStorageTheme;
 	  }
@@ -70,8 +69,8 @@ jQuery( document ).ready(function($) {
 	  updateThemeOnHtmlEl({ theme: newTheme });
 
 	  currentThemeSetting = newTheme;
-	}); 
-	// Light/Dark Toggle*/
+	}); */
+	// Light/Dark Toggle
 	themeToggleButton.on('change', function () {
 		const newTheme = $(this).is(':checked') ? "dark" : "light";	
 		localStorage.setItem("theme", newTheme);

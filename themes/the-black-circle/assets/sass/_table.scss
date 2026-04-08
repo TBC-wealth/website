@@ -40,3 +40,20 @@
         }
     }
 }
+
+html[data-theme="light"] {
+    .table {
+        tr {
+            th {
+                background-color: $white;
+            }
+        }
+        tr {
+            &:nth-child(even) {
+                td {
+                    background-color: $white;
+                }
+            }
+        }
+    }
+}
