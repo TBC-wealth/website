@@ -162,3 +162,33 @@ html[data-theme="dark"] {
         display: inline-block;
     }
 }
+
+.number-listing {
+    ol {
+        list-style-type: none;
+        counter-reset: decimal;
+        li {
+            display: table;
+            &::before {
+                display: table-cell;
+                content: counters(decimal, ".") ".";
+                counter-increment: decimal;
+                padding-right: 5px;
+            }
+            ol {
+                margin: 5px 0;
+                &[type="a"] {
+                    counter-reset: none;
+                    li {
+                        list-style: lower-alpha;
+                        display: list-item;
+                        &::before {
+                            content: none;
+                        }
+                    }
+                }
+            }
+        }
+  
+    }
+}

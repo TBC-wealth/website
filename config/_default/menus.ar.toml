@@ -149,6 +149,11 @@ name = 'الشروط والأحكام'
 pageRef = '/terms'
 weight = 1
 
+[[terms]]
+name = 'سياسة الخصوصية'
+pageRef = '/privacy-policy'
+weight = 2
+
 ##############################
 # Footer Menu Company
 ##############################
