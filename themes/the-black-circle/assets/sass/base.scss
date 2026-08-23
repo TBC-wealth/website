@@ -163,6 +163,32 @@ html[data-theme="dark"] {
     }
 }
 
+.avatar-placeholder {
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	flex-shrink: 0;
+	&::after {
+		content: '';
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		background: #4a4a4a;
+	}
+}
+
+img.rounded-circle {
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 50%;
+}
+
 .number-listing {
     ol {
         list-style-type: none;
