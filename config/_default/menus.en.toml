@@ -9,50 +9,50 @@ identifier = "Solutions"
 name = "Solutions"
 weight = 2
 
-  # === Column 1: Financing ===
+  # === Column 1: Bitcoin ===
   [[main]]
-  identifier = "Financing"
+  identifier = "Bitcoin"
   parent = "Solutions"
-  name = "Financing"
+  name = "Bitcoin"
   pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
   weight = 1
 
     [[main]]
-    identifier = "Bitcoin-Backed Loans"
-    parent = "Financing"
-    name = "Bitcoin-Backed Loans"
+    identifier = "Financing"
+    parent = "Bitcoin"
+    name = "Financing"
     pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
     weight = 1
 
+    [[main]]
+    identifier = "Investment"
+    parent = "Bitcoin"
+    name = "Investment"
+    pageRef = "/solutions/investment"
+    weight = 2
 
-  # === Column 2: Investment ===
+
+  # === Column 2: Gold ===
   [[main]]
-  identifier = "Investment"
+  identifier = "Gold"
   parent = "Solutions"
-  name = "Investment"
-  pageRef = "/solutions/investment"
+  name = "Gold"
+  pageRef = "/solutions/gold"
   weight = 2
 
     [[main]]
-    identifier = "Trading"
-    parent = "Investment"
-    name = "Trading"
-    pageRef = "/solutions/investment/#trading"
+    identifier = "Gold Financing"
+    parent = "Gold"
+    name = "Gold Financing"
+    pageRef = "/solutions/gold/#financing"
     weight = 1
 
     [[main]]
-    identifier = "Custody"
-    parent = "Investment"
-    name = "Custody"
-    pageRef = "/solutions/investment/#custody"
+    identifier = "Gold Investment"
+    parent = "Gold"
+    name = "Gold Investment"
+    pageRef = "/solutions/gold/#investment"
     weight = 2
-
-    [[main]]
-    identifier = "Bitcoin Yield Strategies"
-    parent = "Investment"
-    name = "Bitcoin Yield Strategies"
-    pageRef = "/solutions/investment/#yield-strategies"
-    weight = 3
 
 
   # === Column 3: Wealth Planning ===
@@ -85,27 +85,6 @@ weight = 2
   name = "Tailored Solutions"
   pageRef = "/solutions/tailored-solutions"
   weight = 4
-
-    [[main]]
-    identifier = "Visa & Relocation"
-    parent = "Tailored Solutions"
-    name = "Visa & Relocation"
-    pageRef = "/solutions/tailored-solutions/#visa-relocation"
-    weight = 1
-
-    [[main]]
-    identifier = "Bank Accounts"
-    parent = "Tailored Solutions"
-    name = "Bank Accounts"
-    pageRef = "/solutions//tailored-solutions/#banking-access"
-    weight = 2
-
-    [[main]]
-    identifier = "Lifestyle"
-    parent = "Tailored Solutions"
-    name = "Lifestyle"
-    pageRef = "/solutions//tailored-solutions/#lifestyle"
-    weight = 3
 
 [[main]]
 identifier = "The Origin"
@@ -171,13 +150,13 @@ weight = 3
 ##############################
 
 [[products]]
-name = "Financing"
+name = "Bitcoin"
 pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
 weight = 4
 
 [[products]]
-name = "Investment"
-pageRef = "/solutions/investment"
+name = "Gold"
+pageRef = "/solutions/gold"
 weight = 5
 
 [[products]]
