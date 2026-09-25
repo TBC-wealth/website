@@ -125,6 +125,7 @@
 .tbc .skyline--img{opacity:0.2;background-repeat:no-repeat;background-position:bottom center;background-size:cover}
 .tbc .section>.container{position:relative;z-index:1}
 [dir="rtl"] .tbc .hero-iris{right:auto;left:-18%}
+[dir="rtl"] .tbc{text-align:right}
 [dir="rtl"] .tbc .arrow{display:inline-block;transform:scaleX(-1)}
 [dir="rtl"] .tbc .service-row .arrow{margin-left:0;margin-right:6px}
 [dir="rtl"] .tbc .quiet-card .more,[dir="rtl"] .tbc .tbc-card .more{letter-spacing:normal}
@@ -139,8 +140,9 @@
 .tbc-nav a{font-size:var(--fs-sm);font-weight:400;color:var(--on-dark);text-decoration:none;transition:color .18s}
 .tbc-nav a:hover,.tbc-nav a.active{color:var(--bronze-soft)}
 .tbc-nav .has-dropdown{position:relative}
+.tbc-actions .has-dropdown{position:relative}
 .tbc-nav .has-dropdown>a::after{content:"\203A";font-size:0.8em;margin-left:4px;display:inline-block;transform:rotate(90deg);color:var(--on-dark-muted)}
-.tbc-dropdown{position:absolute;top:calc(100% + 10px);left:0;min-width:250px;background:var(--teal-deep);border:1px solid rgba(237,231,218,0.12);border-radius:6px;padding:8px;display:none;flex-direction:column;gap:2px;z-index:60;box-shadow:0 18px 40px rgba(0,0,0,0.35)}
+.tbc-dropdown{position:absolute;top:100%;padding-top:10px;left:0;min-width:250px;background:var(--teal-deep);border:1px solid rgba(237,231,218,0.12);border-radius:6px;padding:8px;display:none;flex-direction:column;gap:2px;z-index:60;box-shadow:0 18px 40px rgba(0,0,0,0.35)}
 .tbc-nav .has-dropdown:hover .tbc-dropdown,.tbc-nav .has-dropdown:focus-within .tbc-dropdown{display:flex}
 .tbc-actions .has-dropdown:hover .tbc-dropdown,.tbc-actions .has-dropdown:focus-within .tbc-dropdown,.lang-switch.lang-open .lang-dropdown{display:flex}
 .tbc-actions .tbc-dropdown{left:0;min-width:180px}
