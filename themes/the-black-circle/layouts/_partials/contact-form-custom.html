@@ -1,0 +1,30 @@
+<form class="tbc-form" id="lead-form">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="Full name" required>
+    <input type="email" name="email" placeholder="Email address" required>
+  </div>
+  <div class="form-row">
+    <input type="text" name="phone" placeholder="Phone (optional)">
+    <input type="text" name="company" placeholder="Company / Organization (optional)">
+  </div>
+  <textarea name="message" rows="4" placeholder="Brief description of your requirements" required></textarea>
+  <label class="form-check"><input type="checkbox" name="eligible" required> I confirm I am a professional, institutional, or sophisticated investor.</label>
+  <button type="submit" class="btn btn--primary">Submit request <span class="arrow">&rsaquo;</span></button>
+  <p class="form-status" id="form-status"></p>
+</form>
+<script>
+(function(){
+  var form=document.getElementById('lead-form');if(!form)return;
+  var API="{{ .Site.Params.leads_api_url }}";
+  var status=document.getElementById('form-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!API){status.textContent='Please contact us at legal@theblackcircle.com to submit your request.';return;}
+    status.textContent='Submitting...';
+    var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
+    fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(r.ok){status.textContent='Thank you. Your request has been received. A dedicated manager will contact you shortly.';form.reset();}else{status.textContent='Submission failed. Please email legal@theblackcircle.com.';}})
+      .catch(function(){status.textContent='Submission failed. Please email legal@theblackcircle.com.';});
+  });
+})();
+</script>
