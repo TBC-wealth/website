@@ -185,5 +185,10 @@
   .tbc-menu-btn{display:block}
   .tbc-actions{gap:10px}
   .tbc-footer-top{grid-template-columns:1fr}
+  body.tbc-menu-open .tbc-nav{display:flex;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--teal-deep);flex-direction:column;align-items:stretch;padding:24px 24px 48px;gap:0;overflow-y:auto;z-index:40}
+  body.tbc-menu-open .tbc-nav>a,body.tbc-menu-open .tbc-nav .has-dropdown>a{display:block;padding:16px 0;width:100%;border-bottom:1px solid rgba(237,231,218,0.1);font-size:1.05rem;color:var(--on-dark);text-decoration:none}
+  body.tbc-menu-open .tbc-nav .has-dropdown>a::after{content:""}
+  body.tbc-menu-open .tbc-nav .has-dropdown .tbc-dropdown{display:flex;position:static;flex-direction:column;background:none;border:0;box-shadow:none;padding:0 0 0 16px;min-width:0;opacity:1;visibility:visible}
+  body.tbc-menu-open .tbc-nav .has-dropdown .tbc-dropdown a{padding:12px 0;font-size:0.9rem;border-bottom:1px solid rgba(237,231,218,0.06)}
 }
 @media (prefers-reduced-motion:reduce){.tbc *{transition:none!important;animation:none!important}}
