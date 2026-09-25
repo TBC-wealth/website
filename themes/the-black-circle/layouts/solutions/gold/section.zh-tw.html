@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">專屬能力</p>
+      <h1 class="display">黃金解決方案</h1>
+      <p class="lead">為私人客戶及家族辦公室而設的機構級黃金解決方案 — 由黃金融資到分配投資持倉，由機構級託管安排支援。</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper" id="financing">
+    <div class="container">
+      <p class="eyebrow">融資</p>
+      <h2>黃金融資。</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">以實體黃金持倉作抵押取得流動性，具彈性架構及機構級託管。</p>
+      <div class="tbc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="tbc-card"><p>針對已分配黃金的具競爭力貸款價值比</p></div>
+        <div class="tbc-card"><p>透過精選融資交易對手提供彈性還款架構</p></div>
+        <div class="tbc-card"><p>機構級託管安排，適用時附保險保障</p></div>
+        <div class="tbc-card"><p>透明文件及成熟的機構交易對手</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark" id="investment">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">投資</p>
+      <h2>黃金投資。</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">作為多元化投資策略的一部分，接入已分配及未分配黃金持倉，由機構級託管安排支援。</p>
+      <div class="feature-list">
+        <div class="feature-item"><p>已分配實體黃金，附清晰文件化的持有安排</p></div>
+        <div class="feature-item"><p>接入未分配黃金持倉</p></div>
+        <div class="feature-item"><p>透過成熟機構託管提供者持有</p></div>
+        <div class="feature-item"><p>適用時附保險保障及定期獨立核證</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">黃金投資及黃金融資涉及風險。黃金價值可能波動，融資安排可能涉及抵押品、保證金、交易對手、託管及強制平倉風險。未分配黃金持倉亦可能涉及對相關提供者的信貸風險。條款、資格、託管及保險安排視乎相關提供者及交易文件而定。</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.zh-tw.html" . }}
+
+{{ end }}

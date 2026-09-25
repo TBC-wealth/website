@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">成為客戶</p>
+      <h1 class="display">申請加入。</h1>
+      <p class="lead">The Black Circle 服務尋求機構級財富管理的私人客戶、家族辦公室及機構。若您為尋求度身訂造解決方案的專業投資者或機構，請填寫下方表格。專屬經理將與您聯絡，保密地討論您的需求。</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container narrow">
+      <p class="eyebrow">申請</p>
+      <h2>成為客戶。</h2>
+      <p style="color:var(--muted);margin-bottom:32px;">填寫下方表格以申請保密接洽。所有查詢均保密處理。</p>
+      {{ partial "contact-form.html" . }}
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow--muted">資格</p>
+      <h2>專屬接入。卓越服務。</h2>
+      <p class="lead" style="color:var(--on-dark-muted);">在 The Black Circle，我們服務一群經甄選的個人、家族辦公室及機構，他們符合我們的內部門檻及 BVI 金融服務委員會的專業投資者標準。</p>
+      <p style="color:var(--on-dark-muted);">我們確保每位客戶均按 FSC 規則分類及入職，包括完整的 AML/KYC 程序及 CRS/FATCA 合規。</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.zh-tw.html" . }}
+
+{{ end }}

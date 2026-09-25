@@ -1,19 +1,15 @@
 {{ define "main" }}
 
-<section class="block inner-hero-block position-relative">
-  <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
-        <div class="inner-hero-item px-lg-5 pt-lg-5">
-          <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">Privacy Policy</h1>
-        </div>
-      </div>
-    </div>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Legal</p>
+    <h1 class="display">Privacy Policy</h1>
   </div>
 </section>
 
-<section class="block text-light pt-0">
+<section class="section surface-paper">
   <div class="container">
+    <div class="prose">
     <p><strong>IMPORTANT INFORMATION</strong></p>
     <p>This Privacy Policy explains how The Black Circle Group ("TBC", "we", "us" or "our") collects, uses, processes, stores and shares Personal Data in connection with your use of our website and your interactions with The Black Circle Group.</p>
     <p>The Black Circle Group operates through affiliated entities across multiple jurisdictions, including:</p>
@@ -213,7 +209,9 @@
     <p><strong>APPLICABLE DATA PROTECTION LAW</strong></p>
     <p>The processing of Personal Data by The Black Circle Group and its affiliated entities is subject to the data protection and privacy laws applicable to the relevant Group entity, processing activity and data subject.</p>
     <p>Nothing in this Privacy Policy is intended to limit any rights available to an individual under mandatory applicable data protection law.</p>
+    </div>
   </div>
+  {{ partial "skyline.html" (dict "city" "hongkong") }}
 </section>
 
 {{ end }}

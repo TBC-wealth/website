@@ -1,12 +1,102 @@
 {{ define "main" }}
-<section id="home">
-  {{ partial "hero-section.ar.html" . }}
-  {{ partial "holistic-section.ar.html" . }}
-  {{ partial  "future-wealth-section.ar.html" . }}
-  <!-- {{ partial "solutions-section.html" . }} -->
-  {{ partial  "excecution-section.ar.html" . }}
-  {{ partial "cta-section.ar.html" . }}
-  {{ partial "call-to-action.ar.html" . }}
-</section>
-{{ end }}
 
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-iris" src="{{ (resources.Get "images/iris-hero.png").RelPermalink }}" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="eyebrow">إدارة الثروات الخاصة</p>
+        <h1 class="display">إدارة الثروات<br>للجيل القادم</h1>
+        <p class="lead">تخطيط الثروات، إدارة الاستثمار، الخدمات المصرفية الخاصة، والحفظ — مقدّمة لجيل لم يُبنَ له الخدمات المصرفية الخاصة التقليدية، مع خدمة كونسيرج، ونهج يضع الخصوصية أولاً، ونصائح محايدة للمنتجات عبر الحدود.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="{{ "/request-access/" | relLangURL }}">اطلب الوصول <span class="arrow">&rsaquo;</span></a>
+          <a class="btn btn--ghost" href="#the-firm">الشركة</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>BVI &middot; كايمان &middot; ADGM</b>مجموعة متعددة الولايات القضائية</div>
+          <div><b>مدير استثمار منظّم</b>BVI FSC، لوائح المديرين المعتمدين</div>
+          <div><b>العملاء المحترفون والمؤسسيون</b>غير مخصص للمستثمرين الأفراد</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIRM -->
+  <section class="section surface-paper" id="the-firm">
+    <div class="container narrow">
+      <p class="eyebrow">الشركة</p>
+      <h2>منصة ثروات خاصة منظّمة عبر ولايات قضائية متعددة.</h2>
+      <p class="lead">نخدم قاعدة محدودة من العملاء الخاصين من خلال مجموعة متعددة الولايات القضائية. يبدأ عملنا من الميزانية العمومية الكاملة ويمتد عبر التخطيط والهيكلة والحفظ والتنفيذ — وفقًا لمعيار المؤسسة المنظّمة وبتقديم السرية ونقطة اتصال واحدة.</p>
+      <p>تؤدي كل كيان من المجموعة وظيفة مميزة وفقًا للقوانين والمتطلبات التنظيمية المطبقة عليها. يتم تحديد الكيان أو الكيانات، وحيثما ينطبق ذلك المحفظة المنفصلة، ذات الصلة بالعميل أو الاستثمار في الوثائق القانونية والعروض المعمول بها.</p>
+    </div>
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section surface-paper-2" id="what-we-do">
+    <div class="container">
+      <p class="eyebrow">ماذا نقدم</p>
+      <h2>القدرات الأساسية، منظمة حول العميل.</h2>
+      <p class="lead" style="max-width:62ch;color:var(--muted);margin-bottom:48px;">التخطيط، الاستثمار، صفقات السوق الثانوية، والحلول المخصصة — يقدم كل منها بخدمة كونسيرج ونقطة اتصال واحدة. تدعم قدرات الذهب والبيتكوين المتخصصة مرونة الميزانية العمومية عند الحاجة.</p>
+      <div class="service-list">
+        <a class="service-row" href="{{ "/solutions/wealth-planning/" | relLangURL }}">
+          <div class="num">01</div>
+          <div><h3>تخطيط الثروات</h3><p>ترتيبات الهيكلة والت succession لدعم الاستمرارية والسيطرة عبر الأجيال، عبر حلول التأمين والائتمان المتوافقة.</p></div>
+          <div class="go">استكشف <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/solutions/investment/" | relLangURL }}">
+          <div class="num">02</div>
+          <div><h3>إدارة الاستثمار</h3><p>الإدارة التقديرية للمحافظ التقليدية والبديلة، ضمن إطار منظّم ومتوافقة مع أهداف العميل وملف المخاطر.</p></div>
+          <div class="go">استكشف <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/request-access/" | relLangURL }}">
+          <div class="num">03</div>
+          <div><h3>صفقات السوق الثانوية</h3><p>وصول منسّق إلى فرص السوق الثانوية عبر الأسواق الأمريكية والعالمية، بما في ذلك قطاع الفضاء.</p></div>
+          <div class="go">اطلب الوصول <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/solutions/tailored-solutions/" | relLangURL }}">
+          <div class="num">04</div>
+          <div><h3>حلول مخصصة</h3><p>حلول مخصصة تغطي الطلبات المحددة للبنوك الخاصة ومكاتب العائلة، من الوصول المصرفي إلى نمط الحياة.</p></div>
+          <div class="go">استكشف <span class="arrow">&rsaquo;</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIST CAPABILITIES -->
+  <section class="section surface-dark" id="digital-asset-solutions">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">القدرات المتخصصة</p>
+      <h2>مرونة الميزانية العمومية.</h2>
+      <p class="lead" style="max-width:64ch;color:var(--on-dark-muted);margin-bottom:48px;">حلول الذهب والبيتكوين المصممة لدعم المرونة والتنويع عبر الميزانية العمومية — مقدمة ضمن نفس إطار السرية والتنظيم.</p>
+      <div class="quiet-grid">
+        <a class="quiet-card" href="{{ "/solutions/gold/" | relLangURL }}"><h4>حلول الذهب</h4><p>الذهب الفعلي — من المراكز الاستثمارية المخصصة إلى التمويل المدعوم بالذهب، محفوظ لدى أمناء حفظ معتمدين. وصول حصري لهياكل ذهبية بمستوى مؤسسي.</p><span class="more">اعرف المزيد &rsaquo;</span></a>
+        <a class="quiet-card" href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relLangURL }}"><h4>حلول البيتكوين</h4><p>التمويل المدعوم بالبيتكوين والعائد، مع الحفاظ على المركز مع الوصول إلى السيولة. هياكل بيتكوين حصرية بمستوى مؤسسي.</p><span class="more">اعرف المزيد &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BLACK CIRCLE SERVICE -->
+  <section class="section surface-paper" id="the-service">
+    <div class="container narrow">
+      <p class="eyebrow">خدمة The Black Circle</p>
+      <h2>كونسيرج لجميع احتياجاتك المالية.</h2>
+      <p class="lead" style="margin-top:8px;">يحصل كل عميل على مدير علاقات مخصص ووصول مباشر إلى مسؤولي الشركة. الاتصالات سرية، والقرارات مدفوعة بأهداف العميل فقط، والترتيبات منفصلة تمامًا وخاصة.</p>
+      <p style="margin-top:16px;"><a class="link" href="{{ "/the-origin/" | relLangURL }}">المنشأ <span style="display:inline-block;">&rsaquo;</span></a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section cta-band">
+    <div class="container">
+      <div class="inner">
+        <div>
+          <p class="eyebrow eyebrow--muted">العضوية</p>
+          <h2>اطلب الوصول.</h2>
+          <p>العضوية انتقائية وتخضع للأهلية، والإجراءات التأهيلية، وفحوصات AML/KYC والعقوبات. اطلب تقديمًا سرّيًا.</p>
+        </div>
+        <a class="btn btn--primary" href="{{ "/request-access/" | relLangURL }}">اطلب الوصول <span class="arrow">&rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+{{ end }}

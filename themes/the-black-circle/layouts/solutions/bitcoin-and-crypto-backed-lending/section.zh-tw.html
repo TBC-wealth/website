@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">專屬能力</p>
+      <h1 class="display">比特幣解決方案</h1>
+      <p class="lead">為私人客戶及家族辦公室而設的機構級比特幣解決方案 — 由比特幣融資到收益及投資持倉，於受監管框架內交付。</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper" id="financing">
+    <div class="container">
+      <p class="eyebrow">融資</p>
+      <h2>比特幣融資。</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">以您的比特幣持倉作抵押取得流動性，具彈性架構及機構級託管，同時維持核心持倉。</p>
+      <div class="tbc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="tbc-card"><p>針對已分配比特幣的具競爭力貸款價值比</p></div>
+        <div class="tbc-card"><p>透過精選融資交易對手提供彈性還款架構</p></div>
+        <div class="tbc-card"><p>機構級託管安排，適用時附保險保障</p></div>
+        <div class="tbc-card"><p>透明文件及成熟的機構交易對手</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark" id="investment">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">投資及收益</p>
+      <h2>比特幣投資及收益。</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">接入比特幣投資持倉及僅限機構的收益機會，維持持倉並採用風險管理框架。</p>
+      <div class="feature-list">
+        <div class="feature-item"><p>透過全球經紀的最佳執行接入現貨持倉</p></div>
+        <div class="feature-item"><p>僅限機構的收益計劃，附透明報告</p></div>
+        <div class="feature-item"><p>透過受監管合作夥伴提供獨立、受保險保障的託管</p></div>
+        <div class="feature-item"><p>可調整風險取向，與客戶目標對齊</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">比特幣融資及收益策略涉及風險，包括抵押品價值波動、保證金或抵押品要求、強制平倉風險、交易對手風險及資本虧損的可能。條款、資格及可用性受相關提供者及交易文件規範。客戶應在適當情況下尋求獨立法律、稅務及財務意見。</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.zh-tw.html" . }}
+
+{{ end }}

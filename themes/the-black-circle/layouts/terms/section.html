@@ -1,25 +1,17 @@
 {{ define "main" }}
 
-<section class="block inner-hero-block position-relative">
-  <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
-        <div class="inner-hero-item px-lg-5 pt-lg-5">
-          <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">Terms & Conditions</h1>
-          <p class="text-light mb-3"><strong>ALL INFORMATION DISPLAYED ON THIS WEBSITE IS AIMED EXCLUSIVELY AT
-              PROFESSIONAL CLIENTS AND NOT INTENDED FOR RETAIL INVESTORS</strong></p>
-          <div class="d-flex justify-content-center">
-            <a href="https://en.adgm.thomsonreuters.com/rulebook/cobs-24-professional-clients" target="_blank"
-              class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
+<section class="page-hero">
+  <div class="container">
+    <p class="eyebrow">Legal</p>
+    <h1 class="display">Terms &amp; Conditions</h1>
+    <p class="lead"><strong>ALL INFORMATION DISPLAYED ON THIS WEBSITE IS AIMED EXCLUSIVELY AT PROFESSIONAL CLIENTS AND NOT INTENDED FOR RETAIL INVESTORS</strong></p>
+    <p style="margin-top:24px;"><a class="btn btn--primary" href="https://en.adgm.thomsonreuters.com/rulebook/cobs-24-professional-clients" target="_blank" rel="noopener">Learn more <span class="arrow">&rsaquo;</span></a></p>
   </div>
 </section>
 
-<section class="block text-light">
+<section class="section surface-paper">
   <div class="container">
+    <div class="prose">
     <h2><strong>Website Terms of Use and Disclaimer</strong></h2>
     <p><strong>GENERAL</strong></p>
     <p>These Terms of Use ("Terms") govern your access to and use of this website (the "Website").</p>
@@ -152,7 +144,9 @@
 
     <p><strong>NOTICES</strong></p>
     <p>Any notices or communications in connection with these Terms may be made in writing and sent to: <a href="mailto:legal@theblackcircle.com">legal@theblackcircle.com</a></p>
+    </div>
   </div>
+  {{ partial "skyline.html" (dict "city" "dubai") }}
 </section>
 
 {{ end }}

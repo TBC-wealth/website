@@ -1,51 +1,31 @@
 {{ define "main" }}
 
-<section class="block inner-hero-block position-relative">
-  <!-- <div class="hero-bg opacity-half">
-    <img src="{{ (resources.Get "images/request-bg.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
-    <img src="{{ (resources.Get "images/request-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
-  </div> -->
-  <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5">
-      <div class="col-12 col-lg-8 z-1" data-aos="fade-up" data-aos-duration="500">
-          <div class="inner-hero-item px-lg-5 pt-lg-5">
-            <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">هل أنت مستعد لتأمين أصولك الرقمية وتنميتها؟</h1>
-            <p class="text-light mb-3 mb-lg-4 px-xl-4">تخدم "ذا بلاك سيركل" العملاء من الأفراد والمكاتب العائلية والمؤسسات التي تسعى إلى إدارة الأصول الرقمية بمعايير مؤسسية.</p>
-            <p class="text-light mb-0 px-xl-4">إذا كنت مستثمراً محترفاً أو منظمة تبحث عن حلول مصممة خصيصاً، يُرجى تعبئة النموذج أدناه. سيتواصل معك مدير علاقات متخصص لمناقشة احتياجاتك بمنتهى السرية.</p>
-          </div>
-      </div>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">كن عميلاً</p>
+      <h1 class="display">اطلب الوصول.</h1>
+      <p class="lead">تخدم The Black Circle العملاء الخاصين ومكاتب العائلة والمؤسسات الباحثة عن إدارة ثروات بمستوى مؤسسي. إن كنت مستثمرًا مهنيًا أو مؤسسة تبحث عن حلول مخصصة، فاملأ النموذج أدناه. سيتواصل معك مدير مخصص لمناقشة متطلباتك بسرّية.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="block block-bg-img-style">
-  <div class="block-bg bottom-0">
-    <img src="{{ (resources.Get "images/holistic-background.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
-  </div>
-  <div class="container position-relative z-1">
-    <div class="row justify-content-center mb-5 pb-lg-3">
-      <div class="col-12 col-lg-7">
-        <div class="text-center text-light">
-          <h2 class="h4 d-inline-block text-uppercase text-center mb-0">انضم إلى قائمة عملائنا</h2>
-        </div>
-        {{ partial "contact-form.html" . }}
-      </div>
+  <section class="section surface-paper">
+    <div class="container narrow">
+      <p class="eyebrow">طلب</p>
+      <h2>كن عميلاً.</h2>
+      <p style="color:var(--muted);margin-bottom:32px;">املأ النموذج أدناه لطلب تقديم سرّي. تُعالج جميع الاستفسارات بسرّية.</p>
+      {{ partial "contact-form.html" . }}
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Section -->
-<section class="block solution-section z-1">
-  <div class="container">
-    <div class="row justify-content-center mb-lg-5 pb-lg-3">
-      <div class="col-12 col-lg-10 col-xl-8 text-center" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h3 d-inline-block text-uppercase">معايير الانضمام</h2>
-        <h3 class="h6 mb-lg-5">وصول حصري. خدمة استثنائية.</h3>
-        <p class="text-light">في بلاك سيركل، نخدم مجموعة مختارة من الأفراد، والمكاتب العائلية، والمؤسسات الذين يستوفون معاييرنا الداخلية ومعايير المستثمرين المحترفين المعتمدة لدى هيئة الخدمات المالية في جزر فيرجن البريطانية. </p>
-        <p class="text-light mb-0">نحرص على تصنيف جميع العملاء وإتمام إجراءات الانضمام وفقًا لقواعد الهيئة، بما في ذلك استيفاء متطلبات مكافحة غسل الأموال (AML)واعرف عميلك (KYC)، والامتثال لمعايير CRS وFATCA.</p>
-      </div>
+  <section class="section surface-dark">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow--muted">التأهيل</p>
+      <h2>وصول حصري. خدمة استثنائية.</h2>
+      <p class="lead" style="color:var(--on-dark-muted);">في The Black Circle، نخدم مجموعة مختارة من الأفراد ومكاتب العائلة والمؤسسات، الذين يحققون حدّنا الداخلي ومعايير المستثمر المهني للجنة الخدمات المالية في BVI.</p>
+      <p style="color:var(--on-dark-muted);">نضمن تصنيف وتأهيل كل عميل وفق قواعد FSC، بما في ذلك إجراءات AML/KYC الكاملة وامتثال CRS/FATCA.</p>
     </div>
-  </div>
-</section>
+  </section>
+
+  {{ partial "cta-band.ar.html" . }}
 
 {{ end }}

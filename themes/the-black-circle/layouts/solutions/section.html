@@ -1,136 +1,40 @@
 {{ define "main" }}
 
-<section class="block inner-hero-block position-relative">
-  <!-- <div class="hero-bg">
-    <img src="{{ (resources.Get "images/solution-hero-banner.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100 h-100">
-  </div> -->
-  <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5 mt-xl-5">
-      <div class="col-lg-10 col-12" data-aos="fade-up" data-aos-duration="500">
-          <div class="inner-hero-item">
-            <h1 class="text-uppercase mb-3">Tailored digital wealth solutions designed for those who demand more</h1>
-            <p class="text-light mb-0">At The Black Circle, we provide institutional-grade financial solutions for Bitcoin and other leading digital assets. Our offerings are built to secure, amplify, and activate your wealth, combining precision, discretion, and world-class infrastructure.</p>
-            <!-- <div class="d-flex justify-content-center pt-3">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">BECOME A CLIENT</a>
-            </div> -->
-          </div>
-      </div>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Solutions</p>
+      <h1 class="display">Private wealth capabilities, organised around the client.</h1>
+      <p class="lead">Wealth planning, investment management, secondary market deals, and tailored solutions — delivered with concierge service and a single point of contact. Specialist gold and bitcoin capabilities support balance sheet resilience where required.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="block">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="h4 text-uppercase text-center mb-5 pb-lg-3">Core Offerings</h2>
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">Core capabilities</p>
+      <h2>Built around the balance sheet in full.</h2>
+      <p class="lead" style="max-width:62ch;color:var(--muted);margin-bottom:48px;">Each capability is delivered within a regulated framework and aligned to the client's objectives, risk profile, and jurisdictional requirements.</p>
+      <div class="tbc-grid tbc-grid--2">
+        <a class="tbc-card" href="{{ "/solutions/wealth-planning/" | relURL }}"><h3>Wealth Planning</h3><p>Structuring and succession arrangements for continuity and control across generations.</p><span class="more">Explore &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/investment/" | relURL }}"><h3>Investment Management</h3><p>Discretionary management of traditional and alternative portfolios within a regulated framework.</p><span class="more">Explore &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/request-access/" | relURL }}"><h3>Secondary Market Deals</h3><p>Curated access to secondary market opportunities across US and global markets, including the space sector.</p><span class="more">Request access &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/tailored-solutions/" | relURL }}"><h3>Tailored Solutions</h3><p>Bespoke solutions covering private banks and family offices' specific requests, from banking access to lifestyle.</p><span class="more">Explore &rsaquo;</span></a>
       </div>
     </div>
-    <div class="row row-gap-4">
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Bitcoin & Digital Asset-Backed Lending</h5>
-            <p>Access liquidity against your digital assets without compromising your portfolio.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="700">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">OTC Trading</h5>
-            <p>Execute large trades in Bitcoin and other leading digital assets with absolute discretion.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="800">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Custody Solutions</h5>
-            <p>Protect your assets with segregated, custody. Multi-signature security and instant access.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="900">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Yield Strategies</h5>
-            <p>Turn idle assets into consistent growth through risk-managed, institutional-only yield opportunities.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="1000">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Tailored Solutions</h5>
-            <p>When your needs go beyond defined products, we create bespoke solutions. Whatever you envision, we build it exclusively for you.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    {{ partial "skyline.html" (dict "city" "dubai") }}
+  </section>
 
-<section class="block">
-  <div class="container">
-    <div class="row justify-content-center mb-5">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="text-uppercase text-center mb-3">Created to serve those who shape the future of digital wealth</h2>
-        <p class="text-light text-center mb-0">The Black Circle was built with a singular purpose: to serve the individuals and organizations driving the next era of capital. Every service is designed to protect, activate, and elevate wealth without compromise.</p>
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Specialist capabilities</p>
+      <h2>Balance sheet resilience.</h2>
+      <p class="lead" style="max-width:64ch;color:var(--on-dark-muted);margin-bottom:48px;">Gold and bitcoin solutions designed to support resilience and diversification across the balance sheet, delivered within the same confidential, regulated framework.</p>
+      <div class="quiet-grid">
+        <a class="quiet-card" href="{{ "/solutions/gold/" | relURL }}"><h4>Gold Solutions</h4><p>Physical gold — from allocated investment positions to gold-backed financing, held with approved custodians. Exclusive access to institutional-grade gold structures.</p><span class="more">Learn more &rsaquo;</span></a>
+        <a class="quiet-card" href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relURL }}"><h4>Bitcoin Solutions</h4><p>Bitcoin-backed financing and yield, maintaining exposure while accessing liquidity. Exclusive, institutional-only bitcoin structures.</p><span class="more">Learn more &rsaquo;</span></a>
       </div>
     </div>
-    <div class="row row-gap-4">
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="600">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">UHNWIs & Digital Asset Pioneers</h5>
-            <p>From traditional investors seeking discreet exposure to digital assets, to established holders requiring institutional-grade support, we deliver secure custody, lending, and yield strategies tailored to the needs of the most demanding wealth holders.</p>
-            <a href="{{ "/solutions/uhnws/" | relURL }}" class="btn-link text-uppercase">Explore tailored solutions</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="700">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Private Banks & Family Offices</h5>
-            <p>We work with private banks, institutions, and family offices to design bespoke digital asset solutions for their most discerning clients, integrating digital assets into established wealth frameworks with absolute discretion.</p>
-            <a href="{{ "/solutions/private-bank-family-offices/" | relURL }}" class="btn-link text-uppercase">Explore tailored solutions</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-4" data-aos="fade-up" data-aos-duration="800">
-        <div class="card custom-card text-light">
-          <div class="card-body d-flex flex-column justify-content-between">
-            <h5 class="mb-3">Digital Asset Organizations</h5>
-            <p>For blockchain foundations, DAOs, and protocol teams, we provide secure treasury management, compliant custody, and institutional liquidity solutions, empowering innovation with a trusted partner at every stage.</p>
-            <a href="{{ "/solutions/crypto-native-organizations/" | relURL }}" class="btn-link text-uppercase">Explore tailored solutions</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section class="block call-to-action">
-  <div class="container">
-    <div class="w-100 call-to-action-inner p-4 p-lg-5 position-relative d-flex">
-      <div class="row align-items-center">
-        <!-- Left Column -->
-        <div class="col-12 col-lg-12 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
-            <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
-            <p class="mb-4 text-light text-large">Exclusive Access. Exceptional Service.</p>
-            <div class="d-flex pt-4">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
-            </div>
-        </div>
-        <!-- Right Column -->
-        <div class="col-md-6 call-to-action-pic">
-          <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
-          <img src="{{ (resources.Get "images/call-to-action-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  {{ partial "cta-band.html" . }}
 
 {{ end }}

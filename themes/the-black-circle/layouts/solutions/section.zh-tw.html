@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">解決方案</p>
+      <h1 class="display">以客戶為核心的私人財富能力。</h1>
+      <p class="lead">財富規劃、投資管理、二級市場交易及度身訂造解決方案 — 以專屬禮賓服務及單一聯絡人交付。專屬黃金及比特幣能力於需要時支援資產負債表的韌性。</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">核心能力</p>
+      <h2>以全面資產負債表為核心。</h2>
+      <p class="lead" style="max-width:62ch;color:var(--muted);margin-bottom:48px;">各項能力均於受監管框架內交付，並與客戶目標、風險取向及司法管轄區要求對齊。</p>
+      <div class="tbc-grid tbc-grid--2">
+        <a class="tbc-card" href="{{ "/solutions/wealth-planning/" | relLangURL }}"><h3>財富規劃</h3><p>透過合規保險及受託解決方案，為跨代延續與控制提供架構及傳承安排。</p><span class="more">了解更多 &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/investment/" | relLangURL }}"><h3>投資管理</h3><p>於受監管框架內，主動管理傳統及另類投資組合。</p><span class="more">了解更多 &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/request-access/" | relLangURL }}"><h3>二級市場交易</h3><p>精選接入美國及全球市場（包括太空領域）的二級市場機會。</p><span class="more">申請加入 &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/tailored-solutions/" | relLangURL }}"><h3>度身訂造解決方案</h3><p>涵蓋私人銀行及家族辦公室特定需求的度身訂造解決方案。</p><span class="more">了解更多 &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">專屬能力</p>
+      <h2>資產負債表韌性。</h2>
+      <p class="lead" style="max-width:64ch;color:var(--on-dark-muted);margin-bottom:48px;">黃金及比特幣解決方案，旨在支援資產負債表的韌性與多元化 — 於同一保密、受監管框架內交付。</p>
+      <div class="quiet-grid">
+        <a class="quiet-card" href="{{ "/solutions/gold/" | relLangURL }}"><h4>黃金解決方案</h4><p>實體黃金 — 由分配投資持倉到黃金融資，由認可託管人持有。專屬機構級黃金架構。</p><span class="more">了解更多 &rsaquo;</span></a>
+        <a class="quiet-card" href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relLangURL }}"><h4>比特幣解決方案</h4><p>比特幣融資及收益，於維持持倉的同時取得流動性。專屬、僅限機構的比特幣架構。</p><span class="more">了解更多 &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta-band.zh-tw.html" . }}
+
+{{ end }}

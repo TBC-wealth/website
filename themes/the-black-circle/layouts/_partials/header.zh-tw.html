@@ -1,0 +1,37 @@
+<div class="container tbc-header-inner">
+  <a class="tbc-brand" href="{{ .Site.BaseURL | relLangURL }}" aria-label="{{ site.Title }} home">
+    <img src="{{ (resources.Get "images/logo-white.svg").RelPermalink }}" alt="{{ site.Title }}">
+  </a>
+  <nav class="tbc-nav" aria-label="Primary">
+    <a href="{{ "/" | relLangURL }}">首頁</a>
+    <span class="has-dropdown">
+      <a href="{{ "/solutions/" | relLangURL }}">解決方案</a>
+      <div class="tbc-dropdown">
+        <a href="{{ "/solutions/wealth-planning/" | relLangURL }}">財富規劃</a>
+        <a href="{{ "/solutions/investment/" | relLangURL }}">投資管理</a>
+        <a href="{{ "/request-access/" | relLangURL }}">二級市場交易</a>
+        <a href="{{ "/solutions/tailored-solutions/" | relLangURL }}">度身訂造解決方案</a>
+        <a href="{{ "/solutions/gold/" | relLangURL }}">黃金解決方案</a>
+        <a href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relLangURL }}">比特幣解決方案</a>
+      </div>
+    </span>
+    <a href="{{ "/the-origin/" | relLangURL }}">起源</a>
+    <a href="{{ "/request-access/" | relLangURL }}">成為客戶</a>
+  </nav>
+  <div class="tbc-actions">
+    {{ if hugo.IsMultilingual -}}
+    <span class="lang-switch has-dropdown">
+      <button class="lang-trigger" type="button" aria-label="選擇語言" aria-expanded="false">
+        <svg class="lang-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/><path d="M12 2a15 15 0 0 0 0 20 15 15 0 0 0 0-20Z"/></svg>
+      </button>
+      <div class="tbc-dropdown lang-dropdown">
+        {{ range .Site.Home.AllTranslations -}}
+        <a href="{{ .RelPermalink }}" lang="{{ .Lang }}" hreflang="{{ .Lang }}"{{ if eq $.Site.Language.Lang .Lang }} class="active"{{ end }}>{{ .Language.LanguageName }}</a>
+        {{ end -}}
+      </div>
+    </span>
+    {{- end }}
+    <a class="btn btn--primary" href="{{ "/request-access/" | relLangURL }}">申請加入</a>
+    <button class="tbc-menu-btn" type="button" aria-label="開啟選單" aria-expanded="false">&#9776;</button>
+  </div>
+</div>

@@ -1,210 +1,48 @@
 {{ define "main" }}
 
-<section class="block inner-hero-block position-relative">
-  <!-- <div class="hero-bg">
-    <img src="{{ (resources.Get "images/our-values-section-bg-img.jpg").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
-    <img src="{{ (resources.Get "images/our-values-section-bg-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
-  </div> -->
-  <div class="container text-center">
-    <div class="row justify-content-center pb-lg-3 pt-5 mt-xl-5">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="500">
-          <div class="inner-hero-item px-lg-5">
-            <h1 class="d-inline-block text-uppercase mb-4 pb-lg-2">Bitcoin-Backed Lending</h1>
-            <p class="text-light mb-0">Access liquidity for discretionary use while maintaining exposure to your digital assets.</p>
-            <!-- <div class="d-flex justify-content-center pt-3">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">BECOME A CLIENT</a>
-            </div> -->
-          </div>
-      </div>
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Specialist capabilities</p>
+      <h1 class="display">Bitcoin Solutions</h1>
+      <p class="lead">Institutional bitcoin solutions for private clients and family offices — from bitcoin-backed financing to yield and investment positions, delivered within a regulated framework.</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="block">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">Why Leading Clients Choose Our Financing Solutions</h2>
+  <section class="section surface-paper" id="financing">
+    <div class="container">
+      <p class="eyebrow">Financing</p>
+      <h2>Bitcoin-Backed Financing.</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">Access liquidity backed by your Bitcoin holdings, with flexible structures and institutional-grade custody, maintaining exposure to your core position.</p>
+      <div class="tbc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="tbc-card"><p>Competitive loan-to-value ratios against allocated Bitcoin</p></div>
+        <div class="tbc-card"><p>Flexible repayment structures through selected financing counterparties</p></div>
+        <div class="tbc-card"><p>Institutional-grade custody arrangements, with insurance coverage where applicable</p></div>
+        <div class="tbc-card"><p>Transparent documentation and established institutional counterparties</p></div>
       </div>
     </div>
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10">
-        <div class="row row-gap-4">
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="600">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/bitcoin.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
-                </div>
-                <h3 class="h5 mb-2">Institutional-grade execution</h3>
-                <p class="mb-0">Competitive rates and deep liquidity through trusted global partners.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="700">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/trading-desk-img.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
-                </div>
-                <h3 class="h5 mb-2">Tailored loan structures</h3>
-                <p class="mb-0">Flexible financing structures designed to accommodate different liquidity requirements and circumstances.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="800">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/client-choose-03.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
-                </div>
-                <h3 class="h5 mb-2">Secure custody</h3>
-                <p class="mb-0">Assets held through appropriately regulated third-party providers and institutional-grade infrastructure, where applicable.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6" data-aos="fade-up" data-aos-duration="900">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column">
-                <div class="card-icon d-flex align-items-center justify-content-center mb-3 mb-lg-4">
-                  <img src="{{ (resources.Get "images/client-choose.png").RelPermalink }}" alt="Star" class="img-fluid" loading="lazy">
-                </div>
-                <h3 class="h5 mb-2">White-glove service</h3>
-                <p class="mb-0">Dedicated support throughout the financing process, from identifying suitable structures and counterparties through to execution.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    {{ partial "skyline.html" (dict "city" "london") }}
+  </section>
 
-<section class="block block-bg-img-style">
-  <div class="block-bg top-0">
-    <img src="{{ (resources.Get "images/holistic-background.png").RelPermalink }}" alt="The Black Circle" class="img-fluid w-100">
-  </div>
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-12 col-lg-12 text-light text-center mb-4 mb-xl-5" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="text-uppercase">Key Benefits</h2>
-      </div>
-      <div class="col-12 col-lg-12">
-        <div class="row row-gap-3">
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="600">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column justify-content-center">
-                <p class="fs-5 mb-0">Unlock liquidity without selling core assets</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="700">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column justify-content-center">
-                <p class="fs-5 mb-0">Maintain exposure to your underlying digital assets</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column justify-content-center">
-                <p class="fs-5 mb-0">Access competitive financing terms through selected institutional counterparties</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column justify-content-center">
-                <p class="fs-5 mb-0">Fund lifestyle needs, real-estate purchases, or reinvestment opportunities</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-up" data-aos-duration="800">
-            <div class="card custom-card custom-card-style text-light">
-              <div class="card-body d-flex flex-column justify-content-center">
-                <p class="fs-5 mb-0">Transparent documentation and institutional custody arrangements</p>
-              </div>
-            </div>
-          </div>
-        </div>
+  <section class="section surface-dark" id="investment">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Investment &amp; Yield</p>
+      <h2>Bitcoin Investment &amp; Yield.</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">Access bitcoin investment positions and institutional-only yield opportunities, with ownership maintained and risk-managed frameworks.</p>
+      <div class="feature-list">
+        <div class="feature-item"><p>Spot exposure via best execution through global brokers</p></div>
+        <div class="feature-item"><p>Institutional-only yield programs with transparent reporting</p></div>
+        <div class="feature-item"><p>Segregated, insured custody through regulated partners</p></div>
+        <div class="feature-item"><p>Adjustable risk profiles aligned to client objectives</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="block">
-  <div class="container">
-    <div class="row justify-content-center text-center">
-      <div class="col-12 col-lg-8 pt-lg-3" data-aos="fade-up" data-aos-duration="500">
-        <h2 class="d-inline-block text-uppercase text-center mb-5 pb-lg-3">How It Helps You</h2>
-      </div>
+  <section class="section surface-paper-2">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">Bitcoin-backed financing and yield strategies involve risks, including collateral value fluctuations, margin or collateral requirements, liquidation risk, counterparty risk and the potential loss of capital. Terms, eligibility and availability are subject to the relevant provider and transaction documentation. Clients should obtain independent legal, tax and financial advice where appropriate.</p>
     </div>
-    <div class="row row-gap-4 justify-content-center">
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="700">
-        <div class="card custom-card full-custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-3 pb-3 p-xl-3 text-md-center">
-                  <img src="{{ (resources.Get "images/trusted-icon.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
-              </div>
-              <div class="col-12 col-md-9">
-                <h4 class="d-inline-block text-uppercase mb-3">Private Clients</h4>
-                <p class="mb-0">Access liquidity against your Bitcoin holdings to support lifestyle requirements, investments or diversification while maintaining exposure to your digital assets.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  </section>
 
-      <div class="col-12 col-lg-10" data-aos="fade-up" data-aos-duration="600">
-        <div class="card custom-card full-custom-card text-light">
-          <div class="card-body px-lg-5">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-              <div class="col-12 col-md-9">
-                <h4 class="d-inline-block mb-3">FAMILY OFFICES AND EAMs</h4>
-                <p class="mb-0">Access institutional financing solutions backed by digital assets through selected third-party counterparties. Our approach is designed to integrate with existing portfolio structures while providing transparent documentation and institutional-grade custody arrangements, where applicable.</p>
-              </div>
-              <div class="col-12 col-md-3 pb-3 p-xl-3 text-md-center">
-                <img src="{{ (resources.Get "images/visionaries.png").RelPermalink }}" alt="The Black Circle" class="img-fluid" loading="lazy" width="160px">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-lg-10">
-        <p class="small text-muted text-center mb-0">Digital asset-backed financing involves risks, including collateral value fluctuations, margin or collateral requirements, liquidation risk and counterparty risk. Financing terms, eligibility and availability are subject to the relevant provider and transaction documentation. Clients should obtain independent legal, tax and financial advice where appropriate.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="block call-to-action">
-  <div class="container">
-    <div class="w-100 call-to-action-inner p-4 p-lg-5 position-relative d-flex">
-      <div class="row align-items-center">
-        <!-- Left Column -->
-        <div class="col-12 col-lg-12 pe-xl-5 z-1" data-aos="fade-up" data-aos-duration="500">
-            <h4 class="mb-3">YOUR TIME TO ENTER THE CIRCLE</h4>
-            <p class="mb-4 text-light text-large">Exclusive Access. Exceptional Service.</p>
-            <div class="d-flex pt-4">
-              <a href="{{ "/request-access/" | relURL }}" class="btn btn-primary">JOIN THE BLACK CIRCLE</a>
-            </div>
-        </div>
-        <!-- Right Column -->
-        <div class="col-md-6 call-to-action-pic">
-            <img src="{{ (resources.Get "images/call-to-action.png").RelPermalink }}" alt="The Black Circle" class="img-dark img-fluid w-100 h-100">
-             <img src="{{ (resources.Get "images/call-to-action-light.jpg").RelPermalink }}" alt="The Black Circle" class="img-light img-fluid w-100 h-100">
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  {{ partial "cta-band.html" . }}
 
 {{ end }}

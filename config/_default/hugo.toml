@@ -34,3 +34,10 @@ defaultContentLanguageInSubdir = true
     languageCode = 'ar'
     title = "الدائرة السوداء"
     weight = 20
+
+  [languages.zh-tw]
+    languageName = '繁體中文'
+    languageDirection = 'ltr'
+    languageCode = 'zh-tw'
+    title = "The Black Circle"
+    weight = 30

@@ -1,0 +1,82 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">起源</p>
+      <h1 class="display">受監管的私人財富平台。</h1>
+      <p class="lead">The Black Circle 為傳統私人銀行未能服務的一代而創立 — 尋求機構級財富管理、專屬禮賓服務、保密及跨境中立建議的精明投資者。</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">我們的基石</p>
+      <h2>我們的營運方式。</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>安全</h3><p>機構級託管及受保險保障的基礎設施保障我們管理的每項資產。</p></div>
+        <div class="tbc-card"><h3>服務</h3><p>專屬客戶經理提供個人化支援，確保每次互動均具保密、精準及清晰。</p></div>
+        <div class="tbc-card"><h3>合規</h3><p>若干投資架構的投資管理活動由 TBCWM International Limited（公司編號 2202526）進行，該公司為英屬維爾京群島核准管理人，於適用 BVI 監管框架內營運。</p></div>
+        <div class="tbc-card"><h3>接入</h3><p>獨立顧問模式，提供客觀接入第三方產品，確保選擇僅基於客戶利益。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">領導層</p>
+      <h2>具機構深度的主管。</h2>
+      <div class="people-grid" style="margin-top:48px;">
+        <div class="people-card">
+          <div class="people-head">
+            <img src="{{ (resources.Get "images/alex-tai.png").RelPermalink }}" alt="Alex Tai">
+            <div><div class="people-role">執行主席</div><h3>Alex Tai</h3></div>
+          </div>
+          <ul>
+            <li>逾 30 年跨區塊鏈、航空航天及創投創新的領導經驗。</li>
+            <li><strong>董事會成員，</strong>全球區塊鏈商業委員會（GBBC），推動數碼資產的機構採用。</li>
+            <li>前 <strong>集團總監</strong>，Virgin Management Ltd 及 Virgin Galactic 營運總監，主導全球策略、創新及商業化。</li>
+          </ul>
+        </div>
+        <div class="people-card">
+          <div class="people-head">
+            <img src="{{ (resources.Get "images/ivan-grigorev.png").RelPermalink }}" alt="Ivan Grigorev">
+            <div><div class="people-role">財務總監</div><h3>Ivan Grigorev</h3></div>
+          </div>
+          <ul>
+            <li>逾十年數碼資產、量化交易及機構金融經驗。</li>
+            <li>前 <strong>合夥人及財務總監</strong>，Alber Blanc，主導數碼市場擴展、流動性策略及跨境交易基礎設施。</li>
+            <li>以<strong>算法交易員</strong>起家，管理自營資金並開發高頻模型。</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container">
+      <p class="eyebrow">我們的價值</p>
+      <h2>我們的指引。</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>凡事卓越</h3><p>我們在所做的一切中堅持最高標準。卓越是我們的底線，而非追求。</p></div>
+        <div class="tbc-card"><h3>客戶至上</h3><p>每個決定始於一個問題：這是否符合客戶最佳利益？</p></div>
+        <div class="tbc-card"><h3>機構誠信</h3><p>我們以完全透明、監管紀律及受託責任營運，為財富管理訂立新基準。</p></div>
+        <div class="tbc-card"><h3>有目的的創新</h3><p>我們應用強化安全、提升成果及完善客戶體驗的技術。</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">超越財富管理</p>
+      <h2>核心以外的門戶。</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>遠見者網絡</h3><p>接入由跨金融、科技及創新的企業家、先驅及領袖組成的生態圈。透過私人活動及精選聚會，我們將您與塑造未來的人連結。</p></div>
+        <div class="tbc-card"><h3>專屬洞察及研究</h3><p>我們的專屬研究團隊提供市場情報及策略概覽，讓您有清晰度作出自信決定並把握機會。</p></div>
+        <div class="tbc-card"><h3>度身訂造體驗及解決方案</h3><p>由金融架構到度身訂造策略，我們創造專為您而設的路徑。每個解決方案都放大、多元化並保障您的財富以持續增長。</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta-band.zh-tw.html" . }}
+
+{{ end }}

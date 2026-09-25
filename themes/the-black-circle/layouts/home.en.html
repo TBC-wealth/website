@@ -1,12 +1,92 @@
 {{ define "main" }}
-<section id="home">
-  {{ partial "hero-section.en.html" . }}
-  {{ partial "holistic-section.en.html" . }}
-  {{ partial  "future-wealth-section.en.html" . }}
-  <!-- {{ partial "solutions-section.html" . }} -->
-  {{ partial  "excecution-section.en.html" . }}
-  {{ partial "cta-section.en.html" . }}
-  {{ partial "call-to-action.en.html" . }}
-</section>
-{{ end }}
 
+  <!-- HERO -->
+  <section class="hero">
+    <img class="hero-iris" src="{{ (resources.Get "images/iris-hero.png").RelPermalink }}" alt="" aria-hidden="true">
+    <div class="container">
+      <div class="hero-inner">
+        <p class="eyebrow">Private Wealth Management</p>
+        <h1 class="display">Wealth management for<br>the next generation</h1>
+        <p class="lead">Wealth planning, investment management, secondary market deals, and tailored solutions — delivered to a generation traditional private banking was not built to serve, with concierge service, a privacy-first approach, and product-neutral advice across borders.</p>
+        <div class="hero-actions">
+          <a class="btn btn--primary" href="{{ "/request-access/" | relURL }}">Request access <span class="arrow">&rsaquo;</span></a>
+          <a class="btn btn--ghost" href="#the-firm">The firm</a>
+        </div>
+        <div class="hero-meta">
+          <div><b>BVI &middot; Cayman &middot; ADGM</b>Multi-jurisdictional group</div>
+          <div><b>Regulated investment manager</b>BVI FSC, Approved Managers Regs.</div>
+          <div><b>Professional &amp; institutional clients</b>Not intended for retail investors</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE FIRM -->
+  <section class="section surface-paper" id="the-firm">
+    <div class="container narrow">
+      <p class="eyebrow">The firm</p>
+      <h2>A regulated private wealth platform across multiple jurisdictions.</h2>
+      <p class="lead">We serve a limited private clientele through a multi-jurisdictional group. Our work begins with the balance sheet in full and proceeds through planning, structuring, custody, and execution — held to the standard of a regulated institution and delivered with confidentiality and a single point of contact.</p>
+      <p>Each Group entity performs a distinct function under the laws and regulatory requirements applicable to it. The entity, and where relevant the segregated portfolio, relevant to a client or investment is identified in the applicable legal and offering documentation.</p>
+    </div>
+    {{ partial "skyline.html" (dict "city" "london") }}
+  </section>
+
+  <!-- WHAT WE DO -->
+  <section class="section surface-paper-2" id="what-we-do">
+    <div class="container">
+      <p class="eyebrow">What we do</p>
+      <h2>Core capabilities, organised around the client.</h2>
+      <p class="lead" style="max-width:62ch;color:var(--muted);margin-bottom:48px;">Planning, investment, secondary market deals, and tailored solutions — each delivered with concierge service and a single point of contact. Specialist gold and bitcoin capabilities support balance sheet resilience where required.</p>
+      <div class="service-list">
+        <a class="service-row" href="{{ "/solutions/wealth-planning/" | relURL }}">
+          <div class="num">01</div>
+          <div><h3>Wealth Planning</h3><p>Structuring and succession arrangements for continuity and control across generations, through compliant insurance and fiduciary solutions.</p></div>
+          <div class="go">Explore <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/solutions/investment/" | relURL }}">
+          <div class="num">02</div>
+          <div><h3>Investment Management</h3><p>Discretionary management of traditional and alternative portfolios, within a regulated framework and aligned to the client's objectives and risk profile.</p></div>
+          <div class="go">Explore <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/request-access/" | relURL }}">
+          <div class="num">03</div>
+          <div><h3>Secondary Market Deals</h3><p>Curated access to secondary market opportunities across US and global markets, including the space sector.</p></div>
+          <div class="go">Request access <span class="arrow">&rsaquo;</span></div>
+        </a>
+        <a class="service-row" href="{{ "/solutions/tailored-solutions/" | relURL }}">
+          <div class="num">04</div>
+          <div><h3>Tailored Solutions</h3><p>Bespoke solutions covering private banks and family offices' specific requests, from banking access to lifestyle.</p></div>
+          <div class="go">Explore <span class="arrow">&rsaquo;</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPECIALIST CAPABILITIES -->
+  <section class="section surface-dark" id="digital-asset-solutions">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Specialist capabilities</p>
+      <h2>Balance sheet resilience.</h2>
+      <p class="lead" style="max-width:64ch;color:var(--on-dark-muted);margin-bottom:48px;">Gold and bitcoin solutions designed to support resilience and diversification across the balance sheet — delivered within the same confidential, regulated framework.</p>
+      <div class="quiet-grid">
+        <a class="quiet-card" href="{{ "/solutions/gold/" | relURL }}"><h4>Gold Solutions</h4><p>Physical gold — from allocated investment positions to gold-backed financing, held with approved custodians. Exclusive access to institutional-grade gold structures.</p><span class="more">Learn more &rsaquo;</span></a>
+        <a class="quiet-card" href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relURL }}"><h4>Bitcoin Solutions</h4><p>Bitcoin-backed financing and yield, maintaining exposure while accessing liquidity. Exclusive, institutional-only bitcoin structures.</p><span class="more">Learn more &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- THE BLACK CIRCLE SERVICE -->
+  <section class="section surface-paper" id="the-service">
+    <div class="container narrow">
+      <p class="eyebrow">The Black Circle Service</p>
+      <h2>Concierge for all your financial needs.</h2>
+      <p class="lead" style="margin-top:8px;">Each client has a dedicated relationship manager and direct access to the firm's principals. Communications are confidential, decisions are driven solely by the client's objectives, and arrangements are fully segregated and private.</p>
+      <p style="margin-top:16px;"><a class="link" href="{{ "/the-origin/" | relURL }}">The origin <span style="display:inline-block;">&rsaquo;</span></a></p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  {{ partial "cta-band.html" . }}
+
+{{ end }}

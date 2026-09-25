@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">الحلول</p>
+      <h1 class="display">قدرات الثروات الخاصة المنظمة حول العميل.</h1>
+      <p class="lead">تخطيط الثروات، إدارة الاستثمار، صفقات السوق الثانوية، والحلول المخصصة — مقدمة بخدمة كونسيرج ونقطة اتصال واحدة. تدعم قدرات الذهب والبيتكوين المتخصصة مرونة الميزانية العمومية عند الحاجة.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">القدرات الأساسية</p>
+      <h2>مبنية حول الميزانية العمومية الكاملة.</h2>
+      <p class="lead" style="max-width:62ch;color:var(--muted);margin-bottom:48px;">كل قدرة مقدمة ضمن إطار منظّم ومتوافقة مع أهداف العميل وملف المخاطر ومتطلبات الولاية القضائية.</p>
+      <div class="tbc-grid tbc-grid--2">
+        <a class="tbc-card" href="{{ "/solutions/wealth-planning/" | relLangURL }}"><h3>تخطيط الثروات</h3><p>ترتيبات الهيكلة والتوارث للاستمرارية والسيطرة عبر الأجيال.</p><span class="more">استكشف &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/investment/" | relLangURL }}"><h3>إدارة الاستثمار</h3><p>الإدارة التقديرية للمحافظ التقليدية والبديلة ضمن إطار منظّم.</p><span class="more">استكشف &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/request-access/" | relLangURL }}"><h3>صفقات السوق الثانوية</h3><p>وصول منسّق إلى فرص السوق الثانوية عبر الأسواق الأمريكية والعالمية، بما في ذلك قطاع الفضاء.</p><span class="more">اطلب الوصول &rsaquo;</span></a>
+        <a class="tbc-card" href="{{ "/solutions/tailored-solutions/" | relLangURL }}"><h3>حلول مخصصة</h3><p>حلول مخصصة تغطي الطلبات المحددة للبنوك الخاصة ومكاتب العائلة.</p><span class="more">استكشف &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">القدرات المتخصصة</p>
+      <h2>مرونة الميزانية العمومية.</h2>
+      <p class="lead" style="max-width:64ch;color:var(--on-dark-muted);margin-bottom:48px;">حلول الذهب والبيتكوين المصممة لدعم المرونة والتنويع عبر الميزانية العمومية — مقدمة ضمن نفس إطار السرية والتنظيم.</p>
+      <div class="quiet-grid">
+        <a class="quiet-card" href="{{ "/solutions/gold/" | relLangURL }}"><h4>حلول الذهب</h4><p>الذهب الفعلي — من المراكز الاستثمارية المخصصة إلى التمويل المدعوم بالذهب، محفوظ لدى أمناء حفظ معتمدين. وصول حصري لهياكل ذهبية بمستوى مؤسسي.</p><span class="more">اعرف المزيد &rsaquo;</span></a>
+        <a class="quiet-card" href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relLangURL }}"><h4>حلول البيتكوين</h4><p>التمويل المدعوم بالبيتكوين والعائد، مع الحفاظ على المركز مع الوصول إلى السيولة. هياكل بيتكوين حصرية بمستوى مؤسسي.</p><span class="more">اعرف المزيد &rsaquo;</span></a>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta-band.ar.html" . }}
+
+{{ end }}
