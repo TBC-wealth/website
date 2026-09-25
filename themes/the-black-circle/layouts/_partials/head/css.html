@@ -17,21 +17,8 @@
 <link rel="stylesheet" href="{{ $aos.RelPermalink }}" media="screen">
 
 {{ if hugo.IsDevelopment }}
-
-    {{ if eq .Site.Language.LanguageDirection "rtl" }}
-        <link rel="stylesheet" href="{{ $mainRTL.RelPermalink }}" media="screen">
-    {{ else }}
-        <link rel="stylesheet" href="{{ $mainLTR.RelPermalink }}" media="screen">
-    {{ end }}
-
+    <link rel="stylesheet" href="{{ $mainLTR.RelPermalink }}" media="screen">
 {{ else }}
-
-    {{ if eq .Site.Language.LanguageDirection "rtl" }}
-        {{ $secureCSS := $mainRTL | resources.Fingerprint "sha512" }}
-        <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" media="screen">
-    {{ else }}
-        {{ $secureCSS := $mainLTR | resources.Fingerprint "sha512" }}
-        <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" media="screen">
-    {{ end }}
-
+    {{ $secureCSS := $mainLTR | resources.Fingerprint "sha512" }}
+    <link rel="stylesheet" href="{{ $secureCSS.RelPermalink }}" integrity="{{ $secureCSS.Data.Integrity }}" crossorigin="anonymous" media="screen">
 {{ end }}
