@@ -15,16 +15,24 @@
 <script>
 (function(){
   var form=document.getElementById('lead-form');if(!form)return;
-  var API="{{ .Site.Params.leads_api_url }}";
   var status=document.getElementById('form-status');
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    if(!API){status.textContent='Please contact us at legal@theblackcircle.com to submit your request.';return;}
     status.textContent='Submitting...';
     var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
-    fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
-      .then(function(r){if(r.ok){status.textContent='Thank you. Your request has been received. A dedicated manager will contact you shortly.';form.reset();}else{status.textContent='Submission failed. Please email legal@theblackcircle.com.';}})
-      .catch(function(){status.textContent='Submission failed. Please email legal@theblackcircle.com.';});
+    var subject=encodeURIComponent('New Lead: '+(data.name||'Website Enquiry'));
+    var body=encodeURIComponent(
+      'Name: '+(data.name||'')+'\n'+
+      'Email: '+(data.email||'')+'\n'+
+      'Phone: '+(data.phone||'')+'\n'+
+      'Company: '+(data.company||'')+'\n'+
+      'Message: '+(data.message||'')+'\n'+
+      'Eligibility confirmed: '+(data.eligible?'Yes':'No')+'\n'+
+      'Source: theblackcircle.com'
+    );
+    window.location.href='mailto:info@theblackcircle.com?cc=alberto@theblackcircle.com&subject='+subject+'&body='+body;
+    status.textContent='Opening your email client... If nothing happens, please email info@theblackcircle.com directly.';
+    setTimeout(function(){status.textContent='Thank you. Your email client should have opened with your request pre-filled. Please send it to complete your submission.';},2000);
   });
 })();
 </script>

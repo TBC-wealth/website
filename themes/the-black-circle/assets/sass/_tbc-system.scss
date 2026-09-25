@@ -126,9 +126,9 @@
 [dir="rtl"] .tbc .hero-iris{right:auto;left:-18%}
 [dir="rtl"] .tbc .arrow{display:inline-block;transform:scaleX(-1)}
 [dir="rtl"] .tbc .service-row .arrow{margin-left:0;margin-right:6px}
-[dir="rtl"] .tbc .service-row{grid-template-columns:auto 1fr 80px}
-[dir="rtl"] .tbc .service-row .num{order:3}
 [dir="rtl"] .tbc .quiet-card .more,[dir="rtl"] .tbc .tbc-card .more{letter-spacing:normal}
+[dir="rtl"] .tbc-dropdown{left:auto;right:0}
+[dir="rtl"] .tbc-actions .tbc-dropdown{right:auto;left:0}
 
 // Global header (institutional, fixed, dark)
 .tbc-header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal-deep);border-bottom:1px solid rgba(237,231,218,0.08)}

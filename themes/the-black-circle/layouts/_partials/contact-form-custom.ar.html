@@ -1,0 +1,38 @@
+<form class="tbc-form" id="lead-form">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+  </div>
+  <div class="form-row">
+    <input type="text" name="phone" placeholder="الهاتف (اختياري)">
+    <input type="text" name="company" placeholder="الشركة / المؤسسة (اختياري)">
+  </div>
+  <textarea name="message" rows="4" placeholder="وصف موجز لمتطلباتك" required></textarea>
+  <label class="form-check"><input type="checkbox" name="eligible" required> أؤكد أنني مستثمر مهني أو مؤسسي أو متطور.</label>
+  <button type="submit" class="btn btn--primary">إرسال الطلب <span class="arrow">&rsaquo;</span></button>
+  <p class="form-status" id="form-status"></p>
+</form>
+<script>
+(function(){
+  var form=document.getElementById('lead-form');if(!form)return;
+  var status=document.getElementById('form-status');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.textContent='جاري الإرسال...';
+    var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
+    var subject=encodeURIComponent('طلب جديد: '+(data.name||'استفسار من الموقع'));
+    var body=encodeURIComponent(
+      'الاسم: '+(data.name||'')+'\n'+
+      'البريد الإلكتروني: '+(data.email||'')+'\n'+
+      'الهاتف: '+(data.phone||'')+'\n'+
+      'الشركة: '+(data.company||'')+'\n'+
+      'الرسالة: '+(data.message||'')+'\n'+
+      'تأكيد الأهلية: '+(data.eligible?'نعم':'لا')+'\n'+
+      'المصدر: theblackcircle.com'
+    );
+    window.location.href='mailto:info@theblackcircle.com?cc=alberto@theblackcircle.com&subject='+subject+'&body='+body;
+    status.textContent='جاري فتح برنامج البريد الإلكتروني...';
+    setTimeout(function(){status.textContent='شكراً لك. يجب أن يكون قد فُتح برنامج بريدك الإلكتروني بطلبك مُعبأً مسبقاً. يرجى إرساله لإتمام تقديمك.';},2000);
+  });
+})();
+</script>
