@@ -1,10 +1,6 @@
 +++
-title = 'The Black Circle | Institutional Digital Wealth Management for Private Clients'
-description = 'Exclusive digital wealth management platform for ultra-high-net-worth individuals and institutions. Sophisticated Bitcoin and crypto solutions through curated global partners with white-glove service.'
+title = 'The Black Circle | Wealth Management for the Next Generation'
+description = 'Private wealth management for the next generation. Wealth planning, investment management, secondary market deals and tailored solutions, delivered with concierge service, a privacy-first approach and product-neutral advice across borders.'
 date = 2023-01-01T08:00:00-07:00
 draft = false
 +++
-
-Laborum voluptate pariatur ex culpa magna nostrud est incididunt fugiat
-pariatur do dolor ipsum enim. Consequat tempor do dolor eu. Non id id anim anim
-excepteur excepteur pariatur nostrud qui irure ullamco.

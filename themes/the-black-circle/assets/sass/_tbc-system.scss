@@ -10,6 +10,8 @@
   font-family:var(--font-sans); color:var(--ink-text); font-size:1.125rem; line-height:1.65; letter-spacing:0.015em; background:var(--paper);
 }
 .tbc *{box-sizing:border-box}
+.tbc-skip{position:fixed;left:8px;top:8px;z-index:1000;background:var(--white);color:var(--ink-text);padding:12px 20px;font-size:var(--fs-sm);font-weight:600;border-radius:6px;transform:translateY(-150%);transition:transform .18s;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.18)}
+.tbc-skip:focus{transform:translateY(0);outline:2px solid var(--bronze);outline-offset:2px}
 .tbc .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 .tbc .container.narrow{max-width:880px}
 .tbc .section{padding-block:var(--section-y);position:relative}
@@ -42,6 +44,13 @@
 .tbc-form .form-check input{margin:0;width:16px;height:16px;accent-color:var(--bronze);flex-shrink:0}
 .tbc-form .form-status{font-size:var(--fs-sm);color:var(--bronze);min-height:1.5em}
 .tbc-form .btn{align-self:flex-start;padding:10px 20px;min-height:40px;font-size:var(--fs-xs)}
+.tbc-form label{font-size:var(--fs-xs);color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:6px;display:block}
+.tbc-form .form-field{display:flex;flex-direction:column}
+.tbc-form .opt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)}
+.tbc-form .form-error{font-size:var(--fs-xs);color:#B3261E;margin-top:6px;min-height:0;line-height:1.4}
+.tbc-form input[aria-invalid="true"],.tbc-form textarea[aria-invalid="true"]{border-color:#B3261E;background:#FBF1F0}
+.tbc-form .form-notice{font-size:var(--fs-xs);color:var(--muted);line-height:1.6;margin:4px 0 0}
+.tbc-form .form-notice a{color:var(--bronze);text-decoration:underline}
 @media(max-width:640px){.tbc-form .form-row{grid-template-columns:1fr}}
 
 .tbc .hero{background:radial-gradient(125% 95% at 50% 0%,var(--teal) 0%,var(--teal-deep) 42%,var(--black) 100%);color:var(--on-dark);position:relative;overflow:hidden}
@@ -165,6 +174,9 @@
 .tbc-footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:32px;margin-bottom:40px}
 .tbc-footer-brand img{height:30px;width:auto;display:block;margin-bottom:16px}
 .tbc-footer-tagline{font-size:var(--fs-sm);color:var(--on-dark-muted);max-width:34ch}
+.tbc-footer-contact{font-size:var(--fs-sm);color:var(--on-dark-muted);margin-top:10px}
+.tbc-footer-contact a{color:var(--bronze-soft);text-decoration:none}
+.tbc-footer-contact a:hover{text-decoration:underline}
 .tbc-footer-col h6{font-family:var(--font-sans);font-size:var(--fs-xs);font-weight:600;letter-spacing:0.16em;text-transform:uppercase;color:var(--bronze-soft);margin:0 0 14px}
 .tbc-footer-col ul{list-style:none;margin:0;padding:0}
 .tbc-footer-col li{margin-bottom:8px}
@@ -207,3 +219,21 @@
   body.tbc-menu-open .tbc-nav .has-dropdown .tbc-dropdown a{padding:12px 0;font-size:0.9rem;border-bottom:1px solid rgba(237,231,218,0.06)}
 }
 @media (prefers-reduced-motion:reduce){.tbc *{transition:none!important;animation:none!important}}
+
+.tbc-consent{position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--charcoal);color:var(--on-dark);box-shadow:0 -8px 32px rgba(0,0,0,0.35);border-top:1px solid var(--bronze)}
+.tbc-consent-inner{max-width:1200px;margin:0 auto;padding:20px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.tbc-consent-text{flex:1 1 420px;min-width:280px}
+.tbc-consent-title{font-family:var(--font-sans);font-size:var(--fs-sm);font-weight:600;letter-spacing:0.04em;margin:0 0 4px;color:var(--on-dark)}
+.tbc-consent-body{font-size:var(--fs-sm);color:var(--on-dark-muted);line-height:1.5;margin:0}
+.tbc-consent-body a{color:var(--bronze-soft);text-decoration:underline}
+.tbc-consent-actions{display:flex;gap:12px;flex-shrink:0}
+.tbc-consent-btn{min-height:40px;padding:10px 22px;font-size:var(--fs-xs)}
+.tbc-consent-btn.btn--ghost{border-color:var(--line-dark);color:var(--on-dark)}
+.tbc-consent-btn.btn--ghost:hover{border-color:var(--bronze);color:var(--white)}
+.tbc-consent-btn.btn--primary{background:var(--bronze);color:var(--white)}
+.tbc-consent-btn.btn--primary:hover{background:#9A603D}
+.tbc-cookie-prefs{color:var(--on-dark-muted);font-size:var(--fs-xs);text-decoration:underline}
+.tbc-cookie-prefs:hover{color:var(--bronze)}
+@media(max-width:640px){.tbc-consent-inner{flex-direction:column;align-items:stretch}.tbc-consent-actions{justify-content:stretch}.tbc-consent-btn{flex:1}}
+[dir="rtl"] .tbc-consent{direction:rtl}
+

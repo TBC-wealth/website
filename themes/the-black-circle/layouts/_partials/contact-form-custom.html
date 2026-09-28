@@ -1,23 +1,69 @@
-<form class="tbc-form" id="lead-form">
+<form class="tbc-form" id="lead-form" method="post" action="" novalidate>
   <div class="form-row">
-    <input type="text" name="name" placeholder="Full name" required>
-    <input type="email" name="email" placeholder="Email address" required>
+    <div class="form-field">
+      <label for="cf-name">Full name</label>
+      <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Jane Doe" required aria-required="true" aria-invalid="false" aria-describedby="cf-name-err">
+      <p class="form-error" id="cf-name-err" role="alert" hidden></p>
+    </div>
+    <div class="form-field">
+      <label for="cf-email">Email address</label>
+      <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-invalid="false" aria-describedby="cf-email-err">
+      <p class="form-error" id="cf-email-err" role="alert" hidden></p>
+    </div>
   </div>
   <div class="form-row">
-    <input type="text" name="phone" placeholder="Phone (optional)">
-    <input type="text" name="company" placeholder="Company / Organization (optional)">
+    <div class="form-field">
+      <label for="cf-phone">Phone <span class="opt">(optional)</span></label>
+      <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" aria-invalid="false">
+    </div>
+    <div class="form-field">
+      <label for="cf-company">Company / Organization <span class="opt">(optional)</span></label>
+      <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="Company name">
+    </div>
   </div>
-  <textarea name="message" rows="4" placeholder="Brief description of your requirements" required></textarea>
-  <label class="form-check"><input type="checkbox" name="eligible" required> I confirm I am a professional, institutional, or sophisticated investor.</label>
+  <div class="form-field">
+    <label for="cf-message">Brief description of your requirements</label>
+    <textarea id="cf-message" name="message" rows="4" placeholder="Tell us briefly how we can help" required aria-required="true" aria-invalid="false" aria-describedby="cf-message-err"></textarea>
+    <p class="form-error" id="cf-message-err" role="alert" hidden></p>
+  </div>
+  <label class="form-check"><input type="checkbox" name="eligible" value="yes" required> I confirm I am a professional, institutional, or sophisticated investor.</label>
+  <label class="form-check"><input type="checkbox" name="marketing" value="yes"> I agree to receive occasional updates from The Black Circle. I can opt out at any time.</label>
+  <p class="form-notice">We use these details to respond to your enquiry and assess eligibility. See our <a href="{{ "/privacy-policy/" | relURL }}">Privacy Policy</a>. Submitting this form is not a confirmation of eligibility.</p>
   <button type="submit" class="btn btn--primary">Submit request <span class="arrow">&rsaquo;</span></button>
-  <p class="form-status" id="form-status"></p>
+  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form>
 <script>
 (function(){
   var form=document.getElementById('lead-form');if(!form)return;
   var status=document.getElementById('form-status');
+  function setError(field,msg){
+    var err=document.getElementById(field.getAttribute('aria-describedby'));
+    field.setAttribute('aria-invalid',msg?'true':'false');
+    if(err){if(msg){err.textContent=msg;err.hidden=false;}else{err.textContent='';err.hidden=true;}}
+  }
+  function validate(){
+    var firstInvalid=null;
+    ['cf-name','cf-email','cf-message'].forEach(function(id){
+      var f=document.getElementById(id);var val=(f.value||'').trim();
+      var msg='';
+      if(f.required&&!val){msg='This field is required.';}
+      else if(f.type==='email'&&val&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){msg='Please enter a valid email address.';}
+      setError(f,msg);
+      if(msg&&!firstInvalid){firstInvalid=f;}
+    });
+    var elig=form.querySelector('input[name="eligible"]');
+    if(!elig.checked){
+      setError(elig,'Please confirm your investor status to continue.');
+      if(!firstInvalid){firstInvalid=elig;}
+    }else{setError(elig,'');}
+    if(firstInvalid){firstInvalid.focus();}
+    return !firstInvalid;
+  }
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    status.textContent='';
+    if(!validate()){status.textContent='Please review the highlighted fields.';status.style.color='#B3261E';return;}
+    status.style.color='';
     status.textContent='Submitting...';
     var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
     var subject=encodeURIComponent('New Lead: '+(data.name||'Website Enquiry'));
@@ -28,11 +74,18 @@
       'Company: '+(data.company||'')+'\n'+
       'Message: '+(data.message||'')+'\n'+
       'Eligibility confirmed: '+(data.eligible?'Yes':'No')+'\n'+
+      'Marketing consent: '+(data.marketing?'Yes':'No')+'\n'+
       'Source: theblackcircle.com'
     );
-    window.location.href='mailto:info@theblackcircle.com?cc=alberto@theblackcircle.com&subject='+subject+'&body='+body;
+    window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
     status.textContent='Opening your email client... If nothing happens, please email info@theblackcircle.com directly.';
     setTimeout(function(){status.textContent='Thank you. Your email client should have opened with your request pre-filled. Please send it to complete your submission.';},2000);
   });
+  ['cf-name','cf-email','cf-message'].forEach(function(id){
+    var f=document.getElementById(id);
+    if(f){f.addEventListener('input',function(){setError(f,'');});}
+  });
+  var elig=form.querySelector('input[name="eligible"]');
+  if(elig){elig.addEventListener('change',function(){setError(elig,'');});}
 })();
 </script>

@@ -1,6 +1,6 @@
 +++
-title = 'The Black Circle | Institutional Digital Wealth Management for Private Clients'
-description = 'Exclusive digital wealth management platform for ultra-high-net-worth individuals and institutions. Sophisticated Bitcoin and crypto solutions through curated global partners with white-glove service.'
+title = 'The Black Circle | 為下一代而設的財富管理'
+description = '為下一代而設的私人財富管理。財富規劃、投資管理、二級市場交易及度身訂造解決方案，以專屬禮賓服務、隱私至上原則及跨境中立建議為核心。'
 date = 2023-01-01T08:00:00-07:00
 draft = false
 +++

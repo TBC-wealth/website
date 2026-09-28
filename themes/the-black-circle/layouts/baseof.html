@@ -4,6 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
+  <a href="#main" class="tbc-skip">Skip to main content</a>
   <div class="tbc">
     <header class="tbc-header">
       {{ if eq .Site.Language.Lang "ar" }}
@@ -14,7 +15,7 @@
           {{ partial "header.en.html" . }}
       {{ end }}
     </header>
-    <main>
+    <main id="main">
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="tbc-footer">
@@ -27,6 +28,7 @@
       {{ end }}
     </footer>
   </div>
+{{ partial "consent-banner.html" . }}
 <script>
 document.querySelector('.tbc-menu-btn')?.addEventListener('click',function(){document.body.classList.toggle('tbc-menu-open');this.setAttribute('aria-expanded',document.body.classList.contains('tbc-menu-open'))});
 document.addEventListener('click',function(e){if(!e.target.closest('.tbc-header')&&!e.target.closest('.tbc-nav')){document.body.classList.remove('tbc-menu-open');document.querySelector('.tbc-menu-btn')?.setAttribute('aria-expanded','false')}});

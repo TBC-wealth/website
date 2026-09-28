@@ -1,23 +1,69 @@
-<form class="tbc-form" id="lead-form">
+<form class="tbc-form" id="lead-form" method="post" action="" novalidate>
   <div class="form-row">
-    <input type="text" name="name" placeholder="全名" required>
-    <input type="email" name="email" placeholder="電子郵件" required>
+    <div class="form-field">
+      <label for="cf-name">全名</label>
+      <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="全名" required aria-required="true" aria-invalid="false" aria-describedby="cf-name-err">
+      <p class="form-error" id="cf-name-err" role="alert" hidden></p>
+    </div>
+    <div class="form-field">
+      <label for="cf-email">電子郵件</label>
+      <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-invalid="false" aria-describedby="cf-email-err">
+      <p class="form-error" id="cf-email-err" role="alert" hidden></p>
+    </div>
   </div>
   <div class="form-row">
-    <input type="text" name="phone" placeholder="電話（可選）">
-    <input type="text" name="company" placeholder="公司 / 機構（可選）">
+    <div class="form-field">
+      <label for="cf-phone">電話 <span class="opt">（可選）</span></label>
+      <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" aria-invalid="false">
+    </div>
+    <div class="form-field">
+      <label for="cf-company">公司 / 機構 <span class="opt">（可選）</span></label>
+      <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="公司名稱">
+    </div>
   </div>
-  <textarea name="message" rows="4" placeholder="簡述您的需求" required></textarea>
-  <label class="form-check"><input type="checkbox" name="eligible" required> 我確認我是專業、機構或具經驗的投資者。</label>
+  <div class="form-field">
+    <label for="cf-message">簡述您的需求</label>
+    <textarea id="cf-message" name="message" rows="4" placeholder="簡述我們可以如何協助您" required aria-required="true" aria-invalid="false" aria-describedby="cf-message-err"></textarea>
+    <p class="form-error" id="cf-message-err" role="alert" hidden></p>
+  </div>
+  <label class="form-check"><input type="checkbox" name="eligible" value="yes" required> 我確認我是專業、機構或具經驗的投資者。</label>
+  <label class="form-check"><input type="checkbox" name="marketing" value="yes"> 我同意不時接收 The Black Circle 的最新資訊。我可隨時取消訂閱。</label>
+  <p class="form-notice">我們使用這些資料回覆您的查詢並評估資格。請參閱<a href="{{ "/privacy-policy/" | relLangURL }}">《隱私政策》</a>。提交本表格並不構成資格確認。</p>
   <button type="submit" class="btn btn--primary">提交請求 <span class="arrow">&rsaquo;</span></button>
-  <p class="form-status" id="form-status"></p>
+  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
 </form>
 <script>
 (function(){
   var form=document.getElementById('lead-form');if(!form)return;
   var status=document.getElementById('form-status');
+  function setError(field,msg){
+    var err=document.getElementById(field.getAttribute('aria-describedby'));
+    field.setAttribute('aria-invalid',msg?'true':'false');
+    if(err){if(msg){err.textContent=msg;err.hidden=false;}else{err.textContent='';err.hidden=true;}}
+  }
+  function validate(){
+    var firstInvalid=null;
+    ['cf-name','cf-email','cf-message'].forEach(function(id){
+      var f=document.getElementById(id);var val=(f.value||'').trim();
+      var msg='';
+      if(f.required&&!val){msg='此欄位為必填。';}
+      else if(f.type==='email'&&val&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){msg='請輸入有效的電子郵件地址。';}
+      setError(f,msg);
+      if(msg&&!firstInvalid){firstInvalid=f;}
+    });
+    var elig=form.querySelector('input[name="eligible"]');
+    if(!elig.checked){
+      setError(elig,'請確認您的投資者身分以繼續。');
+      if(!firstInvalid){firstInvalid=elig;}
+    }else{setError(elig,'');}
+    if(firstInvalid){firstInvalid.focus();}
+    return !firstInvalid;
+  }
   form.addEventListener('submit',function(e){
     e.preventDefault();
+    status.textContent='';
+    if(!validate()){status.textContent='請檢視標示的欄位。';status.style.color='#B3261E';return;}
+    status.style.color='';
     status.textContent='提交中...';
     var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
     var subject=encodeURIComponent('新查詢: '+(data.name||'網站查詢'));
@@ -28,11 +74,18 @@
       '公司: '+(data.company||'')+'\n'+
       '訊息: '+(data.message||'')+'\n'+
       '資格確認: '+(data.eligible?'是':'否')+'\n'+
+      '行銷同意: '+(data.marketing?'是':'否')+'\n'+
       '來源: theblackcircle.com'
     );
-    window.location.href='mailto:info@theblackcircle.com?cc=alberto@theblackcircle.com&subject='+subject+'&body='+body;
-    status.textContent='正在開啟電郵應用程式...';
+    window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
+    status.textContent='正在開啟電郵應用程式... 若無反應，請直接電郵 info@theblackcircle.com。';
     setTimeout(function(){status.textContent='感謝您。您的電郵應用程式應已開啟並預填了您的請求。請發送以完成提交。';},2000);
   });
+  ['cf-name','cf-email','cf-message'].forEach(function(id){
+    var f=document.getElementById(id);
+    if(f){f.addEventListener('input',function(){setError(f,'');});}
+  });
+  var elig=form.querySelector('input[name="eligible"]');
+  if(elig){elig.addEventListener('change',function(){setError(elig,'');});}
 })();
 </script>

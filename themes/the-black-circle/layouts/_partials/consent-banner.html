@@ -1,0 +1,43 @@
+{{ $lang := .Site.Language.Lang }}
+{{ $t := dict
+  "en" (dict "title" "Cookies & privacy" "body" "We use strictly necessary cookies to operate this site. With your consent, we also use analytics and marketing cookies to improve our services. See our" "policy" "Cookies Policy" "accept" "Accept" "reject" "Reject")
+  "ar" (dict "title" "ملفات تعريف الارتباط والخصوصية" "body" "نستخدم ملفات تعريف الارتباط الضرورية لتشغيل هذا الموقع. وبموافقتك، نستخدم أيضًا ملفات التحليل والتسويق لتحسين خدماتنا. اطّلع على" "policy" "سياسة ملفات تعريف الارتباط" "accept" "قبول" "reject" "رفض")
+  "zh-tw" (dict "title" "Cookie 與隱私" "body" "我們使用絕對必要的 Cookie 來營運本網站。在您同意下，我們亦使用分析與行銷 Cookie 以改善服務。請參閱" "policy" "Cookie 政策" "accept" "接受" "reject" "拒絕")
+}}
+{{ $s := index $t $lang | default (index $t "en") }}
+{{ $cookieURL := cond (eq $lang "en") ("/cookies-policy/" | relURL) ("/cookies-policy/" | relLangURL) }}
+{{ if not hugo.IsServer }}
+<div class="tbc-consent" id="tbc-consent" role="region" aria-label="Cookie consent" hidden>
+  <div class="tbc-consent-inner">
+    <div class="tbc-consent-text">
+      <p class="tbc-consent-title">{{ $s.title }}</p>
+      <p class="tbc-consent-body">{{ $s.body }} <a href="{{ $cookieURL }}">{{ $s.policy }}</a>.</p>
+    </div>
+    <div class="tbc-consent-actions">
+      <button type="button" class="btn btn--ghost tbc-consent-btn" id="tbc-consent-reject">{{ $s.reject }}</button>
+      <button type="button" class="btn btn--primary tbc-consent-btn" id="tbc-consent-accept">{{ $s.accept }}</button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  function init(){
+    var banner=document.getElementById('tbc-consent');if(!banner)return;
+    var stored=null;try{stored=localStorage.getItem('tbc_consent');}catch(e){}
+    function show(){banner.hidden=false;document.body.classList.add('tbc-consent-open');}
+    function hide(){banner.hidden=true;document.body.classList.remove('tbc-consent-open');}
+    function set(v){try{localStorage.setItem('tbc_consent',v);}catch(e){}hide();if(v==='granted'&&typeof window.tbcLoadAnalytics==='function'){window.tbcLoadAnalytics();}}
+    if(!stored){show();}
+    var acc=document.getElementById('tbc-consent-accept');
+    var rej=document.getElementById('tbc-consent-reject');
+    if(acc)acc.addEventListener('click',function(){set('granted');});
+    if(rej)rej.addEventListener('click',function(){set('denied');});
+    document.addEventListener('click',function(e){
+      var t=e.target.closest('#tbc-cookie-prefs');
+      if(t){e.preventDefault();show();}
+    });
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+{{ end }}

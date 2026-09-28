@@ -1,0 +1,23 @@
+{{ $title := .Title | default site.Title }}
+{{ $desc := .Description | default "Private wealth management for the next generation — wealth planning, investment management, secondary market deals and tailored solutions, delivered with concierge service and a privacy-first approach across borders." }}
+{{ $url := .Permalink }}
+{{ $img := "logo-2-line-white.png" | absURL }}
+<link rel="canonical" href="{{ $url }}">
+{{ if .IsTranslated }}
+{{ range .Translations }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ end }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ $url }}">
+{{ range .AllTranslations }}{{ if eq .Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ end }}{{ end }}{{ end }}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"The Black Circle","url":{{ .Site.BaseURL | jsonify }},"logo":{{ $img | jsonify }},"description":"Private wealth management for the next generation, delivered across multiple jurisdictions with concierge service and a privacy-first approach."}
+</script>
