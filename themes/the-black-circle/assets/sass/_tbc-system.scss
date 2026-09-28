@@ -96,6 +96,7 @@
 
 // Content cards (paper sections)
 .tbc .tbc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media (min-width:641px){.tbc .tbc-grid:has(> :nth-child(4):last-child){grid-template-columns:repeat(2,1fr)}}
 .tbc .tbc-card{background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05);padding:28px 26px;transition:border-color .18s,transform .18s;text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
 .tbc .tbc-card:hover{border-color:var(--bronze);transform:translateY(-2px)}
 .tbc .tbc-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--ink-text);margin:0 0 10px}
