@@ -168,23 +168,3 @@ weight = 6
 name = "Tailored Solutions"
 pageRef = "/solutions/tailored-solutions"
 weight = 7
-
-
-##############################
-# Footer Menu Explore
-##############################
-
-[[explore]]
-name = "Ultra-High-Net-Worth Individuals"
-pageRef = "/solutions/uhnws"
-weight = 1
-
-[[explore]]
-name = "Family Offices and Private Banks"
-pageRef = "/solutions/private-bank-family-offices"
-weight = 2
-
-[[explore]]
-name = "Crypto Institutions"
-pageRef = "/solutions/crypto-native-organizations"
-weight = 3
