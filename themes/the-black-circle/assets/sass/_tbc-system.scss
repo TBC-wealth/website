@@ -148,7 +148,7 @@
 .tbc-header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal-deep);border-bottom:1px solid rgba(237,231,218,0.08)}
 .tbc-header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px}
 .tbc-brand img{height:26px;width:auto;display:block}
-.tbc-nav{display:flex;gap:28px;align-items:center}
+.tbc-nav{display:flex;gap:28px;align-items:center;font-size:var(--fs-sm)}
 .tbc-nav a{font-size:var(--fs-sm);font-weight:400;color:var(--on-dark);text-decoration:none;transition:color .18s}
 .tbc-nav a:hover,.tbc-nav a.active{color:var(--bronze-soft)}
 .tbc-nav .has-dropdown{position:relative}
