@@ -1,0 +1,153 @@
+.custom-card {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-color: rgba(var(--color-fg-rgb), 0.05);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 0;
+    transition: all .5s ease;
+    position: relative;
+    z-index: 0;
+    &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        padding: 1px; /* border thickness */
+        border-radius: inherit;
+        background: linear-gradient(135deg, $secondary, $primary);
+        -webkit-mask:
+            linear-gradient($white 0 0) content-box,
+            linear-gradient($white 0 0);
+        -webkit-mask-composite: xor;
+        mask-composite: exclude;
+        pointer-events: none;
+    }
+    .main-card-heading {
+        padding: ($default-base-spacer * 1) ($default-base-spacer * 1) 0 ($default-base-spacer * 1); 
+        @include media-breakpoint-up(lg) {
+           padding: ($default-base-spacer * 1.5) ($default-base-spacer * 1.5) 0 ($default-base-spacer * 1.5); 
+        }
+    }
+    .card-body {
+        padding: $default-base-spacer * 1;
+        @include media-breakpoint-up(lg) {
+            padding: $default-base-spacer * 1.5;    
+        }
+        .card-icon {
+            height: 64px;
+            width: 64px;
+            border-radius: 64px;
+            background: rgba(var(--color-fg-rgb), 0.03);
+            border: 1px solid rgba(var(--color-fg-rgb), 0.2);
+            svg {
+                path {
+                    stroke: var(--color-fg);
+                    fill: transparent;
+                }
+            }
+        }
+
+        .custom-card-heading {
+            border-bottom: 1px solid rgba($white, 0.25);
+            padding-right: 0;
+            padding-bottom: $default-base-spacer;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                border-right: 1px solid rgba($white, 0.25);
+                border-bottom: 0px;
+                padding-right: $default-base-spacer * 1.5;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-right: $default-base-spacer * 3;
+            }
+        }
+        .custom-card-content {
+            padding-left: 0;
+            padding-top: $default-base-spacer;
+
+            @include media-breakpoint-up(md) {
+                width: 50%;
+                padding-left: $default-base-spacer * 1.5;
+                padding-top: 0;
+            }
+
+            @include media-breakpoint-up(xl) {
+                padding-left: $default-base-spacer * 3;
+            }
+
+            ul {
+                list-style-type: square;
+                padding-left: $default-base-spacer * 1.75;
+            }
+        }
+        .fs-5 {
+            @include media-breakpoint-up(xl) {
+                font-size: 18px !important;
+                line-height: 1.5;
+                letter-spacing: 0.54px;
+            }
+        }
+    }
+    h5 {
+        font-family: $body-font;
+        font-weight: $font-weight-medium;
+        font-size: $font-size-base * 1.25;
+        @include media-breakpoint-up(md) {
+            font-weight: $font-weight-normal;
+        }
+    }
+    &.custom-card-style {
+        .card-body {
+            .card-icon {
+                background-color: transparent;
+                border: 0;
+                border-radius: 0;
+            }
+        }
+    }
+    &:hover {
+        box-shadow: 0 1px 20px rgba(var(--color-fg-rgb) ,.3);
+    }
+    &.full-custom-card {
+        .card-body {
+            padding: $default-base-spacer * 1.5;
+            img {
+                width: 64px;
+                @include media-breakpoint-up(md) {
+                    width: 100px;
+                }   
+            }
+            h4 {
+                @include media-breakpoint-up(xl) {
+                    font-size: $font-size-base * 1.875;
+                }
+            }
+            p {
+                font-size: $font-size-base * 0.938;
+            }
+        }
+    }
+}
+
+.execution-section {
+    .block-bg {
+        opacity: 0.3;
+        top: -20%;
+    }
+}
+.content-box-items {
+    .content-box-item {
+        h3 {
+            color: $primary;
+            @include media-breakpoint-up(xl) {
+                font-size: $font-size-base * 3;
+            }
+        }
+        p {
+            line-height: 1.5;
+        }
+    }
+}

@@ -1,0 +1,48 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Specialist capabilities</p>
+      <h1 class="display">Bitcoin Solutions</h1>
+      <p class="lead">Institutional bitcoin solutions for private clients and family offices — from bitcoin-backed financing to yield and investment positions, delivered within a confidential framework.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper" id="financing">
+    <div class="container">
+      <p class="eyebrow">Financing</p>
+      <h2>Bitcoin-Backed Financing.</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">Access liquidity backed by your Bitcoin holdings, with flexible structures and institutional-grade custody, maintaining exposure to your core position.</p>
+      <div class="tbc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="tbc-card"><p>Competitive loan-to-value ratios against allocated Bitcoin</p></div>
+        <div class="tbc-card"><p>Flexible repayment structures through selected financing counterparties</p></div>
+        <div class="tbc-card"><p>Institutional-grade custody arrangements, with insurance coverage where applicable</p></div>
+        <div class="tbc-card"><p>Transparent documentation and established institutional counterparties</p></div>
+      </div>
+    </div>
+    {{ partial "skyline.html" (dict "city" "london") }}
+  </section>
+
+  <section class="section surface-dark" id="investment">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Investment &amp; Yield</p>
+      <h2>Bitcoin Investment &amp; Yield.</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">Access bitcoin investment positions and institutional-only yield opportunities, with ownership maintained and risk-managed frameworks.</p>
+      <div class="feature-list">
+        <div class="feature-item"><p>Spot exposure via best execution through global brokers</p></div>
+        <div class="feature-item"><p>Institutional-only yield programs with transparent reporting</p></div>
+        <div class="feature-item"><p>Custody through third-party providers. Collateral is held by the lender or its custodian, not by The Black Circle</p></div>
+        <div class="feature-item"><p>Adjustable risk profiles aligned to client objectives</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">Execution, staking and custody are carried out by third-party providers for the SPC's portfolios. No Group entity provides virtual asset exchange or custody services to clients. Bitcoin-backed financing and yield strategies involve risks, including collateral value fluctuations, margin or collateral requirements, liquidation risk, counterparty risk and the potential loss of capital. Terms, eligibility and availability are subject to the relevant provider and transaction documentation. Clients should obtain independent legal, tax and financial advice where appropriate.</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

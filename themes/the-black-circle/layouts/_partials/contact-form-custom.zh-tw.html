@@ -1,0 +1,64 @@
+<form class="tbc-form" id="lead-form">
+  <div class="form-row">
+    <input type="text" name="name" placeholder="全名" required>
+    <input type="email" name="email" placeholder="電子郵件" required>
+  </div>
+  <div class="form-row">
+    <input type="text" name="phone" placeholder="電話（可選）">
+    <input type="text" name="company" placeholder="公司 / 機構（可選）">
+  </div>
+  <div class="form-row">
+    <select name="country" required style="width:100%;padding:12px 16px;background:var(--paper);border:1px solid var(--border);font-size:.9375rem;border-radius:4px;">
+      <option value="" selected disabled>居住國 *</option>
+      <option value="AE">阿聯酋</option>
+      <option value="AU">澳洲</option>
+      <option value="CA">加拿大</option>
+      <option value="CH">瑞士</option>
+      <option value="CN">中國</option>
+      <option value="DE">德國</option>
+      <option value="FR">法國</option>
+      <option value="GB">英國</option>
+      <option value="HK">香港</option>
+      <option value="IN">印度</option>
+      <option value="IT">意大利</option>
+      <option value="JP">日本</option>
+      <option value="KR">韓國</option>
+      <option value="KW">科威特</option>
+      <option value="NL">荷蘭</option>
+      <option value="QA">卡塔爾</option>
+      <option value="SA">沙特阿拉伯</option>
+      <option value="SG">新加坡</option>
+      <option value="TW">台灣</option>
+      <option value="US">美國</option>
+      <option value="other">其他</option>
+    </select>
+  </div>
+  <textarea name="message" rows="4" placeholder="簡述您的需求" required></textarea>
+  <label class="form-check"><input type="checkbox" name="eligible" required> 我確認我是我所居住國法律所指的專業或機構投資者，且我是自行主動聯繫 The Black Circle。我理解 The Black Circle 將在提供任何服務前核實我的身份。</label>
+  <label class="form-check"><input type="checkbox" name="updates" style="margin-top:8px;"> 我希望透過電郵接收 The Black Circle 的不定期更新。我可隨時取消訂閱。</label>
+  <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:8px;">TBCWM International Limited 將使用這些資料回覆您的查詢及評估您的資格，詳見我們的<a href="{{ "/privacy-policy/" | relLangURL }}">私隱政策</a>。</p>
+  <button type="submit" class="btn btn--primary">提交請求 <span class="arrow">&rsaquo;</span></button>
+  <p class="form-status" id="form-status"></p>
+</form>
+<script>
+(function(){
+  var form=document.getElementById('lead-form');if(!form)return;
+  var status=document.getElementById('form-status');
+  var apiUrl='{{ site.Params.leads_api_url | default "" }}';
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    status.textContent='提交中...';
+    var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
+    if(apiUrl){
+      fetch(apiUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(r.ok){status.textContent='感謝您。您的請求已提交。我們將保密地與您聯繫。';form.reset();}else{status.textContent='提交時出現問題。請直接電郵至 info@theblackcircle.com。';}})
+      .catch(function(){status.textContent='提交時出現問題。請直接電郵至 info@theblackcircle.com。';});
+    } else {
+      var subject=encodeURIComponent('新查詢: '+(data.name||'網站查詢'));
+      var body=encodeURIComponent('姓名: '+(data.name||'')+'\n'+'電郵: '+(data.email||'')+'\n'+'電話: '+(data.phone||'')+'\n'+'公司: '+(data.company||'')+'\n'+'居住國: '+(data.country||'')+'\n'+'訊息: '+(data.message||'')+'\n'+'資格確認: '+(data.eligible?'是':'否')+'\n'+'更新訂閱: '+(data.updates?'是':'否')+'\n'+'來源: theblackcircle.com');
+      window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
+      status.textContent='正在開啟電郵應用程式...';
+    }
+  });
+})();
+</script>

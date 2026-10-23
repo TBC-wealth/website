@@ -1,0 +1,39 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Specialist capabilities</p>
+      <h1 class="display">OTC Trading Built for Scale.</h1>
+      <p class="lead">The Black Circle provides institutional-grade OTC trading for Bitcoin and other major cryptocurrencies against stablecoins and fiat. Clients access deep liquidity through third-party providers with full confidentiality and precision execution.</p>
+      <p style="margin-top:24px;"><a class="btn btn--primary" href="{{ "/request-access/" | relURL }}">Request access <span class="arrow">&rarr;</span></a></p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">Why clients choose</p>
+      <h2>Confidential, precise execution.</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>Confidential Execution</h3><p>All trades are handled with complete discretion to protect client privacy.</p></div>
+        <div class="tbc-card"><h3>Execution</h3><p>We aim to obtain the best terms reasonably available, taking into account price, costs, speed and likelihood of execution.</p></div>
+        <div class="tbc-card"><h3>Operational Ease</h3><p>We manage trade coordination, reporting, and post-trade settlement efficiently.</p></div>
+        <div class="tbc-card"><h3>Tailored Solutions</h3><p>Each structure is designed around the client's trading requirements and scale.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Designed for your unique needs</p>
+      <h2>Built for different client profiles.</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>UHNWIs &amp; Digital Asset Pioneers</h3><p>Discreetly execute large trades without market impact, gaining access to the best prices and minimal spreads.</p></div>
+        <div class="tbc-card"><h3>Private Banks &amp; Family Offices</h3><p>Benefit from compliant, global execution that integrates seamlessly with existing portfolio strategies and reporting.</p></div>
+        <div class="tbc-card"><h3>Crypto-Native Organizations</h3><p>Rebalance treasuries or access liquidity while maintaining full confidentiality and operational efficiency.</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

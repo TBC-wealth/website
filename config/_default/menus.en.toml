@@ -1,0 +1,195 @@
+[[main]]
+identifier = "Home"
+name = "Home"
+pageRef = "/"
+weight = 1
+
+[[main]]
+identifier = "Solutions"
+name = "Solutions"
+weight = 2
+
+  # === Column 1: Bitcoin ===
+  [[main]]
+  identifier = "Bitcoin"
+  parent = "Solutions"
+  name = "Bitcoin"
+  pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+  weight = 1
+
+    [[main]]
+    identifier = "Financing"
+    parent = "Bitcoin"
+    name = "Financing"
+    pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+    weight = 1
+
+    [[main]]
+    identifier = "Investment"
+    parent = "Bitcoin"
+    name = "Investment"
+    pageRef = "/solutions/investment"
+    weight = 2
+
+
+  # === Column 2: Gold ===
+  [[main]]
+  identifier = "Gold"
+  parent = "Solutions"
+  name = "Gold"
+  pageRef = "/solutions/gold"
+  weight = 2
+
+    [[main]]
+    identifier = "Gold Financing"
+    parent = "Gold"
+    name = "Gold Financing"
+    pageRef = "/solutions/gold/#financing"
+    weight = 1
+
+    [[main]]
+    identifier = "Gold Investment"
+    parent = "Gold"
+    name = "Gold Investment"
+    pageRef = "/solutions/gold/#investment"
+    weight = 2
+
+
+  # === Column 3: Wealth Planning ===
+  [[main]]
+  identifier = "Wealth Planning"
+  parent = "Solutions"
+  name = "Wealth Planning"
+  pageRef = "/solutions/wealth-planning"
+  weight = 3
+
+    [[main]]
+    identifier = "Insurance"
+    parent = "Wealth Planning"
+    name = "Insurance"
+    pageRef = "/solutions/wealth-planning/#insurance"
+    weight = 1
+
+    [[main]]
+    identifier = "Fiduciary Services"
+    parent = "Wealth Planning"
+    name = "Fiduciary Services"
+    pageRef = "/solutions/wealth-planning/#fiduciary"
+    weight = 2
+
+
+  # === Column 4: Tailored Solutions ===
+  [[main]]
+  identifier = "Tailored Solutions"
+  parent = "Solutions"
+  name = "Tailored Solutions"
+  pageRef = "/solutions/tailored-solutions"
+  weight = 4
+
+[[main]]
+identifier = "The Origin"
+name = "The Origin"
+pageRef = "/the-origin"
+weight = 3
+
+[[main]]
+identifier = "Become A Client"
+name = "Become A Client"
+pageRef = "/request-access"
+weight = 4
+
+ ##############################
+# Footer Menu Sitemap
+##############################
+
+[[footer]]
+name = 'Home'
+pageRef = '/'
+weight = 1
+
+[[footer]]
+name = 'Solutions'
+pageRef = '/solutions'
+weight = 2
+
+[[footer]]
+name = 'The Origin'
+pageRef = '/the-origin'
+weight = 3
+
+[[footer]]
+name = 'Request Access'
+pageRef = '/request-access'
+weight = 4
+
+ ##############################
+# Footer Menu Terms
+##############################
+
+[[terms]]
+name = 'Terms & Conditions'
+pageRef = '/terms'
+weight = 1
+
+[[terms]]
+name = 'Privacy Policy'
+pageRef = '/privacy-policy'
+weight = 2
+
+[[terms]]
+name = 'Cookies Policy'
+pageRef = '/cookies-policy'
+weight = 3
+
+##############################
+# Footer Menu Company
+##############################
+
+[[company]]
+name = 'The Origin'
+pageRef = '/the-origin'
+weight = 3
+
+##############################
+# Footer Menu Products
+##############################
+
+[[products]]
+name = "Bitcoin"
+pageRef = "/solutions/bitcoin-and-crypto-backed-lending"
+weight = 4
+
+[[products]]
+name = "Gold"
+pageRef = "/solutions/gold"
+weight = 5
+
+[[products]]
+name = "Wealth Planning"
+pageRef = "/solutions/wealth-planning"
+weight = 6
+
+[[products]]
+name = "Tailored Solutions"
+pageRef = "/solutions/tailored-solutions"
+weight = 7
+
+
+##############################
+# Footer Menu Explore
+##############################
+
+[[explore]]
+name = "Ultra-High-Net-Worth Individuals"
+pageRef = "/solutions/uhnws"
+weight = 1
+
+[[explore]]
+name = "Family Offices and Private Banks"
+pageRef = "/solutions/private-bank-family-offices"
+weight = 2
+
+[[explore]]
+name = "Crypto Institutions"
+pageRef = "/solutions/crypto-native-organizations"
+weight = 3

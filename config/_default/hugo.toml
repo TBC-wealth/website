@@ -1,0 +1,43 @@
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-US'
+title = 'The Black Circle'
+theme = 'the-black-circle'
+enableRobotsTXT = true
+
+[taxonomies]
+
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = '0.146.0'
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    languageDirection = 'ltr'
+    languageCode = 'en'
+    title = "The Black Circle"
+    weight = 10
+
+  [languages.ar]
+    languageName = 'Arabic'
+    languageDirection = 'rtl'
+    languageCode = 'ar'
+    title = "الدائرة السوداء"
+    weight = 20
+
+  [languages.zh-tw]
+    languageName = '繁體中文'
+    languageDirection = 'ltr'
+    languageCode = 'zh-tw'
+    title = "The Black Circle"
+    weight = 30

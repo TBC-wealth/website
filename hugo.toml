@@ -1,0 +1,5 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'The Black Circle'
+
+theme = 'the-black-circle'

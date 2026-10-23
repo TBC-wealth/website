@@ -1,0 +1,102 @@
+{{ $lang := .Site.Language.Lang }}
+<div id="tbc-cookie-banner" style="display:none;position:fixed;bottom:0;left:0;right:0;z-index:9998;background:#0c2d2a;border-top:1px solid #2a4a47;padding:16px 24px;">
+  <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:24px;flex-wrap:wrap;">
+    <p style="flex:1;min-width:280px;color:#b8b0a4;font-size:.8125rem;line-height:1.6;margin:0;">
+      {{ if eq $lang "ar" }}
+      نستخدم ملفات تعريف الارتباط الضرورية لتشغيل هذا الموقع. بموافقتك، نستخدم أيضًا ملفات تعريف الارتباط التحليلية والتسويقية لتحسين خدماتنا. راجع <a href="{{ "/cookies-policy/" | relLangURL }}" style="color:#b2724a;text-decoration:underline;">سياسة ملفات تعريف الارتباط</a>.
+      {{ else if eq $lang "zh-tw" }}
+      我們使用絕對必要的 Cookie 來運營本網站。經您同意，我們亦使用分析及行銷 Cookie 以改善服務。請參閱我們的 <a href="{{ "/cookies-policy/" | relLangURL }}" style="color:#b2724a;text-decoration:underline;">Cookie 政策</a>。
+      {{ else }}
+      We use strictly necessary cookies to operate this site. With your consent, we also use analytics and marketing cookies to improve our services. See our <a href="{{ "/cookies-policy/" | relLangURL }}" style="color:#b2724a;text-decoration:underline;">Cookies Policy</a>.
+      {{ end }}
+    </p>
+    <div style="display:flex;gap:8px;flex-shrink:0;">
+      <button id="tbc-cookie-reject" type="button" style="padding:8px 20px;background:transparent;border:1px solid #4a5c5a;color:#b8b0a4;font-size:.8125rem;border-radius:4px;cursor:pointer;">
+        {{ if eq $lang "ar" }}رفض{{ else if eq $lang "zh-tw" }}拒絕{{ else }}Reject{{ end }}
+      </button>
+      <button id="tbc-cookie-accept" type="button" style="padding:8px 20px;background:#b2724a;border:1px solid #b2724a;color:#fff;font-size:.8125rem;border-radius:4px;cursor:pointer;">
+        {{ if eq $lang "ar" }}قبول{{ else if eq $lang "zh-tw" }}接受{{ else }}Accept{{ end }}
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var banner = document.getElementById('tbc-cookie-banner');
+  var accept = document.getElementById('tbc-cookie-accept');
+  var reject = document.getElementById('tbc-cookie-reject');
+  var key = 'tbc_cookie_consent';
+
+  function getConsent(){ try { return localStorage.getItem(key); } catch(e){ return null; } }
+  function setConsent(v){ try { localStorage.setItem(key, v); } catch(e){} }
+
+  function loadTrackingScripts(){
+    if (window.tbcTrackingLoaded) return;
+    if (!window.tbcTrackingEnabled) return;
+    window.tbcTrackingLoaded = true;
+
+    // Google Analytics
+    var ga = document.createElement('script');
+    ga.async = true;
+    ga.src = 'https://www.googletagmanager.com/gtag/js?id=G-S73N3620LZ';
+    document.head.appendChild(ga);
+    var gtag = document.createElement('script');
+    gtag.textContent = 'window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-S73N3620LZ");';
+    document.head.appendChild(gtag);
+
+    // Zoho PageSense
+    var ps = document.createElement('script');
+    ps.src = 'https://cdn.pagesense.io/js/895907915/bc87dead80f74f2dbb542f99201e236e.js';
+    document.head.appendChild(ps);
+
+    // HubSpot
+    var hs = document.createElement('script');
+    hs.type = 'text/javascript';
+    hs.id = 'hs-script-loader';
+    hs.async = true;
+    hs.defer = true;
+    hs.src = '//js-na2.hs-scripts.com/244247196.js';
+    document.head.appendChild(hs);
+  }
+
+  function showBanner(){ banner.style.display = 'block'; }
+  function hideBanner(){ banner.style.display = 'none'; }
+
+  function init(){
+    var consent = getConsent();
+    if (consent === 'accepted') {
+      loadTrackingScripts();
+    } else if (consent === 'rejected') {
+      // do nothing
+    } else {
+      showBanner();
+    }
+  }
+
+  accept.addEventListener('click', function(){
+    setConsent('accepted');
+    hideBanner();
+    loadTrackingScripts();
+  });
+
+  reject.addEventListener('click', function(){
+    setConsent('rejected');
+    hideBanner();
+  });
+
+  // Expose for reopening from footer link
+  window.tbcReopenCookieBanner = function(){ showBanner(); };
+
+  // Wait for gate to be accepted before showing cookie banner
+  document.addEventListener('tbc:gate-accepted', function(){
+    setTimeout(init, 300);
+  });
+
+  // If gate was already accepted (returning visitor), init immediately
+  try {
+    if (localStorage.getItem('tbc_gate_accepted') === '1') {
+      init();
+    }
+  } catch(e) { init(); }
+})();
+</script>

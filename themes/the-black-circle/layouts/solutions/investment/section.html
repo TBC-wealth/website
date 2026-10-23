@@ -1,0 +1,63 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Core capabilities</p>
+      <h1 class="display">Investment Management.</h1>
+      <p class="lead">Institutional investment management spanning major financial markets, crypto, and gold. Managed by TBCWM International Limited, a BVI-approved investment manager, for the segregated portfolios of The Black Circle Investment SPC, with concierge service and a single point of contact.</p>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Two complementary approaches</p>
+      <h2>Trading &amp; custody.</h2>
+      <div class="split-blocks">
+        <div class="split-block split-block--dark" id="trading">
+          <p class="eyebrow">Trading</p>
+          <h2>Precision. Liquidity. Confidentiality.</h2>
+          <p>Execute across major financial markets, crypto, and gold with institutional pricing and deep global liquidity. The underlying spans traditional equities and funds through to digital assets and precious metals, accessed through third-party brokers and liquidity providers we select, each acting under its own terms and regulatory status.</p>
+        </div>
+        <div class="split-block split-block--light" id="custody">
+          <p class="eyebrow">Custody</p>
+          <h2>Institutional custody.</h2>
+          <p>Custody with third-party custodians, licensed or registered in their own jurisdictions where required. Assets are held in segregated arrangements with insurance coverage subject to each custodian's terms.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">Trading offering</p>
+      <h2>Execution capabilities.</h2>
+      <div class="tbc-grid tbc-grid--2" style="margin-top:32px;">
+        <div class="tbc-card"><h3>Spot &amp; OTC Execution</h3><p>Institutional pricing and deep global liquidity across spot and over-the-counter markets.</p></div>
+        <div class="tbc-card"><h3>Structured Products</h3><p>Access to blended, risk-adjusted portfolios, structured products and hedge fund exposures.</p></div>
+        <div class="tbc-card"><h3>Execution</h3><p>We aim to obtain the best terms reasonably available, taking into account price, costs, speed and likelihood of execution.</p></div>
+        <div class="tbc-card"><h3>High Touch Execution</h3><p>Execution with a trade confirmation for every transaction.</p></div>
+      </div>
+      <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:16px;">Execution, staking and custody are carried out by third-party providers for the SPC's portfolios. No Group entity provides virtual asset exchange or custody services to clients.</p>
+    </div>
+    {{ partial "skyline.html" (dict "city" "hongkong") }}
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container">
+      <p class="eyebrow">Yield strategies</p>
+      <h2>Exposure types.</h2>
+      <div class="tbc-grid tbc-grid--2" style="margin-top:32px;">
+        <div class="tbc-card"><h3>Spot</h3><p>Gain or reduce exposure via best execution through global brokers.</p></div>
+        <div class="tbc-card"><h3>Staking</h3><p>Earn low-risk rewards by participating in network validation through approved custodians.</p></div>
+        <div class="tbc-card"><h3>Lending</h3><p>Lending to institutional borrowers, usually against collateral. Lending involves counterparty, collateral and liquidity risk, and returns are not guaranteed.</p></div>
+        <div class="tbc-card"><h3>Hedge Funds</h3><p>Access to hedge fund exposures across digital and traditional asset markets.</p></div>
+        <div class="tbc-card"><h3>Structured Products</h3><p>Access to structured products and risk-adjusted portfolios.</p></div>
+        <div class="tbc-card"><h3>Yield &amp; Structured Strategies</h3><p>Blended, risk-adjusted portfolios including structured products and hedge funds.</p></div>
+      </div>
+      <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:16px;">Investments involve risk, including the potential loss of capital. Strategies are subject to eligibility, applicable offering documentation, and regulatory requirements.</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

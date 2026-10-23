@@ -1,0 +1,40 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Wealth Planning</p>
+      <h1 class="display">Structuring and succession for continuity and control.</h1>
+      <p class="lead">Access tailored wealth planning solutions designed to support the protection, structuring and transfer of wealth across generations. The Black Circle facilitates access to life insurance and fiduciary solutions through selected specialist providers, supporting clients in navigating their long-term wealth planning objectives.</p>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Two complementary approaches</p>
+      <h2>Insurance &amp; fiduciary solutions.</h2>
+      <div class="split-blocks">
+        <div class="split-block split-block--dark" id="insurance">
+          <p class="eyebrow">Insurance</p>
+          <h2>Private Placement Life Insurance.</h2>
+          <p>Access private placement life insurance solutions offered by specialist providers for international wealth planning. Depending on the relevant structure and provider, solutions may accommodate a range of bankable and non-bankable assets and provide flexibility in relation to investment management, succession and beneficiary arrangements.</p>
+          <p style="font-size:var(--fs-xs);color:var(--on-dark-muted);margin-top:12px;">The Black Circle does not act as an insurer or insurance intermediary. We introduce clients to licensed providers, who may pay us a fee. We will tell you about any such fee before you proceed.</p>
+        </div>
+        <div class="split-block split-block--light" id="fiduciary">
+          <p class="eyebrow">Fiduciary</p>
+          <h2>Fiduciary Solutions.</h2>
+          <p>Access fiduciary solutions through selected specialist providers, supporting governance, succession and continuity across generations. Solutions can be tailored to the circumstances of private clients and family offices and are subject to applicable legal, regulatory and jurisdictional requirements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">Wealth planning, insurance and fiduciary solutions are subject to applicable legal, regulatory, tax and eligibility requirements and may be provided by appropriately authorised or regulated third-party providers. The availability and suitability of any structure will depend on individual circumstances and jurisdiction. Nothing on this page constitutes legal, tax, insurance or investment advice. Clients should obtain independent professional advice before entering into any arrangement.</p>
+    </div>
+    {{ partial "skyline.html" (dict "city" "dubai") }}
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

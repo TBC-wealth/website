@@ -1,0 +1,83 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">The Origin</p>
+      <h1 class="display">A private wealth platform.</h1>
+      <p class="lead">The Black Circle was founded to serve a generation traditional private banking was not built for — sophisticated investors seeking institutional-grade wealth management with concierge service, confidentiality, and a privacy-first approach across borders.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container">
+      <p class="eyebrow">Our foundation</p>
+      <h2>How we operate.</h2>
+      <div class="tbc-grid tbc-grid--2" style="margin-top:48px;">
+        <div class="tbc-card"><h3>Security</h3><p>Client assets are held with third-party custodians. Insurance, where available, is subject to each custodian's terms, limits and exclusions.</p></div>
+        <div class="tbc-card"><h3>Service</h3><p>A dedicated relationship manager supports you, with out-of-hours contact for urgent matters.</p></div>
+        <div class="tbc-card"><h3>Compliance</h3><p>Investment management activities in respect of certain investment structures are carried out by TBCWM International Limited (Company No. 2202526), a British Virgin Islands Approved Manager, operating within the applicable BVI regulatory framework.</p></div>
+        <div class="tbc-card"><h3>Access</h3><p>We select third-party providers on their merits for each client and disclose any fees we receive from them. Conflicts of interest are managed under our conflicts policy.</p></div>
+      </div>
+    </div>
+    {{ partial "skyline.html" (dict "city" "hongkong") }}
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Leadership</p>
+      <h2>Principals with institutional depth.</h2>
+      <div class="people-grid" style="margin-top:48px;">
+        <div class="people-card">
+          <div class="people-head">
+            <img src="{{ (resources.Get "images/alex-tai.png").RelPermalink }}" alt="Alex Tai">
+            <div><div class="people-role">Executive Chairman</div><h3>Alex Tai</h3></div>
+          </div>
+          <ul>
+            <li>Over 30 years of leadership across blockchain, aerospace, and venture innovation.</li>
+            <li><strong>Board Director,</strong> Global Blockchain Business Council (GBBC), advancing institutional adoption of digital assets.</li>
+            <li>Former <strong>Group Director</strong> at Virgin Management Ltd and COO of Virgin Galactic, leading global strategy, innovation, and commercialization.</li>
+          </ul>
+        </div>
+        <div class="people-card">
+          <div class="people-head">
+            <img src="{{ (resources.Get "images/ivan-grigorev.png").RelPermalink }}" alt="Ivan Grigorev">
+            <div><div class="people-role">Chief Financial Officer</div><h3>Ivan Grigorev</h3></div>
+          </div>
+          <ul>
+            <li>Over a decade of experience in digital assets, quantitative trading, and institutional finance.</li>
+            <li>Former <strong>Partner &amp; CFO</strong> at Alber Blanc, leading digital-markets expansion, liquidity strategies, and cross-border trading infrastructure.</li>
+            <li>Began as an <strong>algorithmic trader,</strong> managing proprietary capital and developing high-frequency models.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container">
+      <p class="eyebrow">Our values</p>
+      <h2>What guides us.</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>Excellence in Everything</h3><p>We uphold the highest standards in all we do. Excellence is our baseline, not our aspiration.</p></div>
+        <div class="tbc-card"><h3>Client-First Philosophy</h3><p>Every decision begins with one question: Is it in the client's best interest?</p></div>
+        <div class="tbc-card"><h3>Institutional Integrity</h3><p>We operate transparently and within the regulatory requirements that apply to each Group entity.</p></div>
+        <div class="tbc-card"><h3>Innovation with Purpose</h3><p>We apply technology that strengthens security, enhances results, and refines the client experience.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Beyond wealth management</p>
+      <h2>Doors we open beyond the core.</h2>
+      <div class="tbc-grid" style="margin-top:48px;">
+        <div class="tbc-card"><h3>A Network of Visionaries</h3><p>Access an ecosystem of entrepreneurs, pioneers, and leaders across finance, technology, and innovation. Through private events and curated gatherings, we connect you with those shaping the future.</p></div>
+        <div class="tbc-card"><h3>Exclusive Insights &amp; Research</h3><p>Our team shares market commentary with clients. Commentary is general information, not investment advice.</p></div>
+        <div class="tbc-card"><h3>Tailored Experiences &amp; Solutions</h3><p>From financial structures to bespoke strategies, we create paths designed for you. Our solutions are designed to support diversification. All investments carry risk.</p></div>
+      </div>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

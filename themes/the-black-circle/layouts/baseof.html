@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
+  {{ partial "jurisdiction-gate.html" . }}
+  <div class="tbc">
+    <header class="tbc-header">
+      {{ if eq .Site.Language.Lang "ar" }}
+          {{ partial "header.ar.html" . }}
+      {{ else if eq .Site.Language.Lang "zh-tw" }}
+          {{ partial "header.zh-tw.html" . }}
+      {{ else }}
+          {{ partial "header.en.html" . }}
+      {{ end }}
+    </header>
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+    <footer class="tbc-footer">
+      {{ if eq .Site.Language.Lang "ar" }}
+          {{ partial "footer.ar.html" . }}
+      {{ else if eq .Site.Language.Lang "zh-tw" }}
+          {{ partial "footer.zh-tw.html" . }}
+      {{ else }}
+          {{ partial "footer.en.html" . }}
+      {{ end }}
+    </footer>
+  </div>
+  {{ partial "cookie-banner.html" . }}
+<script>
+document.querySelector('.tbc-menu-btn')?.addEventListener('click',function(){document.body.classList.toggle('tbc-menu-open');this.setAttribute('aria-expanded',document.body.classList.contains('tbc-menu-open'))});
+document.addEventListener('click',function(e){if(!e.target.closest('.tbc-header')&&!e.target.closest('.tbc-nav')){document.body.classList.remove('tbc-menu-open');document.querySelector('.tbc-menu-btn')?.setAttribute('aria-expanded','false')}});
+document.querySelector('.lang-trigger')?.addEventListener('click',function(e){e.stopPropagation();this.closest('.lang-switch').classList.toggle('lang-open');this.setAttribute('aria-expanded',this.closest('.lang-switch').classList.contains('lang-open'))});
+document.addEventListener('click',function(e){if(!e.target.closest('.lang-switch')){document.querySelector('.lang-switch')?.classList.remove('lang-open');document.querySelector('.lang-trigger')?.setAttribute('aria-expanded','false')}});
+</script>
+</body>
+</html>

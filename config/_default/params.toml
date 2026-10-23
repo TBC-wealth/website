@@ -1,0 +1,7 @@
+# config/_default/params.toml
+
+  contactNumber = "01454 610066"
+  contactEmail = "contact@theblackcircle.com"
+  contactAddress = "xxxx"
+  leads_api_url = "https://internal.theblackcircle.com/businessmgmt/clients/temp-leads"
+

@@ -1,0 +1,61 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Tailored Solutions</p>
+      <h1 class="display">Beyond wealth management — built around you.</h1>
+      <p class="lead">Bespoke solutions coordinated around your individual requirements — from jurisdictional and corporate structuring to banking access and exclusive lifestyle opportunities.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper" id="visa-relocation">
+    <div class="container">
+      <p class="eyebrow">Visa &amp; Residency</p>
+      <h2>Visa &amp; Residency Solutions.</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">We facilitate access to specialist providers supporting residency, mobility and corporate structuring requirements across selected jurisdictions.</p>
+      <div class="tbc-grid tbc-grid--2">
+        <div class="tbc-card"><h3>Visa &amp; Residency</h3><p>Introductions to licensed immigration and residency advisers in the UAE and other selected jurisdictions.</p></div>
+        <div class="tbc-card"><h3>Tax &amp; Structuring Support</h3><p>Introductions to independent tax and professional advisers for guidance on personal and business structuring across relevant jurisdictions.</p></div>
+        <div class="tbc-card"><h3>Corporate Structuring</h3><p>Introductions to licensed corporate service providers supporting the establishment and administration of structures for international business and investment activities.</p></div>
+      </div>
+    </div>
+    {{ partial "skyline.html" (dict "city" "dubai") }}
+  </section>
+
+  <section class="section surface-dark" id="banking-access">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Banking Access</p>
+      <h2>Banking access and coordination.</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">We can introduce clients to banks in several jurisdictions. Account opening is at each bank's discretion and subject to its own checks.</p>
+      <div class="tbc-grid tbc-grid--2">
+        <div class="tbc-card"><h3>Banking Access</h3><p>Introductions to banking partners across key jurisdictions.</p></div>
+        <div class="tbc-card"><h3>Account Opening</h3><p>Support with applications for multi-currency and institutional banking arrangements.</p></div>
+        <div class="tbc-card"><h3>Operational Transparency</h3><p>Support with banking coordination and information requirements.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2" id="lifestyle">
+    <div class="container">
+      <p class="eyebrow">Lifestyle</p>
+      <h2>A network aligned with your values.</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">Gain access to a like-minded network of leaders, innovators, and institutions - with curated opportunities aligned with your values.</p>
+      <div class="tbc-grid tbc-grid--2">
+        <div class="tbc-card"><h3>Private Events</h3><p>Invitation-only gatherings hosted with global partners.</p></div>
+        <div class="tbc-card"><h3>Community Access</h3><p>Engage with a vetted circle of investors and entrepreneurs.</p></div>
+        <div class="tbc-card"><h3>Brand Collaborations</h3><p>Opportunities through select partnerships in finance, art, and technology.</p></div>
+        <div class="tbc-card"><h3>Personalized Support</h3><p>A dedicated relationship manager to coordinate your requests.</p></div>
+      </div>
+    </div>
+    {{ partial "skyline.html" (dict "city" "hongkong") }}
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">The Black Circle does not provide legal, tax, immigration or other professional advice unless expressly stated and appropriately permitted. Certain services described on this page are facilitated through independent third-party professional, banking and corporate service providers. Availability and eligibility are subject to the requirements of the relevant provider and jurisdiction. Clients should obtain independent professional advice appropriate to their individual circumstances.</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

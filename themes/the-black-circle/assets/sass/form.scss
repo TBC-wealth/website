@@ -1,0 +1,72 @@
+.hsfc-FormWrapper {
+	.hsfc-Step__Content {
+		padding: 0 ($default-base-spacer* 0.5) !important;
+	}
+	.hsfc-RichText {
+		display: none;
+	}
+	.hsfc-Row {
+		.hsfc-FieldLabel {
+			color: var(--color-fg);
+			font-family: $body-font;
+			font-size: 14px;
+			letter-spacing: 0.42px;
+			.hsfc-FieldLabel__RequiredIndicator {
+				color: var(--color-fg);	
+			}
+		}
+		.hsfc-TextInput, .hsfc-TextareaInput {
+			width: 100%;
+			height: 48px;
+			background: transparent;
+			border: 1px solid rgba(var(--color-fg-rgb), 0.20);
+			border-radius: 6px;
+			font-size: 18px;
+			font-weight: $font-weight-light;
+			color: rgba(var(--color-fg-rgb), 0.85);
+			padding: ($default-base-spacer * 0.625) $default-base-spacer;
+			transition: 0.3s;
+		}
+		.hsfc-TextareaInput {
+			height: 110px;
+		}
+		.hsfc-DropdownInput {
+			.hsfc-DropdownInput__Caret {
+				span {
+					border-top: 6px solid var(--color-fg, var(--color-fg));
+				}
+			}
+		}
+	}
+	.hsfc-NavigationRow {
+		.hsfc-NavigationRow__Buttons {
+			justify-content: flex-start !important;
+			.hsfc-Button {
+				height: 48px; 
+				border-radius: 8px; 
+				border: 0;
+				font-weight: $font-weight-medium;
+				text-align: center;
+				line-height: 1.2;
+				transition: all 0.5s ease !important;
+				padding: ($default-base-spacer * 0.5) ($default-base-spacer * 1.5);
+				margin: 0;
+				position: relative;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				text-transform: uppercase;
+				gap: $default-base-spacer;
+				color: #D9D9D9;
+				background-image: linear-gradient(to right, #B2724A 0%, #0C2D2A  50%, #B2724A  100%);
+				background-size: 200% auto;
+				&:hover {
+					color: #D9D9D9;
+					background-position: right center;
+					border: 0;
+					transform: translateY(0px);
+				}
+			}
+		}
+	}
+}

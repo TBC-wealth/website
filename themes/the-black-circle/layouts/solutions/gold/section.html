@@ -1,0 +1,49 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Specialist capabilities</p>
+      <h1 class="display">Gold Solutions</h1>
+      <p class="lead">Institutional gold solutions for private clients and family offices — from gold-backed financing to allocated investment positions, supported by institutional-grade custody arrangements.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper" id="financing">
+    <div class="container">
+      <p class="eyebrow">Financing</p>
+      <h2>Gold-Backed Financing</h2>
+      <p class="lead" style="color:var(--muted);max-width:62ch;margin-bottom:40px;">Access liquidity backed by physical gold holdings, with flexible structures and institutional-grade custody.</p>
+      <div class="tbc-grid" style="grid-template-columns:repeat(2,1fr);">
+        <div class="tbc-card"><p>Competitive loan-to-value ratios against allocated gold</p></div>
+        <div class="tbc-card"><p>Access to flexible repayment structures through selected financing counterparties</p></div>
+        <div class="tbc-card"><p>Institutional-grade custody arrangements, with insurance coverage where applicable</p></div>
+        <div class="tbc-card"><p>Transparent documentation and established institutional counterparties</p></div>
+      </div>
+      <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:16px;">Financing is provided by third-party lenders under their own terms. No Group entity lends money.</p>
+    </div>
+    {{ partial "skyline.html" (dict "city" "dubai") }}
+  </section>
+
+  <section class="section surface-dark" id="investment">
+    <div class="container">
+      <p class="eyebrow eyebrow--muted">Investment</p>
+      <h2>Gold Investment</h2>
+      <p class="lead" style="color:var(--on-dark-muted);max-width:62ch;margin-bottom:40px;">Access allocated and unallocated gold positions as part of a diversified investment strategy, with institutional-grade custody arrangements.</p>
+      <div class="feature-list">
+        <div class="feature-item"><p>Allocated physical gold with clearly documented ownership arrangements</p></div>
+        <div class="feature-item"><p>Access to unallocated gold positions</p></div>
+        <div class="feature-item"><p>Held through established institutional custody providers</p></div>
+        <div class="feature-item"><p>Insurance coverage and regular independent verification, where applicable</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section surface-paper-2">
+    <div class="container narrow">
+      <p style="font-size:var(--fs-xs);color:var(--muted);line-height:1.7;">Gold investments and gold-backed financing involve risk. The value of gold may fluctuate and financing arrangements may involve collateral, margin, counterparty, custody and liquidation risks. Unallocated gold positions may also involve credit exposure to the relevant provider. Terms, eligibility, custody and insurance arrangements vary depending on the relevant provider and transaction documentation.</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+  <section class="page-hero">
+    <div class="container">
+      <p class="eyebrow">Become a Client</p>
+      <h1 class="display">Request access.</h1>
+      <p class="lead">The Black Circle serves private clients, family offices, and institutions seeking institutional-grade wealth management. If you are a professional investor or organization looking for bespoke solutions, complete the form below. A dedicated manager will contact you to discuss your needs in confidence.</p>
+    </div>
+  </section>
+
+  <section class="section surface-paper">
+    <div class="container narrow">
+      <p class="eyebrow">Application</p>
+      <h2>Become a client.</h2>
+      <p style="color:var(--muted);margin-bottom:32px;">Complete the form below to request a confidential introduction. All enquiries are handled in confidence.</p>
+      {{ partial "contact-form-custom.en.html" . }}
+    </div>
+    {{ partial "skyline.html" (dict "city" "london") }}
+  </section>
+
+  <section class="section surface-dark">
+    <div class="container narrow">
+      <p class="eyebrow eyebrow--muted">Qualification</p>
+      <h2>Exclusive access. Exceptional service.</h2>
+      <p class="lead" style="color:var(--on-dark-muted);">At the Black Circle, we serve a select group of individuals, family offices, and institutions, who qualify as a "professional investor" under the BVI Securities and Investment Business Act, 2010, and under the rules of your own country.</p>
+      <p style="color:var(--on-dark-muted);">We ensure every client is classified and onboarded in accordance with the FSC rules, including full AML/KYC procedures and CRS/FATCA compliance.</p>
+    </div>
+  </section>
+
+  {{ partial "cta-band.en.html" . }}
+
+{{ end }}

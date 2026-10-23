@@ -1,0 +1,98 @@
+{{ $lang := .Site.Language.Lang }}
+<div id="tbc-gate-overlay" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(5,6,8,.96);backdrop-filter:blur(8px);overflow-y:auto;">
+  <div style="max-width:640px;margin:min(40px,5vh) auto;padding:48px 32px;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <img src="{{ (resources.Get "images/logo-white.svg").RelPermalink }}" alt="The Black Circle" style="height:40px;margin-bottom:24px;">
+      <h2 style="font-family:'Source Serif 4',serif;font-size:1.5rem;color:#f5f1ea;margin-bottom:8px;">
+        {{ if eq $lang "ar" }}معلومات مهمة{{ else if eq $lang "zh-tw" }}重要資訊{{ else }}Important information{{ end }}
+      </h2>
+    </div>
+    <p style="color:#b8b0a4;font-size:.9375rem;line-height:1.7;margin-bottom:24px;">
+      {{ if eq $lang "ar" }}
+      هذا الموقع مخصص فقط للمستثمرين المحترفين والمؤسسيين وغيرهم من المستثمرين المؤهلين. وهو غير موجه إلى، أو مخصص للاستخدام من قبل، أي شخص في ولاية قضائية حيث يكون نشره أو استخدامه غير قانوني، بما في ذلك الأشخاص في المملكة المتحدة أو الولايات المتحدة أو هونغ كونغ أو الإمارات العربية المتحدة، إلا في حال تأكد كيان في المجموعة كتابةً من أنه يتعامل معهم قانونًا. بمتابعتك تؤكد أنك مستثمر مؤهل في بلد إقامتك وأنك تتصفح هذا الموقع بمبادرك الخاصة.
+      {{ else if eq $lang "zh-tw" }}
+      本網站僅供專業、機構及其他合資格投資者使用。本網站並非針對或供任何在其司法管轄區發佈或使用即屬違法的人士使用，包括英國、美國、香港或阿拉伯聯合酋長國的人士，除非本集團實體已書面確認可合法與其交易。繼續瀏覽即表示您確認您是您居住國的合資格投資者，且您是自行主動存取本網站。
+      {{ else }}
+      This website is intended only for professional, institutional and other eligible investors. It is not directed at, or intended for use by, any person in a jurisdiction where its publication or use would be unlawful, including persons in the United Kingdom, the United States, Hong Kong or the United Arab Emirates, except where a Group entity has confirmed in writing that it may lawfully deal with them. By continuing you confirm that you are an eligible investor in your country of residence and that you are accessing this website on your own initiative.
+      {{ end }}
+    </p>
+    <div style="margin-bottom:24px;">
+      <label for="tbc-gate-country" style="display:block;color:#b8b0a4;font-size:.8125rem;margin-bottom:8px;text-transform:uppercase;letter-spacing:.05em;">
+        {{ if eq $lang "ar" }}بلد الإقامة{{ else if eq $lang "zh-tw" }}居住國{{ else }}Country of residence{{ end }}
+      </label>
+      <select id="tbc-gate-country" style="width:100%;padding:12px 16px;background:#0c2d2a;border:1px solid #2a4a47;color:#f5f1ea;font-size:.9375rem;border-radius:4px;">
+        <option value="" selected disabled>{{ if eq $lang "ar" }}— اختر —{{ else if eq $lang "zh-tw" }}— 請選擇 —{{ else }}— Select —{{ end }}</option>
+        <option value="AE">United Arab Emirates</option>
+        <option value="AU">Australia</option>
+        <option value="CA">Canada</option>
+        <option value="CH">Switzerland</option>
+        <option value="CN">China</option>
+        <option value="DE">Germany</option>
+        <option value="FR">France</option>
+        <option value="GB">United Kingdom</option>
+        <option value="HK">Hong Kong</option>
+        <option value="IN">India</option>
+        <option value="IT">Italy</option>
+        <option value="JP">Japan</option>
+        <option value="KR">Korea, Republic of</option>
+        <option value="KW">Kuwait</option>
+        <option value="NL">Netherlands</option>
+        <option value="QA">Qatar</option>
+        <option value="SA">Saudi Arabia</option>
+        <option value="SG">Singapore</option>
+        <option value="TW">Taiwan</option>
+        <option value="US">United States</option>
+        <option value="other">{{ if eq $lang "ar" }}أخرى{{ else if eq $lang "zh-tw" }}其他{{ else }}Other{{ end }}</option>
+      </select>
+    </div>
+    <div style="display:flex;gap:12px;justify-content:center;">
+      <button id="tbc-gate-leave" type="button" style="padding:12px 32px;background:transparent;border:1px solid #4a5c5a;color:#b8b0a4;font-size:.9375rem;border-radius:4px;cursor:pointer;">
+        {{ if eq $lang "ar" }}مغادرة{{ else if eq $lang "zh-tw" }}離開{{ else }}Leave{{ end }}
+      </button>
+      <button id="tbc-gate-confirm" type="button" disabled style="padding:12px 32px;background:#b2724a;border:1px solid #b2724a;color:#fff;font-size:.9375rem;border-radius:4px;cursor:pointer;opacity:.5;transition:opacity .2s;">
+        {{ if eq $lang "ar" }}أؤكد وأستمر{{ else if eq $lang "zh-tw" }}確認並繼續{{ else }}I confirm and continue{{ end }}
+      </button>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  var gate = document.getElementById('tbc-gate-overlay');
+  var country = document.getElementById('tbc-gate-country');
+  var confirmBtn = document.getElementById('tbc-gate-confirm');
+  var leaveBtn = document.getElementById('tbc-gate-leave');
+  var key = 'tbc_gate_accepted';
+
+  function showGate(){ gate.style.display='block'; document.body.style.overflow='hidden'; }
+  function hideGate(){ gate.style.display='none'; document.body.style.overflow=''; }
+
+  try {
+    if (localStorage.getItem(key) === '1') {
+      hideGate();
+    } else {
+      showGate();
+    }
+  } catch(e) { showGate(); }
+
+  country.addEventListener('change', function(){
+    if (this.value) {
+      confirmBtn.disabled = false;
+      confirmBtn.style.opacity = '1';
+    }
+  });
+
+  confirmBtn.addEventListener('click', function(){
+    try { localStorage.setItem(key, '1'); localStorage.setItem('tbc_gate_country', country.value); } catch(e){}
+    hideGate();
+    document.dispatchEvent(new CustomEvent('tbc:gate-accepted'));
+  });
+
+  leaveBtn.addEventListener('click', function(){
+    if (document.referrer && document.referrer !== window.location.href) {
+      window.history.back();
+    } else {
+      window.location.href = 'about:blank';
+    }
+  });
+})();
+</script>

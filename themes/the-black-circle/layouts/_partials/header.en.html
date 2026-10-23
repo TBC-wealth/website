@@ -1,0 +1,38 @@
+<div class="container tbc-header-inner">
+  <a class="tbc-brand" href="{{ .Site.BaseURL | relLangURL }}" aria-label="{{ site.Title }} home">
+    <img src="{{ (resources.Get "images/logo-white.svg").RelPermalink }}" alt="{{ site.Title }}">
+  </a>
+  <nav class="tbc-nav" aria-label="Primary">
+    <a href="{{ "/" | relURL }}">Home</a>
+    <span class="has-dropdown">
+      <a href="{{ "/solutions/" | relURL }}">Solutions</a>
+      <div class="tbc-dropdown">
+        <span class="dropdown-label">Core capabilities</span>
+        <a href="{{ "/solutions/wealth-planning/" | relURL }}">Wealth Planning</a>
+        <a href="{{ "/solutions/investment/" | relURL }}">Investment Management</a>
+        <a href="{{ "/request-access/" | relURL }}">Secondary Market Deals</a>
+        <a href="{{ "/solutions/tailored-solutions/" | relURL }}">Tailored Solutions</a>
+        <span class="dropdown-label">Specialist</span>
+        <a href="{{ "/solutions/gold/" | relURL }}">Gold Solutions</a>
+        <a href="{{ "/solutions/bitcoin-and-crypto-backed-lending/" | relURL }}">Bitcoin Solutions</a>
+      </div>
+    </span>
+    <a href="{{ "/the-origin/" | relURL }}">The Origin</a>
+    <a href="{{ "/request-access/" | relURL }}">Become a Client</a>
+  </nav>
+  <div class="tbc-actions">
+    {{ if hugo.IsMultilingual -}}
+    <span class="lang-switch has-dropdown">
+      <button class="lang-trigger" type="button" aria-label="Select language" aria-expanded="false">
+        <svg class="lang-globe" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z"/><path d="M12 2a15 15 0 0 0 0 20 15 15 0 0 0 0-20Z"/></svg>
+      </button>
+      <div class="tbc-dropdown lang-dropdown">
+        {{ range .Site.Home.AllTranslations -}}
+        <a href="{{ .RelPermalink }}" lang="{{ .Lang }}" hreflang="{{ .Lang }}"{{ if eq $.Site.Language.Lang .Lang }} class="active"{{ end }}>{{ .Language.LanguageName }}</a>
+        {{ end -}}
+      </div>
+    </span>
+    {{- end }}
+    <button class="tbc-menu-btn" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+  </div>
+</div>
