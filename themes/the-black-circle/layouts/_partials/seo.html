@@ -1,0 +1,37 @@
+{{ $title := .Title | default site.Title }}
+{{ $desc := .Description | default "Private wealth management for the next generation — wealth planning, investment management, secondary market deals and tailored solutions, delivered with concierge service and a privacy-first approach across borders." }}
+{{ $url := .Permalink }}
+{{ $img := "logo-2-line-white.png" | absURL }}
+<link rel="canonical" href="{{ $url }}">
+<link rel="describedby" type="text/markdown" href="{{ "llms.txt" | absURL }}">
+{{ if .IsTranslated }}
+{{ range .Translations }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ .Permalink }}">
+{{ end }}<link rel="alternate" hreflang="{{ .Lang }}" href="{{ $url }}">
+{{ range .AllTranslations }}{{ if eq .Lang "en" }}<link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
+{{ end }}{{ end }}{{ end }}
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ $url }}">
+<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:image" content="{{ $img }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $img }}">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":["Organization","FinancialService"],"@id":"{{ site.BaseURL }}#organization","name":"The Black Circle","url":"{{ site.BaseURL }}","logo":"{{ $img }}","description":"Multi-jurisdictional private wealth management group regulated in the British Virgin Islands, the Cayman Islands, and ADGM, serving professional and institutional clients.","address":{"@type":"PostalAddress","addressCountry":"VG","addressLocality":"Road Town, Tortola"},"areaServed":["British Virgin Islands","Cayman Islands","United Arab Emirates"],"knowsAbout":["Wealth Planning","Investment Management","Secondary Market Deals","Tailored Solutions","Gold Solutions","Bitcoin Solutions","BVI Business Companies","Cayman SPC","ADGM structures"],"contactPoint":{"@type":"ContactPoint","email":"info@theblackcircle.com","contactType":"customer service","availableLanguage":["English","Arabic","Chinese"]},"hasCredential":["BVI FSC Approved Managers Regs","Cayman Islands CIMA Registration: 432397","ADGM FSRA Authorisation"]}
+</script>
+{{- if not .IsHome }}
+{{- $homeURL := site.Home.Permalink -}}
+{{- $crumbs := slice (dict "name" "Home" "url" $homeURL) -}}
+{{- range .Ancestors -}}
+  {{- if ne .Permalink $homeURL -}}
+    {{- $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $crumbs = $crumbs | append (dict "name" .Title "url" .Permalink) -}}
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{{ range $i, $c := $crumbs }}{{ if $i }},{{ end }}{"@type":"ListItem","position":{{ add $i 1 }},"name":"{{ $c.name }}","item":"{{ $c.url }}"}{{ end }}]}
+</script>
+{{- end }}
