@@ -6,6 +6,7 @@
 <body>
   <a href="#main" class="tbc-skip">Skip to main content</a>
   <div class="tbc">
+    <div class="scroll-progress" aria-hidden="true"></div>
     <header class="tbc-header">
       {{ if eq .Site.Language.Lang "ar" }}
           {{ partial "header.ar.html" . }}
