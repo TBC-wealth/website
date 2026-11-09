@@ -1,4 +1,4 @@
 ---
-title: "Tailored Wealth Solutions | The Black Circle"
-description: "The Black Circle delivers bespoke wealth planning, residency, tax, banking, and lifestyle solutions - designed for high-net-worth clients globally."
+title: "Tailored Solutions | The Black Circle"
+description: "Introductions to licensed providers for residency, corporate services, banking access and lifestyle — coordinated for professional clients."
 ---

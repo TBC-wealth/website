@@ -1,4 +1,4 @@
 ---
-title: "Financing & Bitcoin-Backed Lending | The Black Circle"
-description: "BlackCircle offers secure institutional lending against Bitcoin and crypto - access liquidity while retaining exposure to your digital assets."
+title: "Bitcoin-Backed Lending | The Black Circle"
+description: "Bitcoin-backed financing and yield arranged with third-party providers, for eligible professional clients only. Digital assets are volatile and you may lose some or all of your investment."
 ---

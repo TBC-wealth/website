@@ -12,25 +12,7 @@
 {{ end }}
 {{ partial "seo.html" . }}
 {{ if not hugo.IsServer }}
-<script>
-window.TBC=window.TBC||{};
-window.tbcLoadAnalytics=function(){
-  if(window.TBC._loaded)return;window.TBC._loaded=true;
-  window.dataLayer=window.dataLayer||[];
-  function gtag(){dataLayer.push(arguments);}
-  window.gtag=gtag;
-  gtag('js',new Date());
-  gtag('config','G-S73N3620LZ');
-  var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-S73N3620LZ';document.head.appendChild(s);
-  var ps=document.createElement('script');ps.async=true;ps.src='https://cdn.pagesense.io/js/895907915/bc87dead80f74f2dbb542f99201e236e.js';document.head.appendChild(ps);
-  var hs=document.createElement('script');hs.type='text/javascript';hs.id='hs-script-loader';hs.async=true;hs.defer=true;hs.src='//js-na2.hs-scripts.com/244247196.js';document.head.appendChild(hs);
-};
-(function(){
-  var c=null;
-  try{c=localStorage.getItem('tbc_consent');}catch(e){}
-  if(c==='granted'){window.tbcLoadAnalytics();}
-})();
-</script>
+<script>window.tbcTrackingEnabled = true;</script>
 {{ end }}
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}

@@ -1,91 +1,85 @@
-<form class="tbc-form" id="lead-form" method="post" action="" novalidate>
+<form class="tbc-form" id="lead-form">
   <div class="form-row">
-    <div class="form-field">
-      <label for="cf-name">Full name</label>
-      <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="Jane Doe" required aria-required="true" aria-invalid="false" aria-describedby="cf-name-err">
-      <p class="form-error" id="cf-name-err" role="alert" hidden></p>
-    </div>
-    <div class="form-field">
-      <label for="cf-email">Email address</label>
-      <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-invalid="false" aria-describedby="cf-email-err">
-      <p class="form-error" id="cf-email-err" role="alert" hidden></p>
-    </div>
+    <input type="text" name="name" placeholder="Full name" required>
+    <input type="email" name="email" placeholder="Email address" required>
   </div>
   <div class="form-row">
-    <div class="form-field">
-      <label for="cf-phone">Phone <span class="opt">(optional)</span></label>
-      <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" aria-invalid="false">
-    </div>
-    <div class="form-field">
-      <label for="cf-company">Company / Organization <span class="opt">(optional)</span></label>
-      <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="Company name">
-    </div>
+    <input type="text" name="phone" placeholder="Phone (optional)">
+    <input type="text" name="company" placeholder="Company / Organization (optional)">
   </div>
-  <div class="form-field">
-    <label for="cf-message">Brief description of your requirements</label>
-    <textarea id="cf-message" name="message" rows="4" placeholder="Tell us briefly how we can help" required aria-required="true" aria-invalid="false" aria-describedby="cf-message-err"></textarea>
-    <p class="form-error" id="cf-message-err" role="alert" hidden></p>
+  <div class="form-row">
+    <select name="country" required style="width:100%;padding:12px 16px;background:var(--paper);border:1px solid var(--border);font-size:.9375rem;border-radius:4px;">
+      <option value="" selected disabled>Country of residence *</option>
+      <option value="AE">United Arab Emirates</option>
+      <option value="AU">Australia</option>
+      <option value="CA">Canada</option>
+      <option value="CH">Switzerland</option>
+      <option value="CN">China</option>
+      <option value="DE">Germany</option>
+      <option value="FR">France</option>
+      <option value="GB">United Kingdom</option>
+      <option value="HK">Hong Kong</option>
+      <option value="IN">India</option>
+      <option value="IT">Italy</option>
+      <option value="JP">Japan</option>
+      <option value="KR">Korea, Republic of</option>
+      <option value="KW">Kuwait</option>
+      <option value="NL">Netherlands</option>
+      <option value="QA">Qatar</option>
+      <option value="SA">Saudi Arabia</option>
+      <option value="SG">Singapore</option>
+      <option value="TW">Taiwan</option>
+      <option value="US">United States</option>
+      <option value="other">Other</option>
+    </select>
   </div>
-  <label class="form-check"><input type="checkbox" name="eligible" value="yes" required> I confirm I am a professional, institutional, or sophisticated investor.</label>
-  <label class="form-check"><input type="checkbox" name="marketing" value="yes"> I agree to receive occasional updates from The Black Circle. I can opt out at any time.</label>
-  <p class="form-notice">We use these details to respond to your enquiry and assess eligibility. See our <a href="{{ "/privacy-policy/" | relURL }}">Privacy Policy</a>. Submitting this form is not a confirmation of eligibility.</p>
+  <textarea name="message" rows="4" placeholder="Brief description of your requirements" required></textarea>
+  <label class="form-check"><input type="checkbox" name="eligible" required> I confirm that I am a professional or institutional investor under the laws of my country of residence, and that I am contacting The Black Circle on my own initiative. I understand that The Black Circle will verify my status before providing any service.</label>
+  <label class="form-check"><input type="checkbox" name="updates" style="margin-top:8px;"> I would like to receive occasional updates from The Black Circle by email. I can unsubscribe at any time.</label>
+  <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:8px;">TBCWM International Limited will use these details to respond to your enquiry and assess your eligibility, as described in our <a href="{{ "/privacy-policy/" | relURL }}">Privacy Policy</a>.</p>
   <button type="submit" class="btn btn--primary">Submit request <span class="arrow">&rsaquo;</span></button>
-  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  <p class="form-status" id="form-status"></p>
 </form>
 <script>
 (function(){
   var form=document.getElementById('lead-form');if(!form)return;
   var status=document.getElementById('form-status');
-  function setError(field,msg){
-    var err=document.getElementById(field.getAttribute('aria-describedby'));
-    field.setAttribute('aria-invalid',msg?'true':'false');
-    if(err){if(msg){err.textContent=msg;err.hidden=false;}else{err.textContent='';err.hidden=true;}}
-  }
-  function validate(){
-    var firstInvalid=null;
-    ['cf-name','cf-email','cf-message'].forEach(function(id){
-      var f=document.getElementById(id);var val=(f.value||'').trim();
-      var msg='';
-      if(f.required&&!val){msg='This field is required.';}
-      else if(f.type==='email'&&val&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){msg='Please enter a valid email address.';}
-      setError(f,msg);
-      if(msg&&!firstInvalid){firstInvalid=f;}
-    });
-    var elig=form.querySelector('input[name="eligible"]');
-    if(!elig.checked){
-      setError(elig,'Please confirm your investor status to continue.');
-      if(!firstInvalid){firstInvalid=elig;}
-    }else{setError(elig,'');}
-    if(firstInvalid){firstInvalid.focus();}
-    return !firstInvalid;
-  }
+  var apiUrl='{{ site.Params.leads_api_url | default "" }}';
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    status.textContent='';
-    if(!validate()){status.textContent='Please review the highlighted fields.';status.style.color='#B3261E';return;}
-    status.style.color='';
     status.textContent='Submitting...';
     var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
-    var subject=encodeURIComponent('New Lead: '+(data.name||'Website Enquiry'));
-    var body=encodeURIComponent(
-      'Name: '+(data.name||'')+'\n'+
-      'Email: '+(data.email||'')+'\n'+
-      'Phone: '+(data.phone||'')+'\n'+
-      'Company: '+(data.company||'')+'\n'+
-      'Message: '+(data.message||'')+'\n'+
-      'Eligibility confirmed: '+(data.eligible?'Yes':'No')+'\n'+
-      'Marketing consent: '+(data.marketing?'Yes':'No')+'\n'+
-      'Source: theblackcircle.com'
-    );
-    window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
-    status.textContent='Opening your email client... If nothing happens, please email info@theblackcircle.com directly.';
-    setTimeout(function(){status.textContent='Thank you. Your email client should have opened with your request pre-filled. Please send it to complete your submission.';},2000);
+    if(apiUrl){
+      fetch(apiUrl,{
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify(data)
+      }).then(function(r){
+        if(r.ok){
+          status.textContent='Thank you. Your request has been submitted. We will contact you in confidence.';
+          form.reset();
+        } else {
+          status.textContent='There was an issue submitting your request. Please email info@theblackcircle.com directly.';
+        }
+      }).catch(function(){
+        status.textContent='There was an issue submitting your request. Please email info@theblackcircle.com directly.';
+      });
+    } else {
+      var subject=encodeURIComponent('New Lead: '+(data.name||'Website Enquiry'));
+      var body=encodeURIComponent(
+        'Name: '+(data.name||'')+'\n'+
+        'Email: '+(data.email||'')+'\n'+
+        'Phone: '+(data.phone||'')+'\n'+
+        'Company: '+(data.company||'')+'\n'+
+        'Country: '+(data.country||'')+'\n'+
+        'Message: '+(data.message||'')+'\n'+
+        'Eligibility confirmed: '+(data.eligible?'Yes':'No')+'\n'+
+        'Updates opt-in: '+(data.updates?'Yes':'No')+'\n'+
+        'Source: theblackcircle.com'
+      );
+      window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
+      status.textContent='Opening your email client... If nothing happens, please email info@theblackcircle.com directly.';
+    }
   });
-  ['cf-name','cf-email','cf-message'].forEach(function(id){
-    var f=document.getElementById(id);
-    if(f){f.addEventListener('input',function(){setError(f,'');});}
-  });
-  var elig=form.querySelector('input[name="eligible"]');
-  if(elig){elig.addEventListener('change',function(){setError(elig,'');});}
 })();
 </script>

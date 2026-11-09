@@ -1,4 +1,4 @@
 ---
-title: "Crypto & Wealth Planning Solutions | The Black Circle"
-description: "The Black Circle offers regulated wealth planning with life insurance & fiduciary solutions, ensuring control, privacy, and compliance for clients."
+title: "Wealth Planning | The Black Circle"
+description: "Introductions to independent life insurance and fiduciary providers for succession and structuring. For professional clients only."
 ---

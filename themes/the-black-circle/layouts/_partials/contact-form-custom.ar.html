@@ -1,91 +1,64 @@
-<form class="tbc-form" id="lead-form" method="post" action="" novalidate>
+<form class="tbc-form" id="lead-form">
   <div class="form-row">
-    <div class="form-field">
-      <label for="cf-name">الاسم الكامل</label>
-      <input type="text" id="cf-name" name="name" autocomplete="name" placeholder="الاسم الكامل" required aria-required="true" aria-invalid="false" aria-describedby="cf-name-err">
-      <p class="form-error" id="cf-name-err" role="alert" hidden></p>
-    </div>
-    <div class="form-field">
-      <label for="cf-email">البريد الإلكتروني</label>
-      <input type="email" id="cf-email" name="email" autocomplete="email" placeholder="you@example.com" required aria-required="true" aria-invalid="false" aria-describedby="cf-email-err">
-      <p class="form-error" id="cf-email-err" role="alert" hidden></p>
-    </div>
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
   </div>
   <div class="form-row">
-    <div class="form-field">
-      <label for="cf-phone">الهاتف <span class="opt">(اختياري)</span></label>
-      <input type="tel" id="cf-phone" name="phone" autocomplete="tel" placeholder="+1 555 000 0000" aria-invalid="false">
-    </div>
-    <div class="form-field">
-      <label for="cf-company">الشركة / المؤسسة <span class="opt">(اختياري)</span></label>
-      <input type="text" id="cf-company" name="company" autocomplete="organization" placeholder="اسم الشركة">
-    </div>
+    <input type="text" name="phone" placeholder="الهاتف (اختياري)">
+    <input type="text" name="company" placeholder="الشركة / المؤسسة (اختياري)">
   </div>
-  <div class="form-field">
-    <label for="cf-message">وصف موجز لمتطلباتك</label>
-    <textarea id="cf-message" name="message" rows="4" placeholder="أخبرنا باختصار كيف يمكننا المساعدة" required aria-required="true" aria-invalid="false" aria-describedby="cf-message-err"></textarea>
-    <p class="form-error" id="cf-message-err" role="alert" hidden></p>
+  <div class="form-row">
+    <select name="country" required style="width:100%;padding:12px 16px;background:var(--paper);border:1px solid var(--border);font-size:.9375rem;border-radius:4px;">
+      <option value="" selected disabled>بلد الإقامة *</option>
+      <option value="AE">الإمارات العربية المتحدة</option>
+      <option value="AU">أستراليا</option>
+      <option value="CA">كندا</option>
+      <option value="CH">سويسرا</option>
+      <option value="CN">الصين</option>
+      <option value="DE">ألمانيا</option>
+      <option value="FR">فرنسا</option>
+      <option value="GB">المملكة المتحدة</option>
+      <option value="HK">هونغ كونغ</option>
+      <option value="IN">الهند</option>
+      <option value="IT">إيطاليا</option>
+      <option value="JP">اليابان</option>
+      <option value="KR">كوريا</option>
+      <option value="KW">الكويت</option>
+      <option value="NL">هولندا</option>
+      <option value="QA">قطر</option>
+      <option value="SA">السعودية</option>
+      <option value="SG">سنغافورة</option>
+      <option value="TW">تايوان</option>
+      <option value="US">الولايات المتحدة</option>
+      <option value="other">أخرى</option>
+    </select>
   </div>
-  <label class="form-check"><input type="checkbox" name="eligible" value="yes" required> أؤكد أنني مستثمر مهني أو مؤسسي أو متطور.</label>
-  <label class="form-check"><input type="checkbox" name="marketing" value="yes"> أوافق على تلقي تحديثات دورية من The Black Circle. يمكنني إلغاء الاشتراك في أي وقت.</label>
-  <p class="form-notice">نستخدم هذه التفاصيل للرد على استفسارك وتقييم الأهلية. اطّلع على <a href="{{ "/privacy-policy/" | relLangURL }}">سياسة الخصوصية</a>. لا يُعد إرسال هذا النموذج تأكيدًا للأهلية.</p>
+  <textarea name="message" rows="4" placeholder="وصف موجز لمتطلباتك" required></textarea>
+  <label class="form-check"><input type="checkbox" name="eligible" required> أؤكد أنني مستثمر مهني أو مؤسسي وفقًا لقوانين بلد إقامتي، وأنني أتصل بـ The Black Circle بمبادرتي الخاصة. أتفهم أن The Black Circle ستحقق من حالتي قبل تقديم أي خدمة.</label>
+  <label class="form-check"><input type="checkbox" name="updates" style="margin-top:8px;"> أرغب في تلقي تحديثات دورية من The Black Circle عبر البريد الإلكتروني. يمكنني إلغاء الاشتراك في أي وقت.</label>
+  <p style="font-size:var(--fs-xs);color:var(--muted);margin-top:8px;">ستستخدم TBCWM International Limited هذه التفاصيل للرد على استفسارك وتقييم أهليتك، كما هو موضح في <a href="{{ "/privacy-policy/" | relLangURL }}">سياسة الخصوصية</a> الخاصة بنا.</p>
   <button type="submit" class="btn btn--primary">إرسال الطلب <span class="arrow">&rsaquo;</span></button>
-  <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+  <p class="form-status" id="form-status"></p>
 </form>
 <script>
 (function(){
   var form=document.getElementById('lead-form');if(!form)return;
   var status=document.getElementById('form-status');
-  function setError(field,msg){
-    var err=document.getElementById(field.getAttribute('aria-describedby'));
-    field.setAttribute('aria-invalid',msg?'true':'false');
-    if(err){if(msg){err.textContent=msg;err.hidden=false;}else{err.textContent='';err.hidden=true;}}
-  }
-  function validate(){
-    var firstInvalid=null;
-    ['cf-name','cf-email','cf-message'].forEach(function(id){
-      var f=document.getElementById(id);var val=(f.value||'').trim();
-      var msg='';
-      if(f.required&&!val){msg='هذا الحقل مطلوب.';}
-      else if(f.type==='email'&&val&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val)){msg='يرجى إدخال بريد إلكتروني صحيح.';}
-      setError(f,msg);
-      if(msg&&!firstInvalid){firstInvalid=f;}
-    });
-    var elig=form.querySelector('input[name="eligible"]');
-    if(!elig.checked){
-      setError(elig,'يرجى تأكيد وضعك كمستثمر للمتابعة.');
-      if(!firstInvalid){firstInvalid=elig;}
-    }else{setError(elig,'');}
-    if(firstInvalid){firstInvalid.focus();}
-    return !firstInvalid;
-  }
+  var apiUrl='{{ site.Params.leads_api_url | default "" }}';
   form.addEventListener('submit',function(e){
     e.preventDefault();
-    status.textContent='';
-    if(!validate()){status.textContent='يرجى مراجعة الحقول المميزة.';status.style.color='#B3261E';return;}
-    status.style.color='';
     status.textContent='جاري الإرسال...';
     var data={};new FormData(form).forEach(function(v,k){data[k]=v;});
-    var subject=encodeURIComponent('طلب جديد: '+(data.name||'استفسار من الموقع'));
-    var body=encodeURIComponent(
-      'الاسم: '+(data.name||'')+'\n'+
-      'البريد الإلكتروني: '+(data.email||'')+'\n'+
-      'الهاتف: '+(data.phone||'')+'\n'+
-      'الشركة: '+(data.company||'')+'\n'+
-      'الرسالة: '+(data.message||'')+'\n'+
-      'تأكيد الأهلية: '+(data.eligible?'نعم':'لا')+'\n'+
-      'موافقة التسويق: '+(data.marketing?'نعم':'لا')+'\n'+
-      'المصدر: theblackcircle.com'
-    );
-    window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
-    status.textContent='جاري فتح برنامج البريد الإلكتروني... إذا لم يحدث شيء، يرجى مراسلة info@theblackcircle.com مباشرة.';
-    setTimeout(function(){status.textContent='شكراً لك. يجب أن يكون قد فُتح برنامج بريدك الإلكتروني بطلبك مُعبأً مسبقاً. يرجى إرساله لإتمام تقديمك.';},2000);
+    if(apiUrl){
+      fetch(apiUrl,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)})
+      .then(function(r){if(r.ok){status.textContent='شكراً لك. تم إرسال طلبك. سنتواصل معك بسرية.';form.reset();}else{status.textContent='حدث خطأ في الإرسال. يرجى الإرسال إلى info@theblackcircle.com مباشرة.';}})
+      .catch(function(){status.textContent='حدث خطأ في الإرسال. يرجى الإرسال إلى info@theblackcircle.com مباشرة.';});
+    } else {
+      var subject=encodeURIComponent('طلب جديد: '+(data.name||'استفسار من الموقع'));
+      var body=encodeURIComponent('الاسم: '+(data.name||'')+'\n'+'البريد: '+(data.email||'')+'\n'+'الهاتف: '+(data.phone||'')+'\n'+'الشركة: '+(data.company||'')+'\n'+'البلد: '+(data.country||'')+'\n'+'الرسالة: '+(data.message||'')+'\n'+'الأهلية: '+(data.eligible?'نعم':'لا')+'\n'+'التحديثات: '+(data.updates?'نعم':'لا')+'\n'+'المصدر: theblackcircle.com');
+      window.location.href='mailto:info@theblackcircle.com?subject='+subject+'&body='+body;
+      status.textContent='جاري فتح برنامج البريد الإلكتروني...';
+    }
   });
-  ['cf-name','cf-email','cf-message'].forEach(function(id){
-    var f=document.getElementById(id);
-    if(f){f.addEventListener('input',function(){setError(f,'');});}
-  });
-  var elig=form.querySelector('input[name="eligible"]');
-  if(elig){elig.addEventListener('change',function(){setError(elig,'');});}
 })();
 </script>

@@ -23,8 +23,6 @@
   font-family:var(--font-sans); color:var(--ink-text); font-size:1.125rem; line-height:1.65; letter-spacing:0.015em; background:var(--paper);
 }
 .tbc *{box-sizing:border-box}
-.tbc-skip{position:fixed;left:8px;top:8px;z-index:1000;background:var(--white);color:var(--ink-text);padding:12px 20px;font-size:var(--fs-sm);font-weight:600;border-radius:6px;transform:translateY(-150%);transition:transform .18s;text-decoration:none;box-shadow:0 4px 16px rgba(0,0,0,0.18)}
-.tbc-skip:focus{transform:translateY(0);outline:2px solid var(--bronze);outline-offset:2px}
 .tbc .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 .tbc .container.narrow{max-width:880px}
 .tbc .section{padding-block:var(--section-y);position:relative}
@@ -57,13 +55,6 @@
 .tbc-form .form-check input{margin:0;width:16px;height:16px;accent-color:var(--bronze);flex-shrink:0}
 .tbc-form .form-status{font-size:var(--fs-sm);color:var(--bronze);min-height:1.5em}
 .tbc-form .btn{align-self:flex-start;padding:10px 20px;min-height:40px;font-size:var(--fs-xs)}
-.tbc-form label{font-size:var(--fs-xs);color:var(--muted);font-weight:600;letter-spacing:0.04em;text-transform:uppercase;margin-bottom:6px;display:block}
-.tbc-form .form-field{display:flex;flex-direction:column}
-.tbc-form .opt{font-weight:400;text-transform:none;letter-spacing:0;color:var(--muted)}
-.tbc-form .form-error{font-size:var(--fs-xs);color:#B3261E;margin-top:6px;min-height:0;line-height:1.4}
-.tbc-form input[aria-invalid="true"],.tbc-form textarea[aria-invalid="true"]{border-color:#B3261E;background:#FBF1F0}
-.tbc-form .form-notice{font-size:var(--fs-xs);color:var(--muted);line-height:1.6;margin:4px 0 0}
-.tbc-form .form-notice a{color:var(--bronze);text-decoration:underline}
 @media(max-width:640px){.tbc-form .form-row{grid-template-columns:1fr}}
 
 .tbc .hero{background:radial-gradient(125% 95% at 50% 0%,var(--teal) 0%,var(--teal-deep) 42%,var(--black) 100%);color:var(--on-dark);position:relative;overflow:hidden}
@@ -109,7 +100,6 @@
 
 // Content cards (paper sections)
 .tbc .tbc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-@media (min-width:641px){.tbc .tbc-grid:has(> :nth-child(4):last-child){grid-template-columns:repeat(2,1fr)}}
 .tbc .tbc-card{background:var(--white);border:1px solid var(--line);border-radius:6px;box-shadow:0 1px 3px rgba(0,0,0,0.05);padding:28px 26px;transition:border-color .18s,transform .18s;text-decoration:none;color:inherit;display:flex;flex-direction:column;height:100%}
 .tbc .tbc-card:hover{border-color:var(--bronze);transform:translateY(-2px)}
 .tbc .tbc-card h3{font-family:var(--font-display);font-size:1.25rem;font-weight:500;color:var(--ink-text);margin:0 0 10px}
@@ -135,15 +125,13 @@
 .tbc .people-card ul li::before{content:"";position:absolute;left:0;top:9px;width:8px;height:1px;background:var(--bronze)}
 
 // Prose (legal pages)
-.tbc .prose{max-width:70ch;font-family:var(--font-display);font-size:1rem;line-height:1.75;color:var(--ink-text);text-wrap:pretty}
-.tbc .prose h2{font-family:var(--font-display);font-size:1.45rem;font-weight:500;margin:40px 0 14px;color:var(--ink-text)}
-.tbc .prose p{margin:0 0 14px}
-.tbc .prose p>strong:only-child{display:block;font-family:var(--font-sans);font-size:var(--fs-xs);font-weight:600;letter-spacing:0.16em;color:var(--bronze);margin:32px 0 12px}
+.tbc .prose{max-width:780px}
+.tbc .prose h2{font-family:var(--font-display);font-size:1.4rem;font-weight:500;margin:36px 0 14px;color:var(--ink-text)}
+.tbc .prose p{margin:0 0 14px;color:var(--ink-text)}
 .tbc .prose ul{margin:0 0 18px;padding-left:20px}
-.tbc .prose li{margin-bottom:8px}
+.tbc .prose li{margin-bottom:8px;color:var(--ink-text)}
 .tbc .prose strong{font-weight:600}
-.tbc .prose a{color:var(--bronze);text-decoration:underline;text-underline-offset:3px}
-.tbc .prose em{color:var(--muted);font-style:italic}
+.tbc .prose a{color:var(--bronze)}
 
 .tbc .skyline{position:absolute;left:0;right:0;top:30%;bottom:0;pointer-events:none;color:var(--bronze);opacity:0.08;z-index:0;overflow:hidden}
 .tbc .skyline svg{width:100%;height:100%;display:block}
@@ -161,7 +149,7 @@
 .tbc-header{position:fixed;top:0;left:0;right:0;z-index:50;background:var(--teal-deep);border-bottom:1px solid rgba(237,231,218,0.08)}
 .tbc-header-inner{display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:64px}
 .tbc-brand img{height:26px;width:auto;display:block}
-.tbc-nav{display:flex;gap:28px;align-items:center;font-size:var(--fs-sm)}
+.tbc-nav{display:flex;gap:28px;align-items:center}
 .tbc-nav a{font-size:var(--fs-sm);font-weight:400;color:var(--on-dark);text-decoration:none;transition:color .18s}
 .tbc-nav a:hover,.tbc-nav a.active{color:var(--bronze-soft)}
 .tbc-nav .has-dropdown{position:relative}
@@ -298,4 +286,3 @@
 .tbc-cookie-prefs:hover{color:var(--bronze)}
 @media(max-width:640px){.tbc-consent-inner{flex-direction:column;align-items:stretch}.tbc-consent-actions{justify-content:stretch}.tbc-consent-btn{flex:1}}
 [dir="rtl"] .tbc-consent{direction:rtl}
-

@@ -4,7 +4,7 @@
   {{ partial "head.html" . }}
 </head>
 <body>
-  <a href="#main" class="tbc-skip">Skip to main content</a>
+  {{ partial "jurisdiction-gate.html" . }}
   <div class="tbc">
     <div class="scroll-progress" aria-hidden="true"></div>
     <header class="tbc-header">
@@ -16,7 +16,7 @@
           {{ partial "header.en.html" . }}
       {{ end }}
     </header>
-    <main id="main">
+    <main>
       {{ block "main" . }}{{ end }}
     </main>
     <footer class="tbc-footer">
@@ -28,8 +28,8 @@
           {{ partial "footer.en.html" . }}
       {{ end }}
     </footer>
-    {{ partial "consent-banner.html" . }}
   </div>
+  {{ partial "cookie-banner.html" . }}
 <script>
 document.querySelector('.tbc-menu-btn')?.addEventListener('click',function(){document.body.classList.toggle('tbc-menu-open');this.setAttribute('aria-expanded',document.body.classList.contains('tbc-menu-open'))});
 document.addEventListener('click',function(e){if(!e.target.closest('.tbc-header')&&!e.target.closest('.tbc-nav')){document.body.classList.remove('tbc-menu-open');document.querySelector('.tbc-menu-btn')?.setAttribute('aria-expanded','false')}});
