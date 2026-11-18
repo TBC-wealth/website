@@ -1,21 +1,23 @@
 // Body defaults. Font-size is set here only as a fallback for content outside
 // the .tbc wrapper; inside .tbc the design system's 1.125rem base applies and
 // p/li inherit it instead of being forced down to 14px.
+// Weight 400 matches current private-bank/fintech practice (Robinhood,
+// Betterment, Revolut all set body text at regular).
 body {
 	font-family: $body-font;
-	font-weight: $font-weight-light;
+	font-weight: $font-weight-normal;
 	line-height: 1.75;
 	font-size: 14px;
 }
 p {
 	font-family: $body-font;
-	font-weight: $font-weight-light;
+	font-weight: $font-weight-normal;
 	line-height: 1.75;
 }
 ul, ol {
 	li {
 		font-family: $body-font;
-		font-weight: $font-weight-light;
+		font-weight: $font-weight-normal;
 		& + li {
 			padding-top: $default-base-spacer * 0.25;
 		}
@@ -43,7 +45,7 @@ h1, .h1 {
 	font-weight: $font-weight-medium;
 	@include media-breakpoint-up(md) {
 		font-size: $font-size-base * 2.375;
-		font-weight: $font-weight-light;
+		font-weight: $font-weight-normal;
 	} 
 	@include media-breakpoint-up(xl) {
 		font-size: $font-size-base * 2.875;
