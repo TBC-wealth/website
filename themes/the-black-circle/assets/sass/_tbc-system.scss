@@ -160,12 +160,11 @@ body{background:var(--paper)}
 .tbc-nav a:hover,.tbc-nav a.active{color:var(--bronze-soft)}
 .tbc-nav .has-dropdown{position:relative}
 .tbc-nav .has-dropdown>a{display:inline-flex;align-items:center;gap:6px}
-.tbc-nav .has-dropdown>a::after{content:"";flex-shrink:0;width:7px;height:7px;border-right:1.5px solid var(--on-dark-muted);border-bottom:1.5px solid var(--on-dark-muted);transform:rotate(45deg) translateY(-2px);transition:border-color .18s}
-.tbc-nav .has-dropdown>a:hover::after{border-color:var(--bronze-soft)}
+.tbc-nav .nav-caret{flex-shrink:0;color:var(--on-dark-muted);transition:color .18s,transform .18s;transform:translateY(0.5px)}
+.tbc-nav .has-dropdown:hover>a .nav-caret,.tbc-nav .has-dropdown>a:hover .nav-caret{color:var(--bronze-soft)}
 .tbc-actions .has-dropdown{position:relative}
 .tbc-dropdown{position:absolute;top:100%;padding-top:10px;left:0;min-width:250px;background:var(--teal-deep);border:1px solid rgba(237,231,218,0.12);border-radius:6px;padding:8px;display:none;flex-direction:column;gap:2px;z-index:60;box-shadow:0 18px 40px rgba(0,0,0,0.35)}
 .tbc-nav .has-dropdown:hover .tbc-dropdown,.tbc-nav .has-dropdown:focus-within .tbc-dropdown{display:flex}
-.tbc-nav .has-dropdown:hover>a::after{border-color:var(--bronze-soft)}
 .tbc-actions .has-dropdown:hover .tbc-dropdown,.tbc-actions .has-dropdown:focus-within .tbc-dropdown,.lang-switch.lang-open .lang-dropdown{display:flex}
 .tbc-actions .tbc-dropdown{left:0;min-width:180px}
 .tbc-dropdown a{padding:10px 14px;border-radius:4px;font-size:var(--fs-sm);color:var(--on-dark)}
@@ -227,7 +226,7 @@ body{background:var(--paper)}
   .tbc-footer-top{grid-template-columns:1fr}
   body.tbc-menu-open .tbc-nav{display:flex;position:fixed;top:64px;left:0;right:0;bottom:0;background:var(--teal-deep);flex-direction:column;align-items:stretch;padding:24px 24px 48px;gap:0;overflow-y:auto;z-index:40}
   body.tbc-menu-open .tbc-nav>a,body.tbc-menu-open .tbc-nav .has-dropdown>a{display:block;padding:16px 0;width:100%;border-bottom:1px solid rgba(237,231,218,0.1);font-size:1.05rem;color:var(--on-dark);text-decoration:none}
-  body.tbc-menu-open .tbc-nav .has-dropdown>a::after{display:none}
+  body.tbc-menu-open .tbc-nav .has-dropdown .nav-caret{display:none}
   body.tbc-menu-open .tbc-nav .has-dropdown .tbc-dropdown{display:flex;position:static;flex-direction:column;background:none;border:0;box-shadow:none;padding:0 0 0 16px;min-width:0;opacity:1;visibility:visible}
   body.tbc-menu-open .tbc-nav .has-dropdown .tbc-dropdown a{padding:12px 0;font-size:0.9rem;border-bottom:1px solid rgba(237,231,218,0.06)}
 }
@@ -242,7 +241,9 @@ body{background:var(--paper)}
 
 // Hero headline — line-mask reveal on load (staggered).
 .tbc .hero h1 { overflow: hidden; }
-.tbc .hero h1 .line { display: block; overflow: hidden; padding-bottom: 0.14em; margin-bottom: -0.14em; }
+// padding must cover the descender depth of Source Serif 4 at line-height 1.05
+// (Safari uses hhea metrics, which extend further than Chrome) — 0.24em is safe.
+.tbc .hero h1 .line { display: block; overflow: hidden; padding-bottom: 0.24em; margin-bottom: -0.24em; }
 .tbc .hero h1 .line > span { display: block; transform: translateY(110%); will-change: transform; animation: tbc-line-up 0.9s cubic-bezier(0.22,1,0.36,1) both; }
 .tbc .hero h1 .line:nth-child(2) > span { animation-delay: 0.14s; }
 .tbc .hero .eyebrow { opacity: 0; animation: tbc-fade-up 0.6s ease 0.05s both; }
