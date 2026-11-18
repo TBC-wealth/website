@@ -11,17 +11,23 @@
 @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 800; font-display: swap; src: url('/fonts/jetbrainsmono-latin.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
 @font-face { font-family: 'JetBrains Mono'; font-style: normal; font-weight: 100 800; font-display: swap; src: url('/fonts/jetbrainsmono-latin-ext.woff2') format('woff2'); unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF; }
 
-// TBC design system — global, scoped under .tbc (loaded via main.scss)
-.tbc{
+// TBC design tokens on :root so inline styles and components rendered outside
+// the .tbc wrapper (consent banner, jurisdiction gate) resolve them too.
+// Arabic fallbacks (Noto Sans/Naskh Arabic) cover the /ar/ site, CJK fallbacks
+// (Noto TC) cover /zh-tw/ — both are loaded only on their respective languages.
+:root{
   --bronze:#B2724A; --bronze-soft:#C99B73; --teal:#0C2D2A; --teal-deep:#07201E;
   --ink:#0A0E0D; --charcoal:#14191A; --paper:#F6F1E8; --paper-2:#EFE8DC;
   --ink-text:#17140D; --muted:#6E6759; --line:#DDD3C4; --line-dark:rgba(237,231,218,0.13);
   --on-dark:#ECE6D9; --on-dark-muted:#9A9387; --white:#fff; --black:#050608;
-  --font-display:"Source Serif 4","Noto Serif TC",Georgia,serif; --font-sans:"Hanken Grotesk","Noto Sans TC",system-ui,sans-serif; --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
+  --font-display:"Source Serif 4","Noto Naskh Arabic","Noto Serif TC",Georgia,serif; --font-sans:"Hanken Grotesk","Noto Sans Arabic","Noto Sans TC",system-ui,sans-serif; --font-mono:"JetBrains Mono",ui-monospace,"SF Mono",Menlo,monospace;
   --fs-display:clamp(2.7rem,5.4vw,4.4rem); --fs-h2:clamp(1.6rem,2.7vw,2.25rem);
   --fs-lead:1.3rem; --fs-sm:0.875rem; --fs-xs:0.75rem; --section-y:clamp(64px,9vw,128px);
+}
+.tbc{
   font-family:var(--font-sans); color:var(--ink-text); font-size:1.125rem; line-height:1.65; letter-spacing:0.015em; background:var(--paper);
 }
+body{background:var(--paper)}
 .tbc *{box-sizing:border-box}
 .tbc .container{width:100%;max-width:1200px;margin:0 auto;padding:0 24px}
 .tbc .container.narrow{max-width:880px}

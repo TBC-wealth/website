@@ -1,20 +1,21 @@
-html {
-	@include media-breakpoint-between(xl, xxl) {
-		font-size: 13px;
-	}
-}
-body, p {
+// Body defaults. Font-size is set here only as a fallback for content outside
+// the .tbc wrapper; inside .tbc the design system's 1.125rem base applies and
+// p/li inherit it instead of being forced down to 14px.
+body {
 	font-family: $body-font;
 	font-weight: $font-weight-light;
 	line-height: 1.75;
 	font-size: 14px;
 }
+p {
+	font-family: $body-font;
+	font-weight: $font-weight-light;
+	line-height: 1.75;
+}
 ul, ol {
 	li {
 		font-family: $body-font;
 		font-weight: $font-weight-light;
-		line-height: 1.65;
-		font-size: 14px;
 		& + li {
 			padding-top: $default-base-spacer * 0.25;
 		}
@@ -23,25 +24,6 @@ ul, ol {
 
 strong {
 	font-weight: $font-weight-medium;
-}
-.text-light {
-	color: var(--color-fg) !important;	
-}
-.text-primary {
-    background: var(--Linear, linear-gradient(285deg, #0C2D2A -7.62%, #B2724A 100.98%));
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.text-color-primary {
-	color: $primary;
-}
-
-.text-large, .text-large p {
-	@include media-breakpoint-up(xl) {
-		font-size: $font-size-base * 1.125;
-	}
 }
 
 a {
@@ -52,7 +34,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: $heading-font;
 	font-weight: $font-weight-normal;
 	margin-bottom: $default-base-spacer;
-	color: var(--color-fg);
+	color: inherit;
 }
 
 h1, .h1 { 
@@ -132,12 +114,3 @@ h6, .h6 {
 		font-weight: $font-weight-normal;
 	}
 }
-
-// html[data-theme="light"] {
-// 	h2, .h2, .{
-// 		background: var(--Linear-3, linear-gradient(90deg, $darkgrey -20.21%, $lightgrey 40.5%, $darkgrey 112.71%));
-// 		background-clip: text;
-// 		-webkit-background-clip: text;
-// 		-webkit-text-fill-color: transparent;
-// 	}	
-// }

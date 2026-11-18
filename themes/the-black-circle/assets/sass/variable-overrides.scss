@@ -1,6 +1,6 @@
 // Default variable overrides
-$body-font : "Hanken Grotesk", "Noto Sans TC", sans-serif;
-$heading-font : "Source Serif 4", "Noto Serif TC", Georgia, serif;
+$body-font : "Hanken Grotesk", "Noto Sans Arabic", "Noto Sans TC", system-ui, sans-serif;
+$heading-font : "Source Serif 4", "Noto Naskh Arabic", "Noto Serif TC", Georgia, serif;
 $font-family-monospace: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 $line-height: 1;
 $default-base-spacer: 1rem;
@@ -17,10 +17,6 @@ $danger:        #dc3545;
 $light:         #FFF8F8;
 $dark:          #050608;
 // scss-docs-end theme-color-variables
-
-$darkgrey: #111111;
-$lightgrey: #666666;
-
 
 
 

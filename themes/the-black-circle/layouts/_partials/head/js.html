@@ -1,24 +1,4 @@
-{{- with resources.Get "js/jquery-3.7.1.min.js" }}
-  <script src="{{ .RelPermalink }}"></script>
-{{- end }}
-
-{{- with resources.Get "js/slick.min.js" }}
-  <script src="{{ .RelPermalink }}"></script>
-{{- end }}
-
-{{- with resources.Get "js/popper.min.js" }}
-  <script src="{{ .RelPermalink }}"></script>
-{{- end }}
-
-{{- with resources.Get "js/bootstrap.min.js" }}
-  <script src="{{ .RelPermalink }}"></script>
-{{- end }}
-
 {{- with resources.Get "js/aos.js" }}
-  <script src="{{ .RelPermalink }}"></script>
-{{- end }}
-
-{{- with resources.Get "js/validation.js" }}
   <script src="{{ .RelPermalink }}"></script>
 {{- end }}
 

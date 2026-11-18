@@ -3,16 +3,10 @@
   {{- $sassOptions = merge $sassOptions (dict "outputStyle" "compressed") -}}
 {{ end -}}
 
-{{/* Build LTR CSS */}}
+{{/* Build site CSS (the .tbc system ships its own [dir="rtl"] overrides) */}}
 {{ $mainLTR := resources.Get "sass/main.scss" | toCSS (merge $sassOptions (dict "targetPath" "css/style-ltr.css"))}}
 
-{{/* Build RTL CSS */}}
-{{ $mainRTL := resources.Get "sass/main-rtl.scss" | toCSS (merge $sassOptions (dict "targetPath" "css/style-rtl.css")) | postCSS}}
-
 {{/* Extra CSS */}}
-{{ $slick := resources.Get "css/slick.css" }}
-<link rel="stylesheet" href="{{ $slick.RelPermalink }}" media="screen">
-
 {{ $aos := resources.Get "css/aos.css" }}
 <link rel="stylesheet" href="{{ $aos.RelPermalink }}" media="screen">
 
